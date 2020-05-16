@@ -1,0 +1,30 @@
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+.navbar-toratto {
+  background-color: transparent;
+
+  .menu-main-navigation-menu-container {
+    color: #fff;
+
+    .nav.navbar-nav {
+      .menu-item {
+        font-size: 1.2rem;
+        font-weight: 600;
+
+        a {
+          color: #fff;
+        }
+
+        a:hover {
+          color: $theme-color-green;
+        }
+      }
+    }
+  }
+}
