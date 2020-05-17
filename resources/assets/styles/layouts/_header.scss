@@ -8,21 +8,20 @@
 
 .navbar-toratto {
   background-color: transparent;
+  color: #fff;
 
-  .menu-main-navigation-menu-container {
-    color: #fff;
-
-    .nav.navbar-nav {
-      .menu-item {
-        font-size: 1.2rem;
-        font-weight: 600;
-
-        a {
+  .navbar-collapse.collapse.justify-content-between.align-items-center {
+    .navbar-nav-toratto-center {
+      .nav-item.menu-item {
+        a.nav-link.hvr-underline-reveal {
           color: #fff;
+          font-size: 1.2rem;
+          font-weight: 600;
         }
 
-        a:hover {
+        a.nav-link.hvr-underline-reveal:hover {
           color: $theme-color-green;
+          border-bottom: 2px solid $theme-color-green;
         }
       }
     }
