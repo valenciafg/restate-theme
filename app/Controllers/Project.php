@@ -46,11 +46,11 @@ class Project extends Controller
     }
 
     public function getProjectFile($files) {
-        $brochure = "";
+        $file = "";
         if(!empty($files)) {
-            $brochure = wp_get_attachment_url($files[0]);
+            $file = wp_get_attachment_url($files[0]);
         }
-        return $brochure;
+        return $file;
     }
 
     public function getProjectModels($model_list) {
@@ -70,8 +70,8 @@ class Project extends Controller
         return $models;
     }
 
-    public function getProjects() {
-        $this->getProjectsQuery();
+    public function getProjects($limit = -1) {
+        $this->getProjectsQuery($limit);
         $data = array();
         if(!empty($this->posts)) {
             $posts = $this->posts;
@@ -80,6 +80,8 @@ class Project extends Controller
                 $title = get_the_title($id);
                 $url = get_permalink($id);
                 $main_image = wp_get_attachment_url(get_post_thumbnail_id($id));
+                $logo = get_post_meta($id, "restate_project_logo_image");
+                $logo = $this->getProjectFile($logo);
                 $slogan = get_post_meta($id, "restate_project_slogan", true);
                 $show_banner = get_post_meta($id, "restate_project_show_banner", true);
                 $delivery_date = get_post_meta($id, "restate_project_delivery_date", true);
@@ -104,6 +106,7 @@ class Project extends Controller
                     'id'                    => $id,
                     'title'                 => $title,
                     'url'                   => $url,
+                    'logo'                  => $logo,
                     'main_image'            => $main_image,
                     'slogan'                => $slogan,
                     'show_banner'           => $show_banner,
