@@ -1,11 +1,6 @@
 @php 
   $project = new  App\Controllers\Project();
   $projects = $project->getProjects(10);
-  /*
-  echo"<pre>";
-  print_r($projects);
-  echo"</pre>";
-  */
 @endphp
 <div class="container">
     <div class="row">
@@ -19,7 +14,6 @@
                     <h5 class="card-title">
                         {{$project['title']}}
                         <a href="#" class="float-right d-inline-flex" style="margin-left: 5px;">
-                            <!--<i class="fas fa-share-alt"></i>-->
                             <img src="{{$project['logo']}}" width="90px" height="60px">
                         </a>
                     </h5>

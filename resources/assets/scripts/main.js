@@ -1,6 +1,7 @@
 // import external dependencies
 import 'jquery';
 import 'owl.carousel';
+import 'vegas/dist/vegas';
 import 'slick-carousel/slick/slick.min';
 // import then needed Font Awesome functionality
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
