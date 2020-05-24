@@ -1,7 +1,6 @@
 @php
     $gallery = $project['gallery'];
     $overlay = get_stylesheet_directory_uri()."/assets/images/07.png";
-    print_r($project['categories']['location']);
     $location = !empty($project['categories']['location']) ? $project['categories']['location'][0] : "";
     $stage = !empty($project['categories']['stage']) ? $project['categories']['stage'][0] : "";
 @endphp

@@ -3,6 +3,10 @@
   --main-black-color: black;
 }
 
+@mixin text_shadow() {
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -67,6 +71,8 @@
   color: $theme-color-green;
   font-size: 35px;
 
+  @include text_shadow();
+
   .fas {
     color: $theme-color-blue;
   }
@@ -87,6 +93,8 @@
   .stage {
     display: inline;
     float: right;
+
+    @include text_shadow();
   }
 }
 
