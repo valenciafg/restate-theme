@@ -1,13 +1,13 @@
-//  import bannerVegas from '../modules/banner/banner-vegas';
 import bannerOwl from '../modules/banner/banner-owl';
+import panoramic from '../modules/gallery/panoramic';
+import popup  from '../modules/common/popup';
 
 export default {
   init() {
     // JavaScript to be fired on all pages
-    //  console.log('bannerVegas');
-    //  bannerVegas.initVegas();
-    console.log('bannerOwl');
     bannerOwl.initOwl();
+    panoramic.initPanoramic();
+    popup.closePopup();
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

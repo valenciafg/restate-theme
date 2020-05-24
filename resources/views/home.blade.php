@@ -15,6 +15,7 @@
   */
 @endphp
 @include('partials.home.banner')
+@include('partials.home.popup')
 @include('partials.home.posts')
 {{--
 @section('content')

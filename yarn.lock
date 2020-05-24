@@ -6942,6 +6942,14 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
+photo-sphere-viewer@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/photo-sphere-viewer/-/photo-sphere-viewer-4.0.4.tgz#da0b101902d9d4fe651b42e840b159997c06e145"
+  integrity sha512-8csRCNwNV7NQ+KliSDLiJ37j8fm0cv1z6w9LvMbkTGwVesvsQF7ef71VQG3qYIJvsT+Vo2nsZ1iK69kY9gEKQw==
+  dependencies:
+    three "^0.116.0"
+    uevent "~2.0.0"
+
 pify@^2.0.0, pify@^2.2.0, pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
@@ -9404,6 +9412,11 @@ tfunk@^3.0.1:
     chalk "^1.1.1"
     object-path "^0.9.0"
 
+three@^0.116.0:
+  version "0.116.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.116.1.tgz#a393f7a81fdc3e2fbf57ded5ba47dc5bd3678ce0"
+  integrity sha512-l2JCMiA/lVZAuSrLWRYMalvpR+0j8hbIhCpfs4V6JFnw2+JQEQJ5HltNpfFr+9TDpQts1BhtcISehWf/xBGPvQ==
+
 through2-filter@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/through2-filter/-/through2-filter-2.0.0.tgz#60bc55a0dacb76085db1f9dae99ab43f83d622ec"
@@ -9630,6 +9643,11 @@ ua-parser-js@0.7.17:
   version "0.7.17"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
   integrity sha512-uRdSdu1oA1rncCQL7sCj8vSyZkgtL7faaw9Tc9rZ3mGgraQ7+Pdx7w5mnOSF3gw9ZNG6oc+KXfkon3bKuROm0g==
+
+uevent@~2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/uevent/-/uevent-2.0.0.tgz#83d3a27dc746f0e0c98db3ca1c850ffe4aef4993"
+  integrity sha512-UWXwwdYnrc/q2AibFqZpq77aKl+uOQdmAZ4SZf4B8kG1Y3eDFGiYqfZ4kaiQZ3jxZDX8XgDm84AAcIWeGu63Zw==
 
 uglify-es@^3.3.4:
   version "3.3.9"

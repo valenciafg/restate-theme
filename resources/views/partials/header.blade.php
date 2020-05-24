@@ -1,5 +1,6 @@
 @php
   $settings = new  App\Controllers\Setting();
+  $all_settings = $settings->getAllSettings();
   $menu = new App\Controllers\Menu();
 
   $logo = $settings->getWebsitePrimaryLogo();
@@ -18,19 +19,37 @@
           </li>
         @endforeach
         </ul>
-        <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">
-            <li class="nav-item">
-              <a class="nav-link" href="">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
+        <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap navbar-toratto-calltoaction">
+          @if (!empty($all_settings['phone']))
+          @php
+            $clean_phone = str_replace("(", "", $all_settings['phone']);
+            $clean_phone = str_replace(")", "", $clean_phone);
+            $clean_phone = str_replace(" ", "", $clean_phone);
+            $clean_phone = str_replace("+", "", $clean_phone);
+          @endphp
+          <li class="nav-item">
+            <a href="tel:{{$clean_phone}}">
+              <i class="fas fa-phone-alt"></i> {{$all_settings['phone']}}
+            </a>
+          </li>
+          @endif
+          @if (!empty($all_settings['whatsapp']))
+          @php
+          $clean_whatsapp = str_replace("(", "", $all_settings['whatsapp']);
+          $clean_whatsapp = str_replace(")", "", $clean_whatsapp);
+          $clean_whatsapp = str_replace(" ", "", $clean_whatsapp);
+          $clean_whatsapp = str_replace("+", "", $clean_whatsapp);
+          @endphp
+          <li class="nav-item">
+            <a href="https://wa.me/{{$clean_whatsapp}}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </li>
+          @endif
+          <li class="nav-item">
+            <a class="btn btn-outline-success btn-sm" href="#" role="button">
+            Cotiza Aquí
+            </a>
+          </li>
         </ul>
     </div>
   </nav>
-
 </header>

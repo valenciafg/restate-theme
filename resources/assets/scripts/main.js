@@ -1,8 +1,14 @@
 // import external dependencies
 import 'jquery';
-import 'owl.carousel';
+import 'owl.carousel/dist/owl.carousel';
 import 'vegas/dist/vegas';
 import 'slick-carousel/slick/slick.min';
+import 'three/build/three';
+import 'uevent';
+import 'photo-sphere-viewer/dist/photo-sphere-viewer';
+//  import 'photoswipe/dist/photoswipe';
+//  import 'photoswipe/dist/photoswipe-ui-default';
+//  import '@fancyapps/fancybox';
 // import then needed Font Awesome functionality
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 // import the Facebook and Twitter icons

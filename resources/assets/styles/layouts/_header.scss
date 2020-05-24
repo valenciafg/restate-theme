@@ -25,5 +25,32 @@
         }
       }
     }
+
+    .navbar-toratto-calltoaction {
+      color: $theme-color-green;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      .nav-item {
+        a {
+          color: inherit;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+
+        a.btn.btn-outline-success {
+          font-size: 1.2rem;
+          font-weight: 600;
+          border-color: $theme-color-green;
+
+          &:hover {
+            border-color: #fff;
+            background-color: $theme-color-green;
+          }
+        }
+      }
+    }
   }
 }

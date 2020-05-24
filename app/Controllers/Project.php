@@ -153,6 +153,8 @@ class Project extends Controller
                 $outside_photos = get_post_meta($id, 'restate_project_outside_photos', false);
                 $outside_photos = $this->getProjectGallery($outside_photos);
                 $gallery  = $this->getFullGallery(array_merge($inside_photos, $outside_photos));
+                $panoramic_photo = get_post_meta($id, "restate_project_panoramic_photo");
+                $panoramic_photo = $this->getProjectFile($panoramic_photo);
                 $brochures_files = get_post_meta($id, 'restate_project_brochure_file', false);
                 $brochures_files = $this->getProjectFile($brochures_files);
                 $terms_and_conditions = get_post_meta($id, "restate_project_information_conditions", true);
@@ -178,6 +180,7 @@ class Project extends Controller
                     'coordinate_y'          => $coordinate_y,
                     'inside_photos'         => $inside_photos,
                     'outside_photos'        => $outside_photos,
+                    'panoramic_photo'       => $panoramic_photo,
                     'gallery'               => $gallery,
                     'brochure'              => $brochures_files,
                     'terms_and_conditions'  => $terms_and_conditions,
@@ -213,6 +216,8 @@ class Project extends Controller
         $outside_photos = get_post_meta($id, 'restate_project_outside_photos', false);
         $outside_photos = $this->getProjectGallery($outside_photos);
         $gallery  = $this->getFullGallery(array_merge($inside_photos, $outside_photos));
+        $panoramic_photo = get_post_meta($id, "restate_project_panoramic_photo");
+        $panoramic_photo = $this->getProjectFile($panoramic_photo);
         $brochures_files = get_post_meta($id, 'restate_project_brochure_file', false);
         $brochures_files = $this->getProjectFile($brochures_files);
         $terms_and_conditions = get_post_meta($id, "restate_project_information_conditions", true);
@@ -237,6 +242,7 @@ class Project extends Controller
             'coordinate_x'          => $coordinate_x,
             'coordinate_y'          => $coordinate_y,
             'inside_photos'         => $inside_photos,
+            'panoramic_photo'       => $panoramic_photo,
             'gallery'               => $gallery,
             'outside_photos'        => $outside_photos,
             'brochure'              => $brochures_files,

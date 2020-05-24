@@ -13,9 +13,11 @@
                 <div class="card-body border-bottom pb-3">
                     <h5 class="card-title">
                         {{$project['title']}}
-                        <a href="#" class="float-right d-inline-flex" style="margin-left: 5px;">
+                        @if (!empty($project['logo']))
+                        <a href="{{$project['url']}}" class="float-right d-inline-flex" style="margin-left: 5px;">
                             <img src="{{$project['logo']}}" width="90px" height="60px">
                         </a>
+                        @endif
                     </h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
