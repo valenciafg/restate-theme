@@ -2,6 +2,32 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.home {
-  background-color: #000;
+.toratto-section-title {
+  color: #6cc24a;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #004c97;
+}
+
+.toratto-section-background-01 {
+  background: url(../../images/trama01.png) 0 0 repeat;
+}
+
+.toratto-section-background-02 {
+  background: url(../../images/trama02.png) 0 0 repeat;
+}
+
+.toratto-section-background-03 {
+  background: url(../../images/trama03.png) 0 0 repeat;
+}
+
+@mixin general_text_icon() {
+  color: $theme-color-green;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  font-size: 25px;
+
+  .far,
+  .fas {
+    color: $theme-color-blue;
+  }
 }

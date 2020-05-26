@@ -1,3 +1,14 @@
 #panoramic-viewer {
   height: 50vh;
 }
+
+.toratto-project-info {
+  margin: 5px;
+  text-align: center;
+
+  @include general_text_icon();
+}
+
+.toratto-project-common-areas {
+  @include general_text_icon();
+}

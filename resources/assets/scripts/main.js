@@ -6,6 +6,8 @@ import 'slick-carousel/slick/slick.min';
 import 'three/build/three';
 import 'uevent';
 import 'photo-sphere-viewer/dist/photo-sphere-viewer';
+import '@fancyapps/fancybox/dist/jquery.fancybox';
+import 'ionicons';
 //  import 'photoswipe/dist/photoswipe';
 //  import 'photoswipe/dist/photoswipe-ui-default';
 //  import '@fancyapps/fancybox';

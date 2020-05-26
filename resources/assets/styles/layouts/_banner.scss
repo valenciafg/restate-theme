@@ -152,10 +152,6 @@
   background: transparent;
 }
 
-section {
-  display: none;
-}
-
 @media screen and (max-width: 575px) {
   .owl-carousel .owl-nav {
     top: 5%;
@@ -164,5 +160,34 @@ section {
   .owl-carousel .owl-nav svg {
     width: 24px;
     height: 24px;
+  }
+}
+
+.vegas-content {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+
+  .toratto-project-banner-container {
+    .toratto-project-banner-title {
+      color: #fff;
+      font-size: 100px;
+    }
+
+    .toratto-project-banner-subtitle {
+      color: $theme-color-green;
+      font-size: 35px;
+      text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+
+      .stage {
+        display: inline;
+        float: right;
+      }
+
+      .fas {
+        color: $theme-color-blue;
+      }
+    }
   }
 }
