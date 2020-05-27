@@ -2,11 +2,63 @@
   height: 50vh;
 }
 
+.toratto-project-banner-excerpt {
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+  transition-delay: 0.35s;
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes toratto-project-banner-excerpt {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes toratto-project-banner-excerpt {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
 .toratto-project-info {
   margin: 5px;
   text-align: center;
 
   @include general_text_icon();
+
+  .row {
+    .col {
+      border-width: 2px;
+      border-color: $theme-color-blue;
+      border-style: dashed;
+      border-radius: 15px;
+      margin: 1px;
+    }
+  }
 }
 
 .toratto-project-common-areas {

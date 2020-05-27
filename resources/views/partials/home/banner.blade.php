@@ -12,7 +12,7 @@
   $location = $categories['location'];
   $stage = $categories['stage'];
   @endphp
-  <div class="owl-slide d-flex align-items-center cover" style="background-image: url({{$project['main_image']}});">
+  <div class="owl-slide d-flex align-items-center cover" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{$project['main_image']}});">
     <div class="container">
       <div class="row justify-content-center justify-content-md-start">
         <div class="col-10 col-md-6 static">
@@ -34,7 +34,7 @@
             </div>
             @endif
             <div class="owl-slide-animated owl-slide-subtitle-action">
-              <a class="btn btn-outline-success owl-slide-animated" href="{{$project['url']}}" role="button">
+              <a class="btn btn-toratto-green owl-slide-animated" href="{{$project['url']}}" role="button">
               Ver proyecto
               </a>
               @if (!empty($stage))

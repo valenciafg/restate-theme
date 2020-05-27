@@ -17,6 +17,7 @@
 @include('partials.home.banner')
 @include('partials.home.popup')
 @include('partials.home.posts')
+@include('partials.home.promotion')
 {{--
 @section('content')
   @while(have_posts()) @php the_post() @endphp

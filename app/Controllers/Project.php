@@ -131,9 +131,13 @@ class Project extends Controller
             foreach ($posts as $post) {
                 $id = $post->ID;
                 $title = get_the_title($id);
+                $excerpt = get_the_excerpt($id);
                 $url = get_permalink($id);
                 $main_image = wp_get_attachment_url(get_post_thumbnail_id($id));
                 $main_image = $main_image ? $main_image : get_stylesheet_directory_uri()."/assets/images/departamento_default.jpg";
+                $facade = get_post_meta($id, "restate_project_facade_image");
+                $facade = $this->getProjectFile($facade);
+                $facade = $facade !== "" ? $facade : get_stylesheet_directory_uri()."/assets/images/default_facade.jpg";
                 $categories = $this->getProjectCategories($id);
                 $logo = get_post_meta($id, "restate_project_logo_image");
                 $logo = $this->getProjectFile($logo);
@@ -163,9 +167,11 @@ class Project extends Controller
                 $data[] = [
                     'id'                    => $id,
                     'title'                 => $title,
+                    'excerpt'               => $excerpt,
                     'url'                   => $url,
                     'logo'                  => $logo,
                     'main_image'            => $main_image,
+                    'facade'                => $facade,
                     'categories'            => $categories,
                     'slogan'                => $slogan,
                     'show_banner'           => $show_banner,
@@ -194,9 +200,13 @@ class Project extends Controller
     public function getSingleProject($id) {
         $data = array();
         $title = get_the_title($id);
+        $excerpt = get_the_excerpt($id);
         $url = get_permalink($id);
         $main_image = wp_get_attachment_url(get_post_thumbnail_id($id));
         $main_image = $main_image ? $main_image : get_stylesheet_directory_uri()."/assets/images/departamento_default.jpg";
+        $facade = get_post_meta($id, "restate_project_facade_image");
+        $facade = $this->getProjectFile($facade);
+        $facade = $facade !== "" ? $facade : get_stylesheet_directory_uri()."/assets/images/default_facade.jpg";
         $categories = $this->getProjectCategories($id);
         $logo = get_post_meta($id, "restate_project_logo_image");
         $logo = $this->getProjectFile($logo);
@@ -226,9 +236,11 @@ class Project extends Controller
         $data = [
             'id'                    => $id,
             'title'                 => $title,
+            'excerpt'               => $excerpt,
             'url'                   => $url,
             'logo'                  => $logo,
             'main_image'            => $main_image,
+            'facade'                => $facade,
             'categories'            => $categories,
             'slogan'                => $slogan,
             'show_banner'           => $show_banner,

@@ -44,6 +44,11 @@ class Setting extends Controller
         return $this->getAttachmentUrl($logo_id);
     }
 
+    public function getWebsitePromotionImage() {
+        $logo_id = $this->getWebsiteLogoId('real_estate_setting_promotion_image');
+        return $this->getAttachmentUrl($logo_id);
+    }
+
     public  function getAllSettings(){
         $config_data = [];
         $settings = $this->settings;
@@ -52,6 +57,8 @@ class Setting extends Controller
             'secundary_logo'    => $this->getWebsiteSecundaryLogo(),
             'show_popup'        => (isset($settings['real_estate_setting_show_popup'])?$settings['real_estate_setting_show_popup'][0]:''),
             'popup_image'       => $this->getWebsitePopupImage(),
+            'show_promotion'    => (isset($settings['real_estate_setting_show_promotion'])?$settings['real_estate_setting_show_promotion'][0]:''),
+            'promotion_image'   => $this->getWebsitePromotionImage(),
             'description'       => (isset($settings['real_estate_setting_main_description'])?$settings['real_estate_setting_main_description']:''),
             'address'           => (isset($settings['real_estate_setting_main_address'])?$settings['real_estate_setting_main_address']:''),
             'postal_code'       => (isset($settings['real_estate_setting_main_postal_code'])?$settings['real_estate_setting_main_postal_code']:''),
