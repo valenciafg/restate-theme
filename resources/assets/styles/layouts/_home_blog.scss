@@ -1,0 +1,33 @@
+.toratto-section-home-blog {
+  padding: 20px 0 20px 0;
+  color: $theme-color-blue;
+
+  .toratto-home-blog-title {
+    border: none;
+
+    .card-title {
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  .card-footer {
+    border-top: none;
+    background-color: transparent;
+  }
+
+  a.btn.btn-toratto-green {
+    color: $theme-color-blue;
+    width: 100%;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .toratto-home-blog-post {
+    .card-title {
+      font-weight: bold;
+    }
+  }
+}

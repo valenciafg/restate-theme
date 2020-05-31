@@ -64,3 +64,44 @@
 .toratto-project-common-areas {
   @include general_text_icon();
 }
+
+.toratto-project-location {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+
+  .card {
+    border: 1px solid $theme-color-green;
+    color: $theme-color-green;
+    background: rgba(255, 255, 255, 0.9);
+
+    .card-title {
+      color: $theme-color-blue;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .fas {
+      color: $theme-color-blue;
+    }
+
+    .card-footer {
+      background-color: transparent;
+      border-top: none;
+
+      a.btn.btn-toratto-green {
+        color: $theme-color-blue;
+        width: 100%;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -83,7 +83,6 @@ class Project extends Controller
         }
         $type = [];
         $terms = get_the_terms($id, 'res_project_type');
-        print_r($terms);
         if($terms) {
             foreach ($terms as $t) {
                 $type[] = $t->name;
@@ -130,68 +129,7 @@ class Project extends Controller
             $posts = $this->posts;
             foreach ($posts as $post) {
                 $id = $post->ID;
-                $title = get_the_title($id);
-                $excerpt = get_the_excerpt($id);
-                $url = get_permalink($id);
-                $main_image = wp_get_attachment_url(get_post_thumbnail_id($id));
-                $main_image = $main_image ? $main_image : get_stylesheet_directory_uri()."/assets/images/departamento_default.jpg";
-                $facade = get_post_meta($id, "restate_project_facade_image");
-                $facade = $this->getProjectFile($facade);
-                $facade = $facade !== "" ? $facade : get_stylesheet_directory_uri()."/assets/images/default_facade.jpg";
-                $categories = $this->getProjectCategories($id);
-                $logo = get_post_meta($id, "restate_project_logo_image");
-                $logo = $this->getProjectFile($logo);
-                $slogan = get_post_meta($id, "restate_project_slogan", true);
-                $show_banner = get_post_meta($id, "restate_project_show_banner", true);
-                $delivery_date = get_post_meta($id, "restate_project_delivery_date", true);
-                $starting_price_pen = get_post_meta($id, "restate_project_starting_price_pen", true);
-                $starting_price_usd = get_post_meta($id, "restate_project_starting_price_usd", true);
-                $max_rooms = get_post_meta($id, "restate_project_max_rooms", true);
-                $min_area = get_post_meta($id, "restate_project_min_area", true);
-                $max_area = get_post_meta($id, "restate_project_max_area", true);
-                $address = get_post_meta($id, "restate_project_address", true);
-                $coordinate_x = get_post_meta($id, "restate_project_coordinate_x", true);
-                $coordinate_y = get_post_meta($id, "restate_project_coordinate_y", true);
-                $inside_photos = get_post_meta($id, 'restate_project_inside_photos', false);
-                $inside_photos = $this->getProjectGallery($inside_photos);
-                $outside_photos = get_post_meta($id, 'restate_project_outside_photos', false);
-                $outside_photos = $this->getProjectGallery($outside_photos);
-                $gallery  = $this->getFullGallery(array_merge($inside_photos, $outside_photos));
-                $panoramic_photo = get_post_meta($id, "restate_project_panoramic_photo");
-                $panoramic_photo = $this->getProjectFile($panoramic_photo);
-                $brochures_files = get_post_meta($id, 'restate_project_brochure_file', false);
-                $brochures_files = $this->getProjectFile($brochures_files);
-                $terms_and_conditions = get_post_meta($id, "restate_project_information_conditions", true);
-                $models = get_post_meta($id, "restate_project_models");
-                $models = $this->getProjectModels($models[0]);
-                $data[] = [
-                    'id'                    => $id,
-                    'title'                 => $title,
-                    'excerpt'               => $excerpt,
-                    'url'                   => $url,
-                    'logo'                  => $logo,
-                    'main_image'            => $main_image,
-                    'facade'                => $facade,
-                    'categories'            => $categories,
-                    'slogan'                => $slogan,
-                    'show_banner'           => $show_banner,
-                    'delivery_date'         => $delivery_date,
-                    'starting_price_pen'    => $starting_price_pen,
-                    'starting_price_usd'    => $starting_price_usd,
-                    'max_rooms'             => $max_rooms,
-                    'min_area'              => $min_area,
-                    'max_area'              => $max_area,
-                    'address'               => $address,
-                    'coordinate_x'          => $coordinate_x,
-                    'coordinate_y'          => $coordinate_y,
-                    'inside_photos'         => $inside_photos,
-                    'outside_photos'        => $outside_photos,
-                    'panoramic_photo'       => $panoramic_photo,
-                    'gallery'               => $gallery,
-                    'brochure'              => $brochures_files,
-                    'terms_and_conditions'  => $terms_and_conditions,
-                    'models'                => $models
-                ];
+                $data[] = $this->getSingleProject($id);
             }
         }
         return $data;
@@ -221,6 +159,8 @@ class Project extends Controller
         $address = get_post_meta($id, "restate_project_address", true);
         $coordinate_x = get_post_meta($id, "restate_project_coordinate_x", true);
         $coordinate_y = get_post_meta($id, "restate_project_coordinate_y", true);
+        $gmap_image = get_post_meta($id, "restate_project_gmap_image");
+        $gmap_image = $this->getProjectFile($gmap_image);
         $inside_photos = get_post_meta($id, 'restate_project_inside_photos', false);
         $inside_photos = $this->getProjectGallery($inside_photos);
         $outside_photos = get_post_meta($id, 'restate_project_outside_photos', false);
@@ -228,9 +168,14 @@ class Project extends Controller
         $gallery  = $this->getFullGallery(array_merge($inside_photos, $outside_photos));
         $panoramic_photo = get_post_meta($id, "restate_project_panoramic_photo");
         $panoramic_photo = $this->getProjectFile($panoramic_photo);
+        $video = get_post_meta($id, "restate_project_promotional_video", true);
         $brochures_files = get_post_meta($id, 'restate_project_brochure_file', false);
         $brochures_files = $this->getProjectFile($brochures_files);
         $terms_and_conditions = get_post_meta($id, "restate_project_information_conditions", true);
+        $advisor_fullname = get_post_meta($id, 'restate_project_advisor_fullname', true);
+        $advisor_ws_number = get_post_meta($id, 'restate_project_advisor_whatsapp_number', true);
+        $advisor_email = get_post_meta($id, 'restate_project_advisor_email', true);
+        $advisor_gender = get_post_meta($id, 'restate_project_advisor_gender', true);
         $models = get_post_meta($id, "restate_project_models");
         $models = $this->getProjectModels($models[0]);
         $data = [
@@ -253,12 +198,18 @@ class Project extends Controller
             'address'               => $address,
             'coordinate_x'          => $coordinate_x,
             'coordinate_y'          => $coordinate_y,
+            'gmap_image'            => $gmap_image,
             'inside_photos'         => $inside_photos,
             'panoramic_photo'       => $panoramic_photo,
+            'video'                 => $video,
             'gallery'               => $gallery,
             'outside_photos'        => $outside_photos,
             'brochure'              => $brochures_files,
             'terms_and_conditions'  => $terms_and_conditions,
+            'advisor_fullname'      => $advisor_fullname,
+            'advisor_ws_number'     => $advisor_ws_number,
+            'advisor_email'         => $advisor_email,
+            'advisor_gender'        => $advisor_gender,
             'models'                => $models
         ];
         return $data;

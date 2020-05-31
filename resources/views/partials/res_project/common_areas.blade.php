@@ -2,7 +2,7 @@
     $areas = !empty($project['categories']['common_areas']) ? $project['categories']['common_areas'] : [];
 @endphp
 @if (!empty($areas))
-<section class="toratto-project-common-areas toratto-section-background-03">
+<section class="toratto-project-common-areas toratto-section-background-00">
     <div class="container">
         <h1 class="toratto-section-title">Nuestras Áreas Comunes</h1>
         <div class="col-12 container">

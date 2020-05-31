@@ -1,3 +1,20 @@
+@mixin center($extend: true) {
+  @if $extend {
+    @extend %center;
+  }
+
+  @else {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+%center {
+  @include center($extend: false);
+}
+
 .banner .nav li {
   @extend .nav-item;
 }
@@ -9,17 +26,18 @@
 .navbar-toratto {
   background-color: transparent;
   color: #fff;
+  text-transform: uppercase;
 
-  .navbar-collapse.collapse.justify-content-between.align-items-center {
+  .navbar-collapse.align-items-center {
     .navbar-nav-toratto-center {
-      .nav-item.menu-item {
-        a.nav-link.hvr-underline-reveal {
+      .nav-item {
+        a.nav-link {
           color: #fff;
           font-size: 1.2rem;
           font-weight: 600;
         }
 
-        a.nav-link.hvr-underline-reveal:hover {
+        a.nav-link:hover {
           color: $theme-color-green;
           border-bottom: 2px solid $theme-color-green;
         }
@@ -27,7 +45,7 @@
     }
 
     .navbar-toratto-calltoaction {
-      color: $theme-color-green;
+      color: #fff;
       font-size: 1.2rem;
       font-weight: 600;
 
@@ -35,23 +53,113 @@
         a {
           color: inherit;
 
+          .fas,
+          .fab {
+            color: $theme-color-green;
+          }
+
           .fab.fa-whatsapp {
             font-size: 1.6em;
           }
 
           &:hover {
-            color: #fff;
+            color: $theme-color-green;
           }
         }
 
-        a.btn.btn-outline-success {
+        a.btn-toratto-green {
           font-size: 1.2rem;
           font-weight: 600;
           border-color: $theme-color-green;
 
           &:hover {
-            border-color: #fff;
+            color: #fff;
             background-color: $theme-color-green;
+            cursor: pointer;
+
+            &::before {
+              transform: translateX(300px)  skewX(-15deg);
+              opacity: 0.6;
+              transition: 0.7s;
+            }
+
+            &::after {
+              transform: translateX(300px) skewX(-15deg);
+              opacity: 1;
+              transition: 0.7s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-toratto.scrolled {
+  background-color: #fff;
+  color: $theme-color-blue;
+  text-transform: uppercase;
+
+  .navbar-collapse.align-items-center {
+    .navbar-nav-toratto-center {
+      .nav-item {
+        a.nav-link {
+          color: $theme-color-blue;
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        a.nav-link:hover {
+          color: $theme-color-green;
+          border-bottom: 2px solid $theme-color-green;
+        }
+      }
+    }
+
+    .navbar-toratto-calltoaction {
+      color: $theme-color-blue;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      .nav-item {
+        a {
+          color: inherit;
+
+          .fas,
+          .fab {
+            color: $theme-color-green;
+          }
+
+          .fab.fa-whatsapp {
+            font-size: 1.6em;
+          }
+
+          &:hover {
+            color: $theme-color-green;
+          }
+        }
+
+        a.btn-toratto-green {
+          font-size: 1.2rem;
+          font-weight: 600;
+          border-color: $theme-color-green;
+
+          &:hover {
+            color: #fff;
+            background-color: $theme-color-green;
+            cursor: pointer;
+
+            &::before {
+              transform: translateX(300px)  skewX(-15deg);
+              opacity: 0.6;
+              transition: 0.7s;
+            }
+
+            &::after {
+              transform: translateX(300px) skewX(-15deg);
+              opacity: 1;
+              transition: 0.7s;
+            }
           }
         }
       }

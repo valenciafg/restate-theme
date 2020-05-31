@@ -1,5 +1,5 @@
 
-<div class="toratto-project-info">
+<section class="toratto-project-info">
   <div class="row">
     @if (!empty($project['delivery_date']))
     <div class="col">
@@ -28,4 +28,4 @@
     </div>
     @endif
   </div>
-</div>
+</section>

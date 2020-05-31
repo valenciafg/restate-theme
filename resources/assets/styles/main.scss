@@ -9,6 +9,7 @@
 @import "~@fancyapps/fancybox/dist/jquery.fancybox.css";
 //@import "~@fancyapps/fancybox/dist/jquery.fancybox.css";
 @import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~floating-whatsapp/floating-wpp.min.css";
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
@@ -37,3 +38,4 @@
 @import "layouts/posts";
 @import "layouts/gallery";
 @import "layouts/tinymce";
+@import "layouts/home_blog";

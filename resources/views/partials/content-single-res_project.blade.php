@@ -13,4 +13,7 @@ echo"</pre>";
 @include('partials.res_project.common_areas')
 @include('partials.res_project.gallery')
 @include('partials.res_project.panoramic')
+@include('partials.res_project.promotional_video')
 @include('partials.res_project.models')
+@include('partials.res_project.location')
+@include('partials.res_project.whatsapp')

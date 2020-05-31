@@ -68,14 +68,9 @@
 }
 
 .owl-carousel .owl-slide-subtitle-location {
-  color: $theme-color-green;
   font-size: 35px;
 
-  @include text_shadow();
-
-  .fas {
-    color: $theme-color-blue;
-  }
+  @include toratto_text_icon();
 }
 
 .owl-carousel .owl-slide-subtitle-location.is-transitioned {
@@ -83,18 +78,13 @@
 }
 
 .owl-carousel .owl-slide-subtitle-action {
-  color: $theme-color-green;
   font-size: 35px;
 
-  .fas {
-    color: $theme-color-blue;
-  }
+  @include toratto_text_icon();
 
   .stage {
     display: inline;
     float: right;
-
-    @include text_shadow();
   }
 }
 
@@ -176,17 +166,13 @@
     }
 
     .toratto-project-banner-subtitle {
-      color: $theme-color-green;
       font-size: 35px;
-      text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+
+      @include toratto_text_icon();
 
       .stage {
         display: inline;
         float: right;
-      }
-
-      .fas {
-        color: $theme-color-blue;
       }
     }
   }

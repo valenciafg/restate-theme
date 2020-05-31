@@ -1,4 +1,6 @@
 .toratto-section-home-project {
+  margin: 15px;
+
   .card-img {
     filter: brightness(70%);
   }
@@ -6,4 +8,35 @@
   .card-title {
     color: #fff;
   }
+
+  .toratto-project-card {
+    min-height: 500px;
+    padding: 30px;
+    font-weight: bold;
+
+    .card-body {
+      .card-text {
+        color: $theme-color-green;
+
+        .far,
+        .fas {
+          color: $theme-color-blue;
+        }
+      }
+    }
+
+    .card-footer {
+      background-color: transparent;
+      border-top: none;
+      padding: 0;
+
+      .btn-toratto-green {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.toratto-blog-post {
+  margin-top: 75px;
 }
