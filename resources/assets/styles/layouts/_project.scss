@@ -45,18 +45,30 @@
 }
 
 .toratto-project-info {
-  margin: 5px;
-  text-align: center;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  background-color: $theme-color-green;
+  color: #fff;
 
-  @include general_text_icon();
+  .toratto-project-info-icon {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
-  .row {
-    .col {
-      border-width: 2px;
-      border-color: $theme-color-blue;
-      border-style: dashed;
-      border-radius: 15px;
-      margin: 1px;
+    .far,
+    .fas {
+      font-size: 2em;
+      color: $theme-color-blue;
+    }
+  }
+
+  .toratto-project-info-content {
+    text-align: center;
+
+    .toratto-project-info-content-title {
+      font-weight: bold;
+      font-size: 1.5em;
     }
   }
 }
@@ -101,6 +113,26 @@
         &:hover {
           color: #fff;
         }
+      }
+    }
+  }
+}
+
+.toratto-section-video {
+  .card {
+    border: none;
+
+    .card-body {
+      display: flex;
+      align-items: center;
+
+      .card-title {
+        text-align: center;
+        font-weight: bold;
+        color: $theme-color-blue;
+        border: 1px solid #6cc24a;
+        padding: 10px;
+        border-radius: 5px;
       }
     }
   }

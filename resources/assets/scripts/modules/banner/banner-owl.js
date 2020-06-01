@@ -3,14 +3,14 @@ import 'owl.carousel';
 
 export default {
     initOwl() {
-        $('.owl-carousel').on('initialized.owl.carousel', () => {
+        $('.toratto-section-home-banner.owl-carousel').on('initialized.owl.carousel', () => {
             setTimeout(() => {
                 $('.owl-item.active .owl-slide-animated').addClass('is-transitioned');
                 $('section').show();
             }, 200);
         });
 
-        const owlCarousel = jQuery('.owl-carousel').owlCarousel({
+        const owlCarousel = jQuery('.toratto-section-home-banner.owl-carousel').owlCarousel({
             items:1,
             loop:true,
             //  margin:10,

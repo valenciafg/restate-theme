@@ -19,7 +19,7 @@ $location = !empty($project['categories']['location']) ? $project['categories'][
         <div class="row">
             <div class="card col-md-4 col-sm-12">
                 <div class="card-body">
-                    <h4 class="card-title">Ubícanos en</h4>
+                    <h4 class="card-title">Visítanos en</h4>
                     <p class="card-text">
                         <i class="fas fa-map-marker-alt"></i> {{$address}}
                     </p>

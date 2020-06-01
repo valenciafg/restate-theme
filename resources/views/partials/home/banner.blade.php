@@ -1,11 +1,8 @@
 @php 
   $project = new  App\Controllers\Project();
   $projects = $project->getBannerProjects();
-  //  echo "<pre>";
-  //  print_r($projects);
-  //  echo "</pre>";
 @endphp
-<div class="owl-carousel owl-theme">
+<section class="toratto-section-home-banner owl-carousel owl-theme">
 @foreach ($projects as $project)
   @php
   $categories = $project['categories'];
@@ -50,4 +47,4 @@
     </div>
   </div>
 @endforeach
-</div>
+</section>

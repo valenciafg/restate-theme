@@ -10,24 +10,34 @@ body {
 }
 
 .toratto-section-background-00 {
-  background: url(../../images/trama00.png) 0 0 repeat;
+  background: url(../images/trama00.png) 0 0 repeat;
 }
 
 .toratto-section-background-01 {
-  background: url(../../images/trama01.png) 0 0 repeat;
+  background: url(../images/trama01.png) 0 0 repeat;
 }
 
 .toratto-section-background-02 {
-  background: url(../../images/trama02.png) 0 0 repeat;
+  background: url(../images/trama02.png) 0 0 repeat;
 }
 
 .toratto-section-background-03 {
-  background: url(../../images/trama03.png) 0 0 repeat;
+  background: url(../images/trama03.png) 0 0 repeat;
 }
 
 @mixin general_text_icon() {
   color: $theme-color-green;
   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  font-size: 25px;
+
+  .far,
+  .fas {
+    color: $theme-color-blue;
+  }
+}
+
+@mixin general_text_icon_simple() {
+  color: $theme-color-green;
   font-size: 25px;
 
   .far,
