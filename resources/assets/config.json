@@ -10,7 +10,7 @@
   },
   "publicPath": "/dev/wp-content/themes/restate-theme",
   "devUrl": "http://localhost/dev/",
-  "proxyUrl": "http://localhost:3000/dev",
+  "proxyUrl": "http://localhost:30001",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",
