@@ -7,11 +7,6 @@
   $menu = wp_get_nav_menu_object($primary_menu_id);
   $menu_items = wp_get_nav_menu_items($menu->term_id);
 @endphp
-<footer class="content-info">
-  <div class="container">
-    @php dynamic_sidebar('sidebar-footer') @endphp
-  </div>
-</footer>
 <footer>
   <div class="footer-top">
     <div class="container">

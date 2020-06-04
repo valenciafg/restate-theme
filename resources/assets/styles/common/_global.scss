@@ -3,10 +3,14 @@ body {
 }
 
 .toratto-section-title {
-  color: #6cc24a;
+  line-height: 1;
+  color: rgba(232, 232, 232, 0.5);
+  font-family: "CircularStd-Black", sans-serif;
+  font-weight: bold;
+  font-size: 140px;
   text-align: center;
-  letter-spacing: 0.1em;
-  text-shadow: -1px -1px 1px #111, 2px 2px 1px #004c97;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .toratto-section-background-00 {

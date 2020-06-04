@@ -1,8 +1,5 @@
 @php
     $gallery = $project['gallery'];
-@endphp
-@if (!empty($gallery))
-@php
     $inside = $project['inside_photos'];
     $outside = $project['outside_photos'];
     $col_size = 12;
@@ -10,9 +7,10 @@
         $col_size = 6;
     }
 @endphp
-<section class="toratto-project-gallery toratto-section-background-01">
+@if (!empty($inside) || !empty($outside)) 
+<section class="toratto-project-gallery toratto-section-background-00">
     <div class="">
-        <h1 class="toratto-section-title">Conoce nuestros espacios</h1>
+        <h1 class="toratto-section-title">Galería</h1>
         <div class="row" style="padding: 15px;">
             @if (!empty($inside))
             <div class="carousel-gallery-inside col-md-{{$col_size}} col-sm-12">

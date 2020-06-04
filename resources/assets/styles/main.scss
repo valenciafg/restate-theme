@@ -23,6 +23,7 @@
 // @import "~some-node-module";
 
 /** Import theme styles */
+@import "common/fonts";
 @import "common/global";
 @import "components/buttons";
 @import "components/comments";
@@ -39,3 +40,4 @@
 @import "layouts/gallery";
 @import "layouts/tinymce";
 @import "layouts/home_blog";
+@import "layouts/models";

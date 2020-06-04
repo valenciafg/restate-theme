@@ -1,5 +1,5 @@
 .toratto-section-home-project {
-  margin: 15px;
+  margin: 0;
 
   .card-img {
     filter: brightness(70%);
@@ -32,6 +32,37 @@
 
       .btn-toratto-green {
         width: 100%;
+      }
+    }
+  }
+
+  .card.toratto-project-building {
+    height: 500px;
+
+    img.card-img.img-hover-zoom {
+      transform-origin: 65% 75%;
+      transition: transform 1s, filter 0.5s ease-out;
+      height: inherit;
+    }
+
+    &:hover img.card-img.img-hover-zoom {
+      transform: scale(1.06);
+    }
+
+    .card-img-overlay {
+      .card-title {
+        text-align: center;
+      }
+
+      .card-text {
+        color: $theme-color-green;
+        font-size: 1.7em;
+        margin-top: 30px;
+
+        .far,
+        .fas {
+          color: $theme-color-blue;
+        }
       }
     }
   }

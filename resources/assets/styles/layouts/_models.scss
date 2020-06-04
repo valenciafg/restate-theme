@@ -1,0 +1,67 @@
+.toratto-section-model {
+  background-color: $theme-color-green;
+
+  .toratto-section-model-title {
+    text-align: center;
+    color: #fff;
+    margin: 50px 0 30px 0;
+  }
+
+  .toratto-section-model-carousel {
+    .owl-nav {
+      text-align: center;
+
+      .owl-prev,
+      .owl-next {
+        font-size: 60px;
+        font-weight: bold;
+        color: #fff;
+        margin: 20px;
+      }
+    }
+  }
+
+  .toratto-section-model-form {
+    p.h2.text-center {
+      color: $theme-color-blue;
+    }
+
+    .toratto-quotation-form-subtitle {
+      color: $theme-color-blue;
+      font-weight: bold;
+    }
+
+    .form-control.form-control-lg {
+      background-color: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+
+      &::placeholder {
+        color: #fff;
+        font-size: 1em;
+      }
+    }
+
+    .form-check {
+      color: #fff;
+    }
+
+    .input-group-prepend {
+      .input-group-text {
+        background-color: $theme-color-green;
+        color: $theme-color-blue;
+      }
+    }
+
+    .btn.btn-toratto-green.btn-block {
+      color: #fff;
+      border-color: #fff;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $theme-color-blue;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}

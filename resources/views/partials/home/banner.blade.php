@@ -23,7 +23,7 @@
               @if (!empty($project['logo']))
               <img src="{{$project['logo']}}" width="30px" height="60px">
               @endif
-              {{$project['title']}}
+              {{strtoupper($project['title'])}}
             </div>
             @if (!empty($project['slogan']))
             <div class="owl-slide-animated owl-slide-subtitle">

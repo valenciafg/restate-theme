@@ -4,7 +4,7 @@
     <div class="row">
       @if (!empty($project['delivery_date']))
       <div class="col-md-3 col-sm-6">
-        <div class="row">
+        <div class="row toratto-project-info-item">
           <div class="col-md-2 toratto-project-info-icon">
             <i class="far fa-calendar-alt"></i>
           </div>
@@ -21,7 +21,7 @@
       @endif
       @if (!empty($project['max_rooms']))
       <div class="col-md-3 col-sm-6">
-        <div class="row">
+        <div class="row toratto-project-info-item">
           <div class="col-md-2 toratto-project-info-icon">
             <i class="fas fa-bed"></i>
           </div>
@@ -38,7 +38,7 @@
       @endif
       @if (!empty($project['min_area']))
       <div class="col-md-3 col-sm-6">
-        <div class="row">
+        <div class="row toratto-project-info-item">
           <div class="col-md-2 toratto-project-info-icon">
             <i class="fas fa-ruler-combined"></i>
           </div>
@@ -58,7 +58,7 @@
       @endif
       @if (!empty($project['starting_price_usd']))
       <div class="col-md-3 col-sm-6">
-        <div class="row">
+        <div class="row toratto-project-info-item">
           <div class="col-md-2 toratto-project-info-icon">
             <i class="far fa-money-bill-alt"></i>
           </div>
