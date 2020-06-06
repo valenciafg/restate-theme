@@ -22,8 +22,8 @@
                 $facade = get_parent_theme_file_uri()."/dist/images/default_facade.jpg";
             }
             @endphp
-            <div class="col-md-4 col-sm-12">
-                <a href="{{$project['url']}}" class="card toratto-project-building">
+            <div class="col-md-4 col-sm-12 toratto-project-building-col">
+                <a href="{{$project['url']}}" class="card toratto-project-building-card">
                     <img class="card-img img-hover-zoom" src="{{$facade}}">
                     <div class="card-img-overlay">
                         <h2 class="card-title">
@@ -48,44 +48,9 @@
             @endforeach
         </div>
         <div class="row">
-            @foreach ($projects as $project)
-            @php
-            $categories = $project['categories'];
-            $location = $categories['location'];
-            $stage = $categories['stage'];
-            $facade = $project['facade'];
-            if(empty($facade)) {
-                $facade = get_parent_theme_file_uri()."/dist/images/default_facade.jpg";
-            }
-            @endphp
-            <div class="col-md-4 col-sm-12">
-                <div class="card toratto-project-card" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{$facade}}); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;">
-                    <div class="card-body"> 
-                        <h2 class="card-title">
-                            @if (!empty($project['logo']))
-                            <a href="{{$project['url']}}" class="d-inline-flex">
-                                <img src="{{$project['logo']}}" width="90px" height="60px">
-                            </a>
-                            @endif
-                            {{strtoupper($project['title'])}}
-                        </h2>
-                        @if (!empty($stage))
-                        <p class="card-text">
-                            <i class="fas fa-tag"></i> {{$stage[0]}}
-                        </p>
-                        @endif 
-                        @if (!empty($location))
-                        <p class="card-text">
-                            <i class="fas fa-map-marked-alt"></i> {{$location[0]}}
-                        </p>
-                        @endif
-                    </div>
-                    <div class="card-footer text-center"> 
-                        <a class="btn btn-toratto-green" href="{{$project['url']}}" target="_blank">Ver más detalles</a>
-                    </div>
-                </div>
+            <div class="col-md-12 col-sm-12 toratto-project-building-projects">
+                <a class="btn btn-toratto-green btn-block" href="#" target="_blank">Ver todos los proyectos</a>
             </div>
-            @endforeach
         </div>
     </div>
 </section>
