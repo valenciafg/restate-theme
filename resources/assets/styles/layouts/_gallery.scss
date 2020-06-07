@@ -81,71 +81,109 @@
   }
 }
 
-.toratto-main {
-  max-width: 800px;
-  width: 90vw;
-
-  /* display the anchor links in a grid */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 150px);
-  grid-auto-rows: 150px;
-
-  /* center the content horizontally & vertically */
-  justify-content: center;
-  align-content: center;
-  grid-auto-flow: dense;
-}
-
-/* remove overflow to give the impression of a zoom when scaling the image up */
-.toratto-main a {
-  overflow: hidden;
-}
-
-/* update the size of a few selected cells */
-.toratto-main a:nth-of-type(2) {
-  grid-column: span 2;
-}
-
-.toratto-main a:nth-of-type(5) {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.toratto-main a:nth-of-type(7) {
-  grid-row: span 2;
-}
-
-/* the default overflow is substituted by the scale/brightness of the nested images */
-.toratto-main a:focus {
-  outline: none;
-}
-
-.toratto-main img {
-  object-fit: cover;
-  display: block;
+.gallery-container {
   width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
 
-  /* transition the scale and brightness of the image when hover/focus-ing on the anchor link */
-  filter: brightness(0.6);
-  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  transform: scale(1);
-}
+  .slick-slider {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-.toratto-main a:focus img,
-.toratto-main a:hover img {
-  transform: scale(1.1);
-  filter: brightness(1);
-}
+  .slick-list {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+  }
 
-.row.toratto-main-slider {
-  position: relative;
-  z-index: 200;
-  padding: 0 0;
-  margin: 5rem auto;
-  max-width: 800px;
-  width: 100%;
+  .slick-dots {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
+  .slick-track {
+    max-width: 100% !important;
+    transform: translate3d(0, 0, 0) !important;
+    perspective: 100px;
+  }
+
+  .slick-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    width: 100% !important;
+    transform: translate3d(0, 0, 0);
+    transition: transform 1s, opacity 1s;
+  }
+
+  .slick-snext,
+  .slick-sprev {
+    display: block;
+  }
+
+  .slick-current {
+    opacity: 1;
+    position: relative;
+    display: block;
+    transform: translate3d(0, 0, 20px);
+    z-index: 2;
+  }
+
+  .slick-snext {
+    opacity: 1;
+    transform: translate3d(20%, 0, 0);
+    z-index: 1;
+  }
+
+  .slick-sprev {
+    opacity: 1;
+    transform: translate3d(-20%, 0, 0);
+  }
+
+  .test {
+    display: block;
+    width: 100%;
+    height: 600px;
+  }
+
+  .slick-next::before,
+  .slick-prev::before {
+    content: none;
+  }
+
+  .slick-arrow {
+    width: 55px;
+    height: 55px;
+    z-index: 5;
+    border-top: 3px solid $theme-color-green;
+    border-right: 3px solid $theme-color-green;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+  }
+
+  .slick-arrow:hover {
+    opacity: 0.5;
+  }
+
+  .slick-prev {
+    left: 2%;
+    transform: rotate(225deg);
+  }
+
+  .slick-next {
+    right: 2%;
+    transform: rotate(45deg);
+  }
+
+  /*
   .slick-arrow {
     position: absolute;
     top: 50%;
@@ -161,58 +199,5 @@
     z-index: 300;
     outline: none;
   }
-
-  .slick-prev {
-    left: -50px;
-    text-align: left;
-  }
-
-  .slick-next {
-    right: -50px;
-    text-align: right;
-  }
-
-  .item.slick-slide {
-    width: 400px;
-    height: 400px !important;
-    transition: transform 0.4s;
-    position: relative;
-    transform: scale(0.7)  translate(640px);
-  }
-
-  .slick-slide::after {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s;
-  }
-
-  .item.slick-slide.slick-center + .slick-slide {
-    transform: scale(0.8) translate(-250px);
-    z-index: 10;
-  }
-
-  .item.slick-slide.slick-center + .slick-slide + .item.slick-slide {
-    transform: scale(0.7)  translate(-640px);
-    z-index: 5;
-  }
-
-  .item.slick-slide.slick-active {
-    transform: scale(0.8) translate(250px);
-  }
-
-  .item.slick-slide.slick-center {
-    /* margin: 0 -10%; */
-    transform: scale(1);
-    z-index: 30;
-  }
-
-  .slick-center::after {
-    opacity: 0;
-  }
+  */
 }

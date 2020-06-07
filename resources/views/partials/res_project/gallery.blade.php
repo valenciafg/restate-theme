@@ -14,28 +14,28 @@
 @if (!empty($inside) || !empty($outside)) 
 <section class="toratto-project-gallery toratto-section-background-00">
     <h1 class="toratto-section-title">Galería</h1>
-    <div class="container toratto-project-gallery-container"> 
+    <div class="toratto-project-gallery-container"> 
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="tab-content">
                     @if (!empty($inside))
-                    <div class="tab-pane fade {{$inside_active_tab}}" id="pills-home" role="tabpanel" aria-labelledby="pills-inside-tab">
-                        <div class="row toratto-main">
+                    <div class="tab-pane fade gallery-container {{$inside_active_tab}}" id="pills-home" role="tabpanel" aria-labelledby="pills-inside-tab">
+                        <div class="rev_slider">
                         @foreach ($inside as $photo)
-                        <a href="{{$photo['image_url']}}" class="item" data-fancybox="inside_gallery" data-options='{"loop": true}'>
-                            <img src="{{$photo['thumbnail_url']}}"/>
-                        </a>
+                        <div class="rev_slide">
+                            <img class="test" src="{{$photo['thumbnail_url']}}"/>
+                        </div>
                         @endforeach
                         </div>
                     </div>
                     @endif
                     @if (!empty($outside))
-                    <div class="tab-pane fade {{$outside_active_tab}}" id="pills-profile" role="tabpanel" aria-labelledby="pills-outside-tab">
-                        <div class="row toratto-main">
+                    <div class="tab-pane fade gallery-container {{$outside_active_tab}}" id="pills-profile" role="tabpanel" aria-labelledby="pills-outside-tab">
+                        <div class="rev_slider2">
                         @foreach ($outside as $photo)
-                        <a href="{{$photo['image_url']}}" data-fancybox="outside_gallery" data-options='{"loop": true}'>
-                            <img src="{{$photo['thumbnail_url']}}"/>
-                        </a>
+                        <div class="rev_slide">
+                            <img class="test" src="{{$photo['thumbnail_url']}}"/>
+                        </div>
                         @endforeach
                         </div>
                     </div>

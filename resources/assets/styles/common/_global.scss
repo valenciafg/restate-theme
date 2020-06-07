@@ -59,6 +59,15 @@ body {
   }
 }
 
+@mixin toratto_icon_text_blue_white() {
+  color: #fff;
+
+  .far,
+  .fas {
+    color: $theme-color-blue;
+  }
+}
+
 .btn-toratto-green {
   color: #fff;
   border-color: $theme-color-green;

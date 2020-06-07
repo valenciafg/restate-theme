@@ -12,7 +12,13 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
+    wp_register_style( 'ERP_TORATTO_CHAT_CSS', 'https://erp.grupotoratto.com/im_livechat/external_lib.css' );
+    wp_enqueue_style('ERP_TORATTO_CHAT_CSS');
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_register_script( 'ERP_TORATTO_CHAT_JS', 'https://erp.grupotoratto.com/im_livechat/external_lib.js', null, null, true );
+    wp_enqueue_script('ERP_TORATTO_CHAT_JS');
+    wp_register_script( 'ERP_TORATTO_CHAT_JS2', 'https://erp.grupotoratto.com/im_livechat/loader/1', null, null, true );
+    wp_enqueue_script('ERP_TORATTO_CHAT_JS2');
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
