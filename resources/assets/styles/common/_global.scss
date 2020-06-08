@@ -92,3 +92,11 @@ body {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+.o_thread_window .o_thread_window_header {
+  background-color: $theme-color-green !important;
+}
+
+.toratto-whatsapp-button.floating-wpp {
+  bottom: 50px;
+}

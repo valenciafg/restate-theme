@@ -52,7 +52,8 @@
             @endforeach
             </div>
             <div class="col-md-6">
-              <p><i class="fas fa-book-open"></i><a href="#"> Libro de Reclamaciones</a></p>
+              <p><i class="fas fa-book-open"></i><a href="#" target="_blank"> Libro de Reclamaciones</a></p>
+              <p><i class="fas fa-folder-open"></i><a href="/legal" target="_blank"> Protección al Consumidor</a></p>
             </div>
           </div>
         </div>

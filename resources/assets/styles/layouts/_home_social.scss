@@ -1,0 +1,26 @@
+.card.toratto-home-social-title,
+.card.toratto-home-social-icons {
+  .card-body {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.card.toratto-home-social-icons {
+  border: none;
+  background: none;
+
+  .card-body {
+    .card-text {
+      font-size: 4em;
+
+      a {
+        color: $theme-color-green;
+
+        &:hover {
+          color: $theme-color-blue;
+        }
+      }
+    }
+  }
+}

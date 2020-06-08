@@ -73,6 +73,15 @@
     .toratto-project-info-content-title,
     .toratto-project-info-content-text {
       font-size: 1.3em;
+
+      a {
+        color: #fff;
+
+        &:hover {
+          color: $theme-color-blue;
+          text-decoration: none;
+        }
+      }
     }
   }
 }

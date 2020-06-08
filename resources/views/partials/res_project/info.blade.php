@@ -71,7 +71,7 @@
           </div>
           <div class="col-md-10 toratto-project-info-content">
             <div class="toratto-project-info-content-title">
-              Documentos Legales
+              <a href="/legal" target="_blank">Documentos Legales</a>
             </div>          
           </div>
         </div>

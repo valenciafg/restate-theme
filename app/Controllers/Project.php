@@ -122,6 +122,19 @@ class Project extends Controller
         return $models;
     }
 
+    public function getProjectLegalDocs($doc_list) {
+        $docs = [];
+        if(!empty($doc_list) && !empty($doc_list[0]['restate_project_legal_doc_name'])){
+            foreach ($doc_list as $doc) {
+                $docs[] = [
+                    "name" => $doc['restate_project_legal_doc_name'],
+                    "file" => $this->getProjectFile($doc['restate_project_legal_doc_file'])
+                ];
+            }
+        }
+        return $docs;
+    }
+
     public function getProjects($limit = -1) {
         $this->getProjectsQuery($limit);
         $data = array();
@@ -178,6 +191,9 @@ class Project extends Controller
         $advisor_gender = get_post_meta($id, 'restate_project_advisor_gender', true);
         $models = get_post_meta($id, "restate_project_models");
         $models = $this->getProjectModels($models[0]);
+        $legal_info = get_post_meta($id, "restate_project_legal_info", true);
+        $legal_docs = get_post_meta($id, "restate_project_legal_docs");
+        $legal_docs = $this->getProjectLegalDocs($legal_docs[0]);
         $data = [
             'id'                    => $id,
             'title'                 => $title,
@@ -210,7 +226,10 @@ class Project extends Controller
             'advisor_ws_number'     => $advisor_ws_number,
             'advisor_email'         => $advisor_email,
             'advisor_gender'        => $advisor_gender,
-            'models'                => $models
+            'models'                => $models,
+            'legal_info'            => $legal_info,
+            'legal_docs'            => $legal_docs
+
         ];
         return $data;
     }

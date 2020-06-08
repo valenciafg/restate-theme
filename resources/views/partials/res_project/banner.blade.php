@@ -4,20 +4,16 @@
     $overlay = get_stylesheet_directory_uri()."/assets/images/06.png";
     $location = !empty($project['categories']['location']) ? $project['categories']['location'][0] : "";
     $stage = !empty($project['categories']['stage']) ? $project['categories']['stage'][0] : "";
+    $images = array();
+    foreach ($gallery as $image) {
+        $images[] = [
+            'src' => $image
+        ];
+    }
+    $images = json_encode($images);
 @endphp
-<script type="text/javascript">
-    jQuery(function() {
-        jQuery('.toratto-project-slider').vegas({
-            overlay: '{{$overlay}}',
-            slides: [
-                <?php foreach ($gallery as $image): ?>
-                { src: '{{$image}}' },
-                <?php endforeach; ?>
-            ],
-            transition: 'zoomOut'
-        });
-    });
-</script>
+<div class="toratto-project-slider-info" data-overlay="{{$overlay}}" data-images="{{$images}}">
+</div>
 <div class="toratto-project-slider" style="height:100vh;">
     <div class="container align-center toratto-project-banner-container">
         <div class="row justify-content-md-center">
