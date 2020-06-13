@@ -1,7 +1,7 @@
 .toratto-section-home-project {
   margin: 25px;
 
-  .col-md-4.col-sm-12.toratto-project-building-col {
+  .toratto-project-building {
     padding: 5px;
   }
 
@@ -42,26 +42,38 @@
 
   .card.toratto-project-building-card {
     height: 500px;
+    transform-origin: 65% 75%;
+    transition: transform 1s, filter 0.5s ease-out;
 
-    img.card-img.img-hover-zoom {
-      transform-origin: 65% 75%;
-      transition: transform 1s, filter 0.5s ease-out;
-      height: inherit;
-    }
-
-    &:hover img.card-img.img-hover-zoom {
+    &:hover {
       transform: scale(1.06);
     }
 
+    .card-img {
+      height: 500px;
+    }
+
     .card-img-overlay {
+      padding: 0;
+
       .card-title {
         text-align: center;
+        padding: 1.25rem;
       }
 
-      .card-text {
-        color: $theme-color-green;
-        font-size: 1.7em;
-        margin-top: 30px;
+      .card-bottom {
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        margin: inherit;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 0.5rem;
+
+        .card-text {
+          color: #fff;
+          font-size: 1.5em;
+          margin-bottom: 0.5rem;
+        }
 
         .far,
         .fas {
@@ -71,8 +83,34 @@
     }
   }
 
+  .card-bottom.toratto-project-building-card-bottom-info {
+    background-color: #fff;
+    padding: 10px;
+
+    .toratto-project-building-card-bottom-info-location {
+      float: left;
+
+      span {
+        float: left;
+        clear: left;
+        color: $theme-color-blue;
+
+        .far,
+        .fas {
+          color: $theme-color-green;
+        }
+      }
+
+      .location {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    }
+  }
+
   .toratto-project-building-projects {
     text-align: center;
+    margin-top: 20px;
 
     .btn.btn-toratto-green.btn-block {
       color: $theme-color-blue;

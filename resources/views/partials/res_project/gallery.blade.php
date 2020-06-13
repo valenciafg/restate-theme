@@ -13,7 +13,6 @@
 @endphp
 @if (!empty($inside) || !empty($outside)) 
 <section class="toratto-project-gallery toratto-section-background-00">
-    <h1 class="toratto-section-title">Galería</h1>
     <div class="toratto-project-gallery-container"> 
         <div class="row">
             <div class="col-md-12 text-center">
@@ -23,7 +22,7 @@
                         <div class="rev_slider">
                         @foreach ($inside as $photo)
                         <div class="rev_slide">
-                            <img class="test" src="{{$photo['thumbnail_url']}}"/>
+                            <img class="test" src="{{$photo['image_url']}}"/>
                         </div>
                         @endforeach
                         </div>
@@ -34,7 +33,7 @@
                         <div class="rev_slider2">
                         @foreach ($outside as $photo)
                         <div class="rev_slide">
-                            <img class="test" src="{{$photo['thumbnail_url']}}"/>
+                            <img class="test" src="{{$photo['image_url']}}"/>
                         </div>
                         @endforeach
                         </div>

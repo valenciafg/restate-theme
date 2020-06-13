@@ -45,7 +45,8 @@
 
 .toratto-section-home-banner.owl-carousel .owl-slide-title {
   color: #fff;
-  font-size: 100px;
+  font-size: 6.2rem;
+  font-weight: bold;
 
   img {
     display: inline;
@@ -69,8 +70,9 @@
 
 .toratto-section-home-banner.owl-carousel .owl-slide-subtitle-location {
   font-size: 35px;
+  text-transform: uppercase;
 
-  @include toratto_text_icon();
+  @include toratto_icon_white_text_green();
 }
 
 .toratto-section-home-banner.owl-carousel .owl-slide-subtitle-location.is-transitioned {
@@ -92,7 +94,7 @@
     .toratto-project-banner-subtitle {
       font-size: 35px;
 
-      @include toratto_text_icon();
+      @include toratto_icon_white_text_green();
 
       .stage {
         display: inline;
@@ -103,13 +105,13 @@
 }
 
 .toratto-section-home-banner.owl-carousel .owl-slide-subtitle-action {
-  font-size: 35px;
-
-  @include toratto_text_icon();
+  @include toratto_icon_white_text_green();
 
   .stage {
     display: inline;
     float: right;
+    text-transform: uppercase;
+    font-size: 1.5rem;
   }
 }
 

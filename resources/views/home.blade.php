@@ -12,8 +12,9 @@
 @include('partials.home.posts')
 @include('partials.home.promotion')
 @include('partials.home.blog')
-@include('partials.home.social')
 {{--
+@include('partials.home.social')
+
 @section('content')
   @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')

@@ -1,5 +1,5 @@
 .toratto-section-model {
-  background-color: $theme-color-green;
+  background-color: $theme-color-green-hard;
 
   .toratto-section-model-title {
     text-align: center;
@@ -8,6 +8,8 @@
   }
 
   .toratto-section-model-carousel {
+    padding: 0 50px 0 50px;
+
     .item {
       img {
         width: 100%;
@@ -28,6 +30,19 @@
         }
       }
     }
+
+    .slick-prev {
+      left: 0;
+    }
+
+    .slick-next {
+      right: 0;
+    }
+
+    .slick-prev::before,
+    .slick-next::before {
+      font-size: 35px;
+    }
   }
 
   .nav.toratto-model-info {
@@ -39,6 +54,8 @@
   }
 
   .toratto-section-model-form {
+    padding: 0 90px 0 90px;
+
     p.h2.text-center {
       color: $theme-color-blue;
     }
@@ -66,7 +83,7 @@
 
     .input-group-prepend {
       .input-group-text {
-        background-color: $theme-color-green;
+        background-color: $theme-color-green-hard;
         color: $theme-color-blue;
       }
     }

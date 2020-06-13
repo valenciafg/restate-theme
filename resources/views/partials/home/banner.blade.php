@@ -20,9 +20,6 @@
               </div>
             @endif            
             <div class="owl-slide-animated owl-slide-title">
-              @if (!empty($project['logo']))
-              <img src="{{$project['logo']}}" width="30px" height="60px">
-              @endif
               {{strtoupper($project['title'])}}
             </div>
             @if (!empty($project['slogan']))
@@ -31,12 +28,11 @@
             </div>
             @endif
             <div class="owl-slide-animated owl-slide-subtitle-action">
-              <a class="btn btn-toratto-green owl-slide-animated" href="{{$project['url']}}" role="button">
-              Ver proyecto
+              <a class="btn btn-lg btn-toratto-green owl-slide-animated" href="{{$project['url']}}" role="button">
+              VER PROYECTO
               </a>
               @if (!empty($stage))
               <div class="stage">
-                <i class="fas fa-tag"></i>
                 {{$stage[0]}}
               </div>
               @endif
