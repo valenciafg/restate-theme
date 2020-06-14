@@ -89,6 +89,18 @@ body {
   }
 }
 
+.btn-toratto-blue {
+  color: $theme-color-blue;
+  border-color: $theme-color-green;
+  font-weight: bold;
+
+  &:hover {
+    color: #fff;
+    background-color: $theme-color-green;
+    border-color: $theme-color-green;
+  }
+}
+
 .toratto-text-icon {
   @include toratto_text_icon();
 }

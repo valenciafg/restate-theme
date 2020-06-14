@@ -1,8 +1,23 @@
 <div class="col-md-6 col-sm-12">
-    <form class="toratto-section-model-form">
+    <form class="toratto-section-model-form" id="toratto-modal-form">
         <div class="form-group input-group">
-            <p class="toratto-quotation-form-subtitle">Modelo a cotizar: <span class="toratto-quotation-form-name">{{$first_model_name}}</span></p>
-            <input name="toratto-quotation-form-name" class="form-control form-control-lg" type="hidden" value="{{$first_model_name}}">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="far fa-building"></i></span>
+            </div>
+            <select name="toratto-quotation-form-model" class="form-control form-control-lg">
+              <option value="">Seleccione el modelo a cotizar</option>
+              @php
+              $i = 0;
+              @endphp
+              @foreach ($models as $model)
+              @if ($model['blueprint'])
+                <option value="{{$model['name']}}" data-index="{{$i}}">{{$model['name']}}</option>
+              @php
+              $i += 1;
+              @endphp
+              @endif
+              @endforeach
+            </select>
         </div> <!-- form-group// -->
         <div class="form-group input-group">
             <div class="input-group-prepend">

@@ -1,4 +1,3 @@
-
 export default {
     initGallery() {
         var rev = $('.rev_slider');
@@ -89,6 +88,7 @@ export default {
     },
     initModels() {
         var carousel = $('.toratto-section-model-carousel');
+        var selectBuilding = $('select[name="toratto-quotation-form-model"]');
         carousel.slick({
             centerMode: true,
             slidesPerRow: 1,
@@ -107,8 +107,10 @@ export default {
             var total_area = elSlide.data('total_area');
             var starting_price_usd = elSlide.data('starting_price_usd');
 
-            $('.toratto-quotation-form-name').html(name);
-            $('input[name="toratto-quotation-form-name"').val(name);
+            // $('.toratto-quotation-form-name').html(name);
+            // $('input[name="toratto-quotation-form-name"').val(name);
+            $('select[name="toratto-quotation-form-model"]').val(name);
+
             var info = $('.toratto-model-info');
             var info_content = '';
             if (room_number) {
@@ -130,6 +132,16 @@ export default {
                 </li>`;
             }
             info.html(info_content);
+        });
+
+        selectBuilding.change(function() {
+          let value = $(this).val();
+          if (value.length > 0) {
+            $('.toratto-section-model-carousel').slick('slickGoTo', value);
+            var currrentNavSlideElem = '.toratto-section-model-carousel .slick-slide[data-slick-index="' + value + '"]';
+            $('.toratto-section-model-carousel .slick-slide.is-active').removeClass('is-active');
+            $(currrentNavSlideElem).addClass('is-active');
+          }
         });
     },
 }

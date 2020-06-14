@@ -1,0 +1,29 @@
+.toratto-legal-doc-page {
+  background-color: #fff;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  .title-underline {
+    color: $theme-color-blue;
+    margin-bottom: 50px;
+  }
+
+  .nav.flex-column.nav-pills {
+    .nav-link {
+      color: $theme-color-green;
+    }
+
+    .nav-link.active {
+      color: #fff;
+      background-color: $theme-color-green;
+    }
+  }
+
+  ul.toratto-legal-docs-list {
+    list-style-type: none;
+
+    li {
+      margin: 10px 0 10px 0;
+    }
+  }
+}

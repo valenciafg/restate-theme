@@ -122,6 +122,23 @@ class Project extends Controller
         return $models;
     }
 
+    public function getPanoramicGallery($panoramic_list) {
+        $gallery = [];
+        if(!empty($panoramic_list) && !empty($panoramic_list[0]['restate_project_panoramic_caption'])){
+            foreach ($panoramic_list as $image) {
+                $id = $image['restate_project_panoramic_image'][0];
+                $image_url = wp_get_attachment_url($id);
+                $thumbnail_url = wp_get_attachment_thumb_url($id);
+                $gallery[] = [
+                    "caption" => $image['restate_project_panoramic_caption'],
+                    "image_url" => $image_url,
+                    "thumbnail_url" => $thumbnail_url,
+                ];
+            }
+        }
+        return $gallery;
+    }
+
     public function getProjectLegalDocs($doc_list) {
         $docs = [];
         if(!empty($doc_list) && !empty($doc_list[0]['restate_project_legal_doc_name'])){
@@ -179,8 +196,8 @@ class Project extends Controller
         $outside_photos = get_post_meta($id, 'restate_project_outside_photos', false);
         $outside_photos = $this->getProjectGallery($outside_photos);
         $gallery  = $this->getFullGallery(array_merge($inside_photos, $outside_photos));
-        $panoramic_photo = get_post_meta($id, "restate_project_panoramic_photo");
-        $panoramic_photo = $this->getProjectFile($panoramic_photo);
+        $panoramic_gallery = get_post_meta($id, "restate_project_panoramics", true);
+        $panoramic_gallery = $this->getPanoramicGallery($panoramic_gallery);
         $video = get_post_meta($id, "restate_project_promotional_video", true);
         $brochures_files = get_post_meta($id, 'restate_project_brochure_file', false);
         $brochures_files = $this->getProjectFile($brochures_files);
@@ -216,7 +233,7 @@ class Project extends Controller
             'coordinate_y'          => $coordinate_y,
             'gmap_image'            => $gmap_image,
             'inside_photos'         => $inside_photos,
-            'panoramic_photo'       => $panoramic_photo,
+            'panoramic_gallery'     => $panoramic_gallery,
             'video'                 => $video,
             'gallery'               => $gallery,
             'outside_photos'        => $outside_photos,
