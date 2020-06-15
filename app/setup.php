@@ -11,14 +11,25 @@ use Roots\Sage\Template\BladeProvider;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
+    $localized_array = array(
+        'ajaxurl'=>admin_url('admin-ajax.php'),
+        'siteurl'=>get_bloginfo('url'),
+        'stylesheet_directory_uri'=>get_stylesheet_directory_uri()
+    );
+
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_register_style( 'ERP_TORATTO_CHAT_CSS', 'https://erp.grupotoratto.com/im_livechat/external_lib.css' );
     wp_enqueue_style('ERP_TORATTO_CHAT_CSS');
-    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, false);
     wp_register_script( 'ERP_TORATTO_CHAT_JS', 'https://erp.grupotoratto.com/im_livechat/external_lib.js', null, null, false );
     wp_enqueue_script('ERP_TORATTO_CHAT_JS');
     wp_register_script( 'ERP_TORATTO_CHAT_JS2', 'https://erp.grupotoratto.com/im_livechat/loader/1', null, null, false );
     wp_enqueue_script('ERP_TORATTO_CHAT_JS2');
+    wp_register_script( 'ERP_TORATTO_CHAT_JS2', 'https://erp.grupotoratto.com/im_livechat/loader/1', null, null, false );
+    wp_enqueue_script('ERP_TORATTO_CHAT_JS2');
+    wp_register_script( 'RECAPTCHA_JS', 'https://www.google.com/recaptcha/api.js?render=6Lfnq6QZAAAAAHCxa5BVeWwF11BP0MuijV_q8U-T', null, null, false );
+    wp_enqueue_script('RECAPTCHA_JS');
+    wp_localize_script('sage/main.js','sage_vars', $localized_array);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -136,3 +147,6 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+add_action( 'wp_ajax_toratto_quotation_form', 'App\Controllers\TorattoAjax::toratto_quotation_form' );
+add_action( 'wp_ajax_nopriv_toratto_quotation_form', 'App\Controllers\TorattoAjax::toratto_quotation_form'  );

@@ -1,9 +1,9 @@
 {{--
-  Template Name: Home Template
+  Template Name: Toratto Home Template
 --}}
 
 @extends('layouts.app')
-@php 
+@php
   $project = new  App\Controllers\Project();
   $projects = $project->getBannerProjects();
 @endphp

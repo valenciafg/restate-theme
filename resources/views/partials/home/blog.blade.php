@@ -1,4 +1,4 @@
-@php 
+@php
   $post_obj = new  App\Controllers\Post();
   $query = $post_obj->getPostByPostType("post", 3);
   $posts = $query->get_posts();
@@ -15,13 +15,13 @@
                 <div class="card-body">
                     <h3 class="card-title">¡No te pierdas el contenido de nuestro blog!</h3>
                     <p class="card-text">Entérate de lo más reciente en el rubro inmobiliario</p>
-                    <a class="btn btn-toratto-green" href="#" role="button">
+                    <a class="btn btn-toratto-green" href="/blog" role="button">
                     Ir al blog
                     </a>
                 </div>
             </div>
             <div class="col-md-8 col-sm-12">
-                <div class="row"> 
+                <div class="row">
                 @foreach ($posts as $post)
                 @php
                 $id = $post->ID;
@@ -40,7 +40,7 @@
                                 <h5 class="card-title">{{$title}}</h5>
                                 <p class="card-text">Por {{$author_name}}, {{$date}}</p>
                             </div>
-                            <div class="card-footer text-center"> 
+                            <div class="card-footer text-center">
                                 <a class="btn btn-toratto-green" href="{{$url}}" role="button">
                                 Ver más
                                 </a>

@@ -123,8 +123,13 @@
 }
 
 .toratto-blog-post,
-.toratto-legal-doc-page {
+.toratto-legal-doc-page,
+.toratto-blog-page,
+.toratto-project-page {
   margin-top: 75px;
+  background-color: #fff;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .toratto-blog-post {

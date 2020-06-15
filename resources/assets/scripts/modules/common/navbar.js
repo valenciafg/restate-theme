@@ -7,7 +7,11 @@ export default {
         let logoPrimary = $('.toratto-logo-primary');
         let logoSecundary = $('.toratto-logo-secundary');
         //  Verifica que la pagina no sea un post del blog
-        if ($('.single-post').length > 0 || $('.page-template-legal').length > 0) {
+        if ($('.single-post').length > 0
+          || $('.page-template-legal').length > 0
+          || $('.page-template-blog').length > 0
+          || $('.page-template-projects').length > 0
+        ) {
             nav.addClass('scrolled');
             logoPrimary.hide();
             logoSecundary.show();
@@ -15,7 +19,7 @@ export default {
             var scrollTop = 0;
             $(window).scroll(function () {
                 scrollTop = $(window).scrollTop();
-                
+
                 if (scrollTop >= 100) {
                     nav.addClass('scrolled');
                     logoPrimary.hide();
@@ -24,7 +28,7 @@ export default {
                     nav.removeClass('scrolled');
                     logoPrimary.show();
                     logoSecundary.hide();
-                } 
+                }
             });
         }
     },

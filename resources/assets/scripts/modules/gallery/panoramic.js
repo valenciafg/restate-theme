@@ -4,23 +4,23 @@ import { Viewer } from 'photo-sphere-viewer';
 function psInit(id) {
   const selector = '#panoramic-viewer-'+id;
   const dviewer = document.querySelector(selector);
-  console.log('dviewer', dviewer);
   if (dviewer !== null) {
     let photoUrl = dviewer.getAttribute('data-photo');
     let caption = dviewer.getAttribute('data-caption');
-    console.log(photoUrl, caption);
-    new Viewer({
-      container: dviewer,
-      panorama: photoUrl,
-      defaultZoomLvl: 0,
-      navbar: [
-        'autorotate',
-        'zoom',
-        'fullscreen',
-      ],
-      caption,
-      mousewheel: false,
-    });
+    if(photoUrl.length > 0) {
+      new Viewer({
+        container: dviewer,
+        panorama: photoUrl,
+        defaultZoomLvl: 0,
+        navbar: [
+          'autorotate',
+          'zoom',
+          'fullscreen',
+        ],
+        caption,
+        mousewheel: false,
+      });
+    }
   }
 }
 

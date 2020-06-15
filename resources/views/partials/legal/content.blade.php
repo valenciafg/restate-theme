@@ -3,6 +3,7 @@
   $projects = $project->getProjects();
 @endphp
 @if (!empty($projects))
+  @section('content')
     <section class="toratto-section-background-00">
         <div class="container toratto-legal-doc-page shadow">
             <div class="row">
@@ -79,4 +80,5 @@
             </div>
         </div>
     <section>
+  @endsection
 @endif

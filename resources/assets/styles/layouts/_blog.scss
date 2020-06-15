@@ -1,0 +1,41 @@
+.toratto-blog-page {
+  .toratto-post-title {
+    color: $theme-color-blue;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .toratto-blog-post-card {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    color: $theme-color-blue;
+
+    .card-title {
+      font-weight: bold;
+    }
+
+    .card-footer {
+      background-color: #fff;
+    }
+  }
+}
+
+.page-nav-container {
+  margin-bottom: 25px;
+
+  .page-numbers {
+    color: $theme-color-green;
+    border: 1px solid $theme-color-green;
+    background-color: #fff;
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.25;
+  }
+
+  .page-numbers.current {
+    color: #fff;
+    border-color: $theme-color-green;
+    background-color: $theme-color-green;
+  }
+}

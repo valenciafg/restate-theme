@@ -1,4 +1,4 @@
-@php 
+@php
   $project = new  App\Controllers\Project();
   $projects = $project->getProjects(10);
 
@@ -6,7 +6,7 @@
   //print_r($projects);
   //echo "</pre>";
   $col_md = 4;
-  
+
 @endphp
 @if (!empty($projects))
 <section class="toratto-section-home-project toratto-section-background-00">
@@ -19,7 +19,7 @@
             $facade = $project['facade'];
             $categories = $project['categories'];
             $location = $categories['location'];
-            $stage = $categories['stage'];            
+            $stage = $categories['stage'];
             if(empty($facade)) {
                 $facade = get_parent_theme_file_uri()."/dist/images/default_facade.jpg";
             }
@@ -34,7 +34,7 @@
                                 <p class="card-text">
                                     <i class="fas fa-tag"></i> {{$stage[0]}}
                                 </p>
-                                @endif 
+                                @endif
                             </div>
                         </div>
                     </a>
@@ -44,7 +44,7 @@
                             @if (!empty($project['logo']))
                                 <img src="{{$project['logo']}}" width="90px" height="60px">
                             @else
-                                {{strtoupper($project['title'])}}                        
+                                {{strtoupper($project['title'])}}
                             @endif
                             </li>
                             <li class="nav-item toratto-project-building-card-bottom-info-location">
@@ -63,7 +63,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 toratto-project-building-projects">
-                <a class="btn btn-toratto-green btn-block" href="#" target="_blank">Ver todos los proyectos</a>
+                <a class="btn btn-toratto-green btn-block" href="/proyectos" target="_blank">Ver todos los proyectos</a>
             </div>
         </div>
     </div>
