@@ -10,7 +10,7 @@
       $facade = get_parent_theme_file_uri()."/dist/images/default_facade.jpg";
   }
 @endphp
-<div class="col-md-4 col-sm-12">
+<div class="col-md-6 col-sm-12">
   <div class="toratto-project-building">
     <a href="{{$project['url']}}" class="card toratto-project-building-card">
       <img class="card-img img-hover-zoom" src="{{$facade}}">

@@ -101,9 +101,16 @@
         }
       }
 
-      .location {
-        font-size: 1.2rem;
+      .location,
+      .stage {
+        font-size: 1rem;
         font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .address {
+        font-size: 0.8rem;
+        text-transform: uppercase;
       }
     }
   }
@@ -126,7 +133,7 @@
 .toratto-legal-doc-page,
 .toratto-blog-page,
 .toratto-project-page {
-  margin-top: 75px;
+  padding-top: 50px;
   background-color: #fff;
   padding-left: 50px;
   padding-right: 50px;

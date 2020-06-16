@@ -14,8 +14,8 @@ export default {
             items:1,
             loop:true,
             //  margin:10,
-            //autoplay:true,
-            //autoplayTimeout:5000,
+            autoplay:true,
+            autoplayTimeout:5000,
             //autoplayHoverPause:true,
             nav: true,
             navText: [

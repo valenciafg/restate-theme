@@ -31,9 +31,11 @@
   .navbar-collapse.align-items-center {
     .navbar-nav-toratto-center {
       .nav-item {
+        margin: 0 5px 0 5px;
+
         a.nav-link {
           color: #fff;
-          font-size: 1.2rem;
+          font-size: 1rem;
           font-weight: 600;
         }
 
@@ -103,9 +105,11 @@
   .navbar-collapse.align-items-center {
     .navbar-nav-toratto-center {
       .nav-item {
+        margin: 0 5px 0 5px;
+
         a.nav-link {
           color: $theme-color-blue;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           font-weight: 600;
         }
 

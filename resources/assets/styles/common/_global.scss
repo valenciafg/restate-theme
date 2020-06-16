@@ -13,6 +13,22 @@ body {
   text-transform: uppercase;
 }
 
+.toratto-section-title-2 {
+  line-height: 1;
+  color: rgba(232, 232, 232, 0.5);
+  font-family: "CircularStd-Black", sans-serif;
+  font-weight: bold;
+  font-size: 6rem;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.toratto-custom-page.toratto-section-title,
+.toratto-custom-page.toratto-section-title-2 {
+  margin-top: 75px;
+}
+
 .toratto-section-background-00 {
   background: url(../images/trama00.png) 0 0 repeat;
 }
@@ -120,4 +136,13 @@ body {
 
 .toratto-whatsapp-button.floating-wpp {
   bottom: 50px;
+}
+
+.toratto-section-home-project {
+  .container {
+    @media (min-width: 1200px) {
+      max-width: 100%;
+      padding: 0 200px 0 200px;
+    }
+  }
 }
