@@ -92,13 +92,13 @@
     }
 
     .toratto-project-banner-subtitle {
-      font-size: 35px;
-
-      @include toratto_icon_white_text_green();
-
+      .location,
       .stage {
-        display: inline;
-        float: right;
+        background-color: #7cb046;
+        padding: 20px;
+        color: #fff;
+        border-radius: 0 30px;
+        font-size: 1.3rem;
       }
     }
   }

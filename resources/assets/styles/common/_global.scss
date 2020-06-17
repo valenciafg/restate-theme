@@ -137,12 +137,3 @@ body {
 .toratto-whatsapp-button.floating-wpp {
   bottom: 50px;
 }
-
-.toratto-section-home-project {
-  .container {
-    @media (min-width: 1200px) {
-      max-width: 100%;
-      padding: 0 200px 0 200px;
-    }
-  }
-}

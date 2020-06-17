@@ -1,4 +1,4 @@
-@php 
+@php
   $settings = new  App\Controllers\Setting();
   $all_settings = $settings->getAllSettings();
   $logo = $settings->getWebsitePrimaryLogo();
@@ -12,19 +12,12 @@
     <div class="container">
       <div class="row">
         <!-- LEFT SIDE -->
-        <div class="col-md-3 footer-about wow fadeInUp">
+        <div class="col-md-3 footer-about">
           <img class="logo-footer" src="{{$logo}}" alt="{{ get_bloginfo('name', 'display') }}">
           @if (!empty($all_settings['description']))
           <p>
             {{$all_settings['description']}}
           </p>
-          @endif
-        </div>
-        <!--CENTER-->
-        <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">
-          <h3>Contacto</h3>
-          @if (!empty($all_settings['address']))
-          <p><i class="fas fa-map-marker-alt"></i>{{$all_settings['address']." ".$all_settings['city']}}</p>
           @endif
           @if (!empty($all_settings['phone']))
           @php
@@ -35,27 +28,45 @@
           @endphp
           <p>
             <a href="tel:{{$clean_phone}}">
-              <i class="fas fa-phone"></i>{{$all_settings['phone']}}
+              <i class="fas fa-phone-alt"></i>{{$all_settings['phone']}}
             </a>
           </p>
           @endif
           @if (!empty($all_settings['email']))
           <p><i class="fas fa-envelope"></i><a href="mailto:{{$all_settings['email']}}">{{$all_settings['email']}}</a></p>
           @endif
+          @if (!empty($all_settings['address']))
+          <p><i class="fas fa-map-marker-alt"></i>{{$all_settings['address']}}</p>
+          <p>{{$all_settings['city']}}</p>
+          @endif
+        </div>
+        <!--CENTER-->
+        <div class="col-md-3 footer-links">
+          <ul>
+            <li><a href="#">Proyectos En Venta</a></li>
+            <li><a href="#">Próximos Proyectos</a></li>
+            <li><a href="#">Proyectos Entregados</a></li>
+          </ul>
         </div>
         <!--RIGHT SIDE-->
-        <div class="col-md-4 footer-links wow fadeInUp">
-          <div class="row">
-            <div class="col-md-6">
-            @foreach ($menu_items as $item)
-              <p><a href="{{$item->url}}">{{$item->title}}</a></p>
-            @endforeach
-            </div>
-            <div class="col-md-6">
-              <p><i class="fas fa-book-open"></i><a href="#" target="_blank"> Libro de Reclamaciones</a></p>
-              <p><i class="fas fa-folder-open"></i><a href="/legal" target="_blank"> Protección al Consumidor</a></p>
-            </div>
-          </div>
+        <div class="col-md-3 footer-links">
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Compra De Terrenos</a></li>
+            <li><a href="#">Nosotros</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-links">
+          <ul>
+            <li><i class="fas fa-book-open"></i><a href="#" target="_blank"> Libro De Reclamaciones</a></li>
+            <li><i class="fas fa-folder-open"></i><a href="/legal" target="_blank"> Protección Al Consumidor</a></li>
+            <li><a href="#">Post-venta</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 footer-message">
+          Todas las imágenes, planos, medidas y áreas son referenciales por lo que podrían sufrir cambios al momento de desarrollarse el proyecto, asimismo los elementos decorativos acabados y mobiliarios son propuestas del departamento de diseño que no se incluyen en la oferta comercial y no comprometen a la empresa inmobiliaria.
         </div>
       </div>
     </div>
@@ -80,10 +91,10 @@
             <a href="{{$all_settings['facebook']}}" target="_blank"><i class="fab fa-facebook-f"></i></a>
             @endif
             @if (!empty($all_settings['twitter']))
-            <a href="{{$all_settings['twitter']}}" target="_blank"><i class="fab fa-twitter"></i></a> 
+            <a href="{{$all_settings['twitter']}}" target="_blank"><i class="fab fa-twitter"></i></a>
             @endif
             @if (!empty($all_settings['gplus']))
-            <a href="{{$all_settings['gplus']}}" target="_blank"><i class="fab fa-google-plus-g"></i></a> 
+            <a href="{{$all_settings['gplus']}}" target="_blank"><i class="fab fa-google-plus-g"></i></a>
             @endif
             @if (!empty($all_settings['instagram']))
             <a href="{{$all_settings['instagram']}}" target="_blank"><i class="fab fa-instagram"></i></a>

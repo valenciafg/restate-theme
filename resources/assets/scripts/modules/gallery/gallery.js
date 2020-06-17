@@ -91,6 +91,7 @@ export default {
         var selectBuilding = $('select[name="toratto-quotation-form-model"]');
         carousel.slick({
             centerMode: true,
+            centerPadding: '0px',
             slidesPerRow: 1,
             slidesToShow: 1,
             slidesToScroll: 1,

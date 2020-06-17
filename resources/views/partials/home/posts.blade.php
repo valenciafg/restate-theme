@@ -57,7 +57,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 toratto-project-building-projects">
-                <a class="btn btn-toratto-green btn-block" href="/proyectos" target="_blank">Ver todos los proyectos</a>
+                <a class="btn btn-toratto-green btn-block" href="/proyectos">Ver todos los proyectos</a>
             </div>
         </div>
     </div>
