@@ -1,0 +1,35 @@
+.toratto-us-page {
+  padding-top: 80px;
+  background-color: #fff;
+
+  .title-us-title-1,
+  .title-us-title-2 {
+    font-family: "CircularStd-Bold", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.15;
+  }
+
+  .title-us-title-1 {
+    color: $theme-color-green;
+  }
+
+  .title-us-title-2 {
+    color: $theme-color-blue;
+  }
+
+  .title-us-subtitle {
+    color: $theme-color-alt-blue;
+  }
+
+  .toratto-us-ecofriendly {
+    background-image: url(../images/img-nosotros-3.png);
+    width: 100%;
+    height: 620px;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;
+  }
+}

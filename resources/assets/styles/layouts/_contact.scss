@@ -1,0 +1,48 @@
+.toratto-contact-page {
+  padding-top: 80px;
+  background-color: #fff;
+
+  .title-us-title-1,
+  .title-us-title-2 {
+    font-family: "CircularStd-Bold", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.15;
+  }
+
+  .title-us-title-1 {
+    color: $theme-color-green;
+  }
+
+  .title-us-title-2 {
+    color: $theme-color-blue;
+  }
+
+  .title-us-subtitle-1 {
+    font-family: 'CircularStd-Black', sans-serif;
+    color: $theme-color-green;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .title-us-subtitle-2 {
+    font-family: 'CircularStd-Bold', sans-serif;
+    color: $theme-color-alt-blue;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .title-us-subtitle-3 {
+    color: $theme-color-alt-blue;
+    font-size: 1.8rem;
+    font-family: "CircularStd-Bold", sans-serif;
+    font-weight: bold;
+
+    .fab,
+    .fas {
+      color: $theme-color-green;
+      margin-right: 20px;
+    }
+  }
+}
