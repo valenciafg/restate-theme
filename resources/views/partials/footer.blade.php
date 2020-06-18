@@ -43,7 +43,7 @@
         <!--CENTER-->
         <div class="col-md-3 footer-links">
           <ul>
-            <li><a href="#">Proyectos En Venta</a></li>
+            <li><a href="/proyectos">Proyectos En Venta</a></li>
             <li><a href="#">Próximos Proyectos</a></li>
             <li><a href="#">Proyectos Entregados</a></li>
           </ul>
@@ -51,9 +51,9 @@
         <!--RIGHT SIDE-->
         <div class="col-md-3 footer-links">
           <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Compra De Terrenos</a></li>
-            <li><a href="#">Nosotros</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/compra-de-terrenos">Compra De Terrenos</a></li>
+            <li><a href="/nosotros">Nosotros</a></li>
           </ul>
         </div>
         <div class="col-md-3 footer-links">
@@ -61,6 +61,7 @@
             <li><i class="fas fa-book-open"></i><a href="#" target="_blank"> Libro De Reclamaciones</a></li>
             <li><i class="fas fa-folder-open"></i><a href="/legal" target="_blank"> Protección Al Consumidor</a></li>
             <li><a href="#">Post-venta</a></li>
+            <li><a href="/contacto">Contacto</a></li>
           </ul>
         </div>
       </div>

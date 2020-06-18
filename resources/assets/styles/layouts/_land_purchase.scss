@@ -1,0 +1,64 @@
+.toratto-land-purchase-page {
+  padding-top: 75px;
+  padding-bottom: 100px;
+  background-color: #fff;
+
+  .title-land-purchase-title-1,
+  .title-land-purchase-title-2 {
+    font-family: "CircularStd-Bold", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.15;
+  }
+
+  .title-land-purchase-title-1 {
+    color: $theme-color-green;
+  }
+
+  .title-land-purchase-title-2 {
+    color: $theme-color-blue;
+  }
+
+  .title-land-purchase-subtitle {
+    color: $theme-color-alt-blue;
+  }
+
+  .toratto-land_purchase-banner {
+    background-image: url(../images/compra-terrenos-bg.jpg);
+    height: 450px;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .toratto-land_purchase-form {
+    margin-top: 50px;
+
+    h1 {
+      font-weight: bold;
+      color: $theme-color-blue;
+      font-family: 'CircularStd-Bold', sans-serif;
+    }
+
+    .toratto-land_purchase-form-title {
+      border-bottom: 2px solid $theme-color-blue;
+      margin-top: 50px;
+
+      h4 {
+        font-weight: bold;
+        color: $theme-color-blue;
+        font-family: 'CircularStd-Bold', sans-serif;
+      }
+    }
+
+    form {
+      color: $theme-color-alt-blue;
+
+      .toratto-form-required {
+        color: $theme-color-green;
+      }
+    }
+  }
+}

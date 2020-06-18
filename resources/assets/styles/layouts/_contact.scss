@@ -1,5 +1,6 @@
 .toratto-contact-page {
-  padding-top: 80px;
+  padding-top: 150px;
+  padding-bottom: 100px;
   background-color: #fff;
 
   .title-us-title-1,
@@ -39,10 +40,26 @@
     font-family: "CircularStd-Bold", sans-serif;
     font-weight: bold;
 
+    a {
+      color: $theme-color-alt-blue;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     .fab,
     .fas {
       color: $theme-color-green;
       margin-right: 20px;
+    }
+  }
+
+  form {
+    color: $theme-color-alt-blue;
+
+    .toratto-form-required {
+      color: $theme-color-green;
     }
   }
 }

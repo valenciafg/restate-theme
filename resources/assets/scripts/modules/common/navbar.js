@@ -13,6 +13,7 @@ export default {
           || $('.page-template-projects').length > 0
           || $('.page-template-us').length > 0
           || $('.page-template-contact').length > 0
+          || $('.page-template-land_purchase').length > 0
         ) {
             nav.addClass('scrolled');
             logoPrimary.hide();

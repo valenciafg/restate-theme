@@ -117,19 +117,19 @@ export default {
             if (room_number) {
                 info_content += `
                 <li class="nav-item">
-                    <i class="fas fa-bed"></i> ${room_number} Habitaciones
+                  ${room_number} Habitaciones
                 </li>`;
             }
             if (total_area) {
                 info_content += `
                 <li class="nav-item">
-                    <i class="fas fa-ruler-combined"></i> Desde ${total_area} m&sup2;
+                  Desde ${total_area} m&sup2;
                 </li>`;
             }
             if (starting_price_usd) {
                 info_content += `
                 <li class="nav-item">
-                    <i class="far fa-money-bill-alt"></i> Desde ${starting_price_usd} USD
+                  Desde ${starting_price_usd} USD
                 </li>`;
             }
             info.html(info_content);

@@ -17,17 +17,17 @@
                     <ul class="nav justify-content-center nav-fill toratto-model-info">
                         @if (!empty($first_model_room_number))
                         <li class="nav-item">
-                            <i class="fas fa-bed"></i> {{$first_model_room_number}} Habitaciones
+                          {{$first_model_room_number}} Habitaciones
                         </li>
                         @endif
                         @if (!empty($first_model_total_area))
                         <li class="nav-item">
-                            <i class="fas fa-ruler-combined"></i> Desde {{$first_model_total_area}} m&sup2;
+                          Desde {{$first_model_total_area}} m&sup2;
                         </li>
                         @endif
                         @if (!empty($first_model_starting_price_usd))
                         <li class="nav-item">
-                            <i class="far fa-money-bill-alt"></i> Desde {{$first_model_starting_price_usd}} USD
+                          Desde {{$first_model_starting_price_usd}} USD
                         </li>
                         @endif
                     </ul>

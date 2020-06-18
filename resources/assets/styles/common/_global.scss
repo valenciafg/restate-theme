@@ -105,6 +105,19 @@ body {
   }
 }
 
+.btn-toratto-green-full {
+  color: #fff;
+  background-color: $theme-color-green;
+  border-color: $theme-color-green;
+  font-weight: bold;
+
+  &:hover {
+    color: $theme-color-blue;
+    background-color: transparent;
+    border-color: $theme-color-green;
+  }
+}
+
 .btn-toratto-blue {
   color: $theme-color-blue;
   border-color: $theme-color-green;
