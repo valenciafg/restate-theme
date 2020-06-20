@@ -5,9 +5,11 @@
 @if (!empty($projects))
   @section('content')
     <section class="toratto-section-background-00">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 text-center">
-          <h1 class="toratto-custom-page toratto-section-title-2">Protección al Consumidor</h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 text-center">
+            <h1 class="toratto-custom-page toratto-section-title-2">Protección al Consumidor</h1>
+          </div>
         </div>
       </div>
         <div class="container toratto-legal-doc-page shadow">

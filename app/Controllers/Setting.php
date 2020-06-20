@@ -49,6 +49,16 @@ class Setting extends Controller
         return $this->getAttachmentUrl($logo_id);
     }
 
+    public function getFacebookPosts($list) {
+        $posts = [];
+        foreach ($list as $post) {
+            if(!empty($post['real_estate_setting_social_fb_embed'])) {
+                $posts[] = $post['real_estate_setting_social_fb_embed'];
+            }
+        }
+        return $posts;
+    }
+
     public  function getAllSettings(){
         $config_data = [];
         $settings = $this->settings;
@@ -71,6 +81,7 @@ class Setting extends Controller
             'gmap_api_key'          => (isset($settings['real_estate_setting_main_google_maps_api_key'])?$settings['real_estate_setting_main_google_maps_api_key']:''),
             'whatsapp'              => (isset($settings['real_estate_setting_social_whatsapp'])?$settings['real_estate_setting_social_whatsapp']:''),
             'facebook'              => (isset($settings['real_estate_setting_social_facebook'])?$settings['real_estate_setting_social_facebook']:''),
+            'facebook_posts'        => (isset($settings['real_estate_setting_social_fb_posts'])?$this->getFacebookPosts($settings['real_estate_setting_social_fb_posts']):[]),
             'twitter'               => (isset($settings['real_estate_setting_social_twitter'])?$settings['real_estate_setting_social_twitter']:''),
             'pinterest'             => (isset($settings['real_estate_setting_social_pinterest'])?$settings['real_estate_setting_social_pinterest']:''),
             'linkedin'              => (isset($settings['real_estate_setting_social_linkedin'])?$settings['real_estate_setting_social_linkedin']:''),

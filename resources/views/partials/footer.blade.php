@@ -44,8 +44,8 @@
         <div class="col-md-3 footer-links">
           <ul>
             <li><a href="/proyectos">Proyectos En Venta</a></li>
-            <li><a href="#">Próximos Proyectos</a></li>
-            <li><a href="#">Proyectos Entregados</a></li>
+            <li><a href="/proximos-proyectos">Próximos Proyectos</a></li>
+            <li><a href="/proyectos-entregados">Proyectos Entregados</a></li>
           </ul>
         </div>
         <!--RIGHT SIDE-->
