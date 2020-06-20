@@ -1,4 +1,4 @@
-@php 
+@php
   $project = new  App\Controllers\Project();
   $projects = $project->getBannerProjects();
 @endphp
@@ -16,9 +16,11 @@
           <div class="owl-slide-text">
             @if (!empty($location))
               <div class="owl-slide-animated owl-slide-subtitle-location">
-                <i class="fas fa-map-marked-alt"></i> {{$location[0]}}
+                <span class="toratto-tag">
+                  <i class="fas fa-map-marker-alt"></i> {{$location[0]}}
+                </span>
               </div>
-            @endif            
+            @endif
             <div class="owl-slide-animated owl-slide-title">
               {{strtoupper($project['title'])}}
             </div>
@@ -33,7 +35,7 @@
               </a>
               @if (!empty($stage))
               <div class="stage">
-                {{$stage[0]}}
+                <i class="fas fa-tag"></i> {{$stage[0]}}
               </div>
               @endif
             </div>
