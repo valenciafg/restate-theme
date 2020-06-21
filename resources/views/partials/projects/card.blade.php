@@ -6,35 +6,50 @@
   $categories = $project['categories'];
   $location = $categories['location'];
   $stage = $categories['stage'];
+  $max_rooms = $project['max_rooms'];
+  $min_area = $project['min_area'];
+  $max_area = $project['max_area'];
   if(empty($facade)) {
       $facade = get_parent_theme_file_uri()."/dist/images/default_facade.jpg";
   }
 @endphp
-<div class="col-md-4 col-sm-12" style="padding-right: 0;padding-left: 0;">
+<div class="col-md-6 col-sm-12" style="padding-right: 0;padding-left: 0;">
   <div class="toratto-project-building">
     <a href="{{$project['url']}}" class="card toratto-project-building-card">
       <img class="card-img img-hover-zoom" src="{{$facade}}">
     </a>
-    <div class="card-bottom toratto-project-building-card-bottom-info shadow">
-      <ul class="nav justify-content-center nav-fill">
+    <div class="card-bottom toratto-project-building-card-bottom-info h-100 shadow">
+      <ul class="nav justify-content-center nav-fill" style="margin-bottom: 10px;">
         <li class="nav-item">
           @if (!empty($project['logo']))
-              <img src="{{$project['logo']}}" width="90px" height="60px">
+              <img src="{{$project['logo']}}" width="90px" height="70px">
           @else
               {{strtoupper($project['title'])}}
           @endif
         </li>
         <li class="nav-item toratto-project-building-card-bottom-info-location">
           @if (!empty($location))
-            <span class="location"><i class="fas fa-map-marked-alt"></i> {{$location[0]}}</span>
+            <span class="location">{{$location[0]}}</span>
           @endif
-          @if (!empty($stage))
-            <span class="location"><i class="fas fa-tag"></i> {{$stage[0]}}</span>
-          @endif
-          @if (!empty($stage))
+          @if (!empty($address))
             <span class="address">{{$address}}</span>
           @endif
+          @if (!empty($stage))
+            <span class="stage">{{$stage[0]}}</span>
+          @endif
         </li>
+      </ul>
+      <ul class="nav justify-content-center nav-fill toratto-bottom-extra-info">
+        @if (!empty($max_rooms))
+        <li>
+          <img src="@asset('images/bed-1.png')" style="width:50px; height:50px;"> Hasta {{$max_rooms}} dormitorios
+        </li>
+        @endif
+        @if (!empty($min_area) && !empty($max_area))
+        <li>
+        <img src="@asset('images/metraje-1.png')" style="width:50px; height:50px;"> Desde {{$min_area}} hasta {{$max_area}}m&sup2;
+        </li>
+        @endif
       </ul>
     </div>
   </div>

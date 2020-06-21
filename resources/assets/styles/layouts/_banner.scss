@@ -79,9 +79,9 @@
 
   .toratto-tag {
     background-color: #7cb046;
-    padding: 20px;
+    padding: 12px;
     color: #fff;
-    border-radius: 0 30px;
+    border-radius: 20px 0;
     font-size: 1.3rem;
   }
 }
@@ -102,9 +102,9 @@
       .location,
       .stage {
         background-color: #7cb046;
-        padding: 20px;
+        padding: 12px;
         color: #fff;
-        border-radius: 0 30px;
+        border-radius: 20px 0;
         font-size: 1.3rem;
       }
     }
@@ -129,8 +129,8 @@
     float: right;
     background-color: $theme-color-green;
     color: #fff;
-    padding: 14px;
-    border-radius: 0 30px;
+    padding: 12px;
+    border-radius: 20px 0;
     font-size: 1.1rem;
   }
 }

@@ -12,7 +12,6 @@ footer {
     a:focus {
       color: $theme-color-green;
       text-decoration: none;
-      font-weight: bold;
       border: 0;
     }
 
@@ -29,13 +28,18 @@ footer {
     color: #fff;
     font-size: 1.1em;
 
-    .footer-about {
-      font-size: 1.1rem;
+    img.logo-footer {
+      max-width: 200px;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
 
-      img.logo-footer {
-        max-width: 200px;
-        margin-top: 0;
-        margin-bottom: 30px;
+    .footer-about {
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      .fas {
+        color: $theme-color-green;
       }
     }
 
@@ -45,18 +49,15 @@ footer {
 
         li {
           margin-top: 0;
-          margin-bottom: 1rem;
-
-          a {
-            text-transform: capitalize;
-          }
+          margin-bottom: 1.5rem;
+          font-size: 1.2rem;
         }
       }
     }
 
     .footer-message {
       background-color: $theme-color-soft-blue;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       text-align: center;
       padding: 25px;
     }

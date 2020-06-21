@@ -20,7 +20,7 @@
           <div class="col-md-12 col-sm-12">
             <div class="toratto-project-banner-subtitle">
               @if (!empty($location))
-              <span class="location"><i class="fas fa-map-marker-alt"></i> {{$location}}</span>
+              <span class="location">{{$location}}</span>
               @endif
             </div>
           </div>
@@ -47,7 +47,7 @@
           <div class="col-md-8 col-sm-12">
             <div class="toratto-project-banner-subtitle">
               @if (!empty($stage))
-              <span class="stage float-right"><i class="fas fa-tag"></i> {{$stage}}</span>
+              <span class="stage float-right">{{$stage}}</span>
               @endif
             </div>
           </div>

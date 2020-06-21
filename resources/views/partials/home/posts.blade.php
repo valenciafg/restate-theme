@@ -24,7 +24,7 @@
                 $facade = get_parent_theme_file_uri()."/dist/images/default_facade.jpg";
             }
             @endphp
-            <div class="col-md-{{$col_md}} col-sm-12">
+            <div class="col-md-{{$col_md}} col-sm-12" style="padding-left: 0;padding-right: 0;">
                 <div class="toratto-project-building">
                     <a href="{{$project['url']}}" class="card toratto-project-building-card">
                         <img class="card-img img-hover-zoom" src="{{$facade}}">
@@ -40,13 +40,13 @@
                             </li>
                             <li class="nav-item toratto-project-building-card-bottom-info-location">
                                 @if (!empty($location))
-                                  <span class="location"><i class="fas fa-map-marked-alt"></i> {{$location[0]}}</span>
-                                @endif
-                                @if (!empty($stage))
-                                   <span class="stage"><i class="fas fa-tag"></i> {{$stage[0]}}</span>
+                                  <span class="location">{{$location[0]}}</span>
                                 @endif
                                 @if (!empty($address))
                                     <span class="address">{{$address}}</span>
+                                @endif
+                                @if (!empty($stage))
+                                   <span class="stage">{{$stage[0]}}</span>
                                 @endif
                             </li>
                         </ul>

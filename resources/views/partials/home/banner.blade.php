@@ -17,7 +17,7 @@
             @if (!empty($location))
               <div class="owl-slide-animated owl-slide-subtitle-location">
                 <span class="toratto-tag">
-                  <i class="fas fa-map-marker-alt"></i> {{$location[0]}}
+                  {{$location[0]}}
                 </span>
               </div>
             @endif
@@ -35,7 +35,7 @@
               </a>
               @if (!empty($stage))
               <div class="stage">
-                <i class="fas fa-tag"></i> {{$stage[0]}}
+                {{$stage[0]}}
               </div>
               @endif
             </div>

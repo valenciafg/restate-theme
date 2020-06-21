@@ -1,5 +1,5 @@
 <div class="col-md-4 col-sm-12">
-  <div class="card shadow toratto-blog-post-card">
+  <div class="card shadow toratto-blog-post-card h-100">
       <img class="card-img-top" src="http://localhost/wp-content/themes/restate-theme/resources/assets/images/departamento_default.jpg" alt="{{ get_the_title() }}">
       <div class="card-body">
           <h5 class="card-title">{{ get_the_title() }}</h5>
