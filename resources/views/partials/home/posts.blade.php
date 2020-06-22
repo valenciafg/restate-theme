@@ -5,7 +5,7 @@
   //echo "<pre>";
   //print_r($projects);
   //echo "</pre>";
-  $col_md = 4;
+  $col_md = 6;
 
 @endphp
 @if (!empty($projects))
