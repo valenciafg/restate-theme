@@ -20,14 +20,15 @@
             $categories = $project['categories'];
             $location = $categories['location'];
             $stage = $categories['stage'];
-            if(empty($facade)) {
-                $facade = get_parent_theme_file_uri()."/dist/images/default_facade.jpg";
-            }
             @endphp
             <div class="col-md-{{$col_md}} col-sm-12" style="padding-left: 0;padding-right: 0;">
                 <div class="toratto-project-building">
                     <a href="{{$project['url']}}" class="card toratto-project-building-card">
+                      @if (empty($facade))
+                        <img class="card-img img-hover-zoom" src="@asset('images/default_facade.jpg')">
+                      @else
                         <img class="card-img img-hover-zoom" src="{{$facade}}">
+                      @endif
                     </a>
                     <div class="card-bottom toratto-project-building-card-bottom-info shadow">
                         <ul class="nav justify-content-center nav-fill">

@@ -9,14 +9,15 @@
   $max_rooms = $project['max_rooms'];
   $min_area = $project['min_area'];
   $max_area = $project['max_area'];
-  if(empty($facade)) {
-      $facade = get_parent_theme_file_uri()."/dist/images/default_facade.jpg";
-  }
 @endphp
 <div class="col-md-6 col-sm-12" style="padding-right: 0;padding-left: 0;">
   <div class="toratto-project-building">
     <a href="{{$project['url']}}" class="card toratto-project-building-card">
-      <img class="card-img img-hover-zoom" src="{{$facade}}">
+      @if (empty($facade))
+        <img class="card-img img-hover-zoom" src="@asset('images/default_facade.jpg')">
+      @else
+        <img class="card-img img-hover-zoom" src="{{$facade}}">
+      @endif
     </a>
     <div class="card-bottom toratto-project-building-card-bottom-info h-100 shadow">
       <ul class="nav justify-content-center nav-fill" style="margin-bottom: 10px;">
@@ -47,7 +48,7 @@
         @endif
         @if (!empty($min_area) && !empty($max_area))
         <li>
-        <img src="@asset('images/metraje-1.png')" style="width:50px; height:50px;"> Desde {{$min_area}} hasta {{$max_area}}m&sup2;
+          <img src="@asset('images/metraje-1.png')" style="width:50px; height:50px;"> Desde {{$min_area}} hasta {{$max_area}}m&sup2;
         </li>
         @endif
       </ul>

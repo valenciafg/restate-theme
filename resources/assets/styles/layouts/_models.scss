@@ -13,7 +13,7 @@
     .item {
       img {
         width: 100%;
-        height: 500px;
+        height: 400px;
       }
     }
 
@@ -50,6 +50,13 @@
     }
   }
 
+  .toratto-model-info-name {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0 5px 0 5px;
+  }
+
   .nav.toratto-model-info {
     .nav-item {
       color: #fff;
@@ -61,7 +68,7 @@
   }
 
   .toratto-section-model-form {
-    padding: 0 120px 0 120px;
+    color: #fff;
 
     p.h2.text-center {
       color: $theme-color-blue;
@@ -73,10 +80,13 @@
       text-transform: uppercase;
     }
 
+    .form-control,
     .form-control.form-control-lg {
       background-color: transparent;
       border: 1px solid #fff;
       color: #fff;
+      padding-top: 22px;
+      padding-bottom: 22px;
 
       &::placeholder {
         color: #fff;
@@ -105,5 +115,110 @@
         background-color: rgba(255, 255, 255, 0.5);
       }
     }
+
+    .btn.btn-toratto-green {
+      background-color: $theme-color-alt-green;
+      color: #fff;
+      padding: 12px 60px 12px 60px;
+
+      &:hover {
+        background-color: $theme-color-green;
+      }
+    }
+
+    .toratto-form-required {
+      color: #fff;
+    }
+  }
+
+  .toratto-quotation-form-model-fake {
+    .toratto-quotation-form-model-fake-btn {
+      width: 100%;
+      float: left;
+      text-align: left;
+
+      img {
+        width: 50px;
+      }
+
+      li,
+      li:hover {
+        padding: 5px;
+        list-style: none;
+        background-color: #fff;
+
+        .title {
+          color: $theme-color-blue;
+          font-weight: bold;
+        }
+
+        .sub-title {
+          color: $theme-color-alt-blue;
+        }
+      }
+
+      &::after {
+        font-family: "Font Awesome 5 Free", sans-serif;
+        content: "\f142";
+        font-size: 1.5rem;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        right: 30px;
+        color: $theme-color-alt-blue;
+        height: 35px;
+        bottom: 0;
+        margin: auto 0;
+      }
+    }
+
+    .toratto-quotation-form-model-fake-section {
+      display: none;
+
+      #toratto-quotation-form-model-fake-list {
+        padding-left: 0;
+
+        img {
+          width: 50px;
+        }
+
+        li {
+          list-style: none;
+          padding: 5px;
+          background-color: #fff;
+
+          .title {
+            color: $theme-color-blue;
+            font-weight: bold;
+          }
+
+          .sub-title {
+            color: $theme-color-alt-blue;
+          }
+
+          img {
+            margin: 5px;
+          }
+        }
+
+        li:hover {
+          background-color: $theme-color-alt-blue;
+
+          .title {
+            color: #fff;
+            font-weight: bold;
+          }
+
+          .sub-title {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  #toratto-quotation-form-model-fake-list li span,
+  .toratto-quotation-form-model-fake-btn li span {
+    margin-left: 30px;
   }
 }

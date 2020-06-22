@@ -21,7 +21,7 @@
             $clean_phone = str_replace("+", "", $clean_phone);
           @endphp
           <p>
-            <a href="tel:{{$clean_phone}}">
+            <a href="tel:{{$clean_phone}}" style="font-size: 2rem;">
               <strong><i class="fas fa-phone-alt"></i>{{$all_settings['phone']}}</strong>
             </a>
           </p>

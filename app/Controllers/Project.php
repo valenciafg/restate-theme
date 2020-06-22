@@ -65,6 +65,14 @@ class Project extends Controller
         return $file;
     }
 
+    public function getProjectFileThumb($files) {
+        $file = "";
+        if(!empty($files)) {
+            $file = wp_get_attachment_thumb_url($files[0]);
+        }
+        return $file;
+    }
+
     public function getProjectCategories($id) {
         $categories = [];
         $common_areas = [];
@@ -115,7 +123,8 @@ class Project extends Controller
                     "room_number" => $model['restate_project_model_room_number'],
                     "starting_price_pen" => $model['restate_project_model_starting_price_pen'],
                     "starting_price_usd" => $model['restate_project_model_starting_price_usd'],
-                    "blueprint" => $this->getProjectFile($model['restate_project_model_blueprints'])
+                    "blueprint" => $this->getProjectFile($model['restate_project_model_blueprints']),
+                    "blueprint_thumbnail" => $this->getProjectFileThumb($model['restate_project_model_blueprints'])
                 ];
             }
         }
