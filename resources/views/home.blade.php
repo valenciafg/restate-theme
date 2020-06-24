@@ -12,6 +12,7 @@
 @include('partials.home.posts')
 @include('partials.home.promotion')
 @include('partials.home.blog')
+@include('partials.home.video')
 @include('partials.home.social')
 {{--
 @include('partials.home.social')

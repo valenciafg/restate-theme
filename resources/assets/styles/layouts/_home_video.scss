@@ -1,0 +1,23 @@
+.toratto-section-home-video {
+  min-height: 550px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  background-image: url(../images/ver-video.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  .col-md-12.col-sm-12 {
+    margin-top: 125px;
+
+    a {
+      font-size: 5rem;
+      color: #fff;
+
+      &:hover {
+        color: $theme-color-blue;
+      }
+    }
+  }
+}

@@ -76,6 +76,7 @@ class Setting extends Controller
             'country'               => (isset($settings['real_estate_setting_main_country'])?$settings['real_estate_setting_main_country']:''),
             'email'                 => (isset($settings['real_estate_setting_main_email'])?$settings['real_estate_setting_main_email']:''),
             'phone'                 => (isset($settings['real_estate_setting_main_phone'])?$settings['real_estate_setting_main_phone']:''),
+            'promotion_video'       => (isset($settings['real_estate_setting_promotional_video'])?$settings['real_estate_setting_promotional_video']:''),
             'recaptcha_site_key'    => (isset($settings['real_estate_setting_main_recaptcha_site_key'])?$settings['real_estate_setting_main_recaptcha_site_key']:''),
             'recaptcha_secret_key'  => (isset($settings['real_estate_setting_main_recaptcha_secret_key'])?$settings['real_estate_setting_main_recaptcha_secret_key']:''),
             'gmap_api_key'          => (isset($settings['real_estate_setting_main_google_maps_api_key'])?$settings['real_estate_setting_main_google_maps_api_key']:''),
