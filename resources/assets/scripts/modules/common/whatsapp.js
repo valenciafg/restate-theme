@@ -11,9 +11,9 @@ export default {
             position: 'right',
             popupMessage,
             message,
-            showPopup: true,
+            showPopup: false,
             autoOpenTimeout: 8000,
-            size: '50px',            
+            size: '50px',
             zIndex: 10,
         });
     },

@@ -1,0 +1,42 @@
+.toratto-complaints-book-page {
+  padding-top: 75px;
+  padding-bottom: 100px;
+  background-color: #fff;
+
+  .toratto-complaints-book-title {
+    color: $theme-color-green;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .toratto-complaints-book-subtitle {
+    color: $theme-color-alt-blue;
+  }
+
+  form {
+    color: $theme-color-alt-blue;
+
+    .toratto-complaints-book-form-title {
+      color: $theme-color-blue;
+      border-bottom: 2px solid $theme-color-blue;
+      margin-top: 50px;
+
+      h5 {
+        font-weight: bold;
+      }
+    }
+
+    .toratto-form-bold {
+      color: $theme-color-blue;
+      font-weight: bold;
+    }
+
+    p {
+      color: $theme-color-alt-blue;
+    }
+
+    .toratto-form-required {
+      color: $theme-color-green;
+    }
+  }
+}

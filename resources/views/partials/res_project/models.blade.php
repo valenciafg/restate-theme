@@ -16,7 +16,7 @@
     <!-- slider model section -->
     @include('partials.res_project.model.slider')
     <!-- form model section -->
-    @include('partials.res_project.model.form2')
+    @include('partials.res_project.model.form')
   </div>
 </section>
 @endif

@@ -27,7 +27,14 @@ export default {
       $('.toratto-quotation-form-model-fake-btn').html(item);
       $('.toratto-quotation-form-model-fake-btn').attr('value', value);
       $('.toratto-quotation-form-model-fake-section').toggle();
-      //console.log(value);
+
+      //MOVE SLICK TO SELECTED MODEL
+      $('.toratto-section-model-carousel').slick('slickGoTo', value);
+      var currrentNavSlideElem = '.toratto-section-model-carousel .slick-slide[data-slick-index="' + value + '"]';
+      $('.toratto-section-model-carousel .slick-slide.is-active').removeClass('is-active');
+      $(currrentNavSlideElem).addClass('is-active');
+      $('.toratto-model-info-name').html(value);
+      $('select[name="toratto-quotation-form-model"]').val(value);
     });
 
     $('.toratto-quotation-form-model-fake-btn').click(function(){

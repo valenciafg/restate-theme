@@ -16,4 +16,4 @@ echo"</pre>";
 @include('partials.res_project.promotional_video')
 @include('partials.res_project.models')
 @include('partials.res_project.location')
-@include('partials.res_project.whatsapp')
+@include('partials.res_project.social')

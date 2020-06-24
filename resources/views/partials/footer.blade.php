@@ -52,7 +52,7 @@
         </div>
         <div class="col-md-2 footer-links">
           <ul>
-            <li><i class="fas fa-book-open"></i><a href="#" target="_blank"> Libro de Reclamaciones</a></li>
+            <li><i class="fas fa-book-open"></i><a href="/libro-de-reclamaciones" target="_blank"> Libro de Reclamaciones</a></li>
             <li><i class="fas fa-folder-open"></i><a href="/legal" target="_blank"> Protección al Consumidor</a></li>
             <li><a href="#">Post-venta</a></li>
             <li><a href="/contacto">Contacto</a></li>

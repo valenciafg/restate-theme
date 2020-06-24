@@ -7,6 +7,11 @@
     <div class="col-md-12 col-sm-12">
       <form>
         <div class="form-row">
+          <div class="form-group col-md-12">
+            <span style="font-weight: bold;">Si desea más información por favor ingrese sus datos en el siguiente formato y nos pondremos en contacto con usted:</span>
+          </div>
+        </div>
+        <div class="form-row">
           <div class="form-group col-md-6">
             <label for="toratto-contact-form-fullname">Nombres y Apellidos: <span class="toratto-form-required">*<span></label>
             <input type="text" class="form-control" id="toratto-contact-form-fullname" name="toratto-contact-form-fullname" required>

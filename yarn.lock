@@ -2734,6 +2734,11 @@ download@^7.1.0:
     p-event "^2.1.0"
     pify "^3.0.0"
 
+dropzone@^5.7.1:
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-5.7.1.tgz#8e41a85879ff145562e8fcce39c6ff619dce81be"
+  integrity sha512-eqcJafupMKRlVUihZtsLkzLn02WTPUMHeImP5ZtWm3ERObC/dv15te0qqn/X2rEKaSqRC0pNTHUBPgrPWcP52w==
+
 duplexer2@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/duplexer2/-/duplexer2-0.0.2.tgz#c614dcf67e2fb14995a91711e5a617e8a60a31db"

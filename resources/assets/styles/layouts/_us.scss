@@ -20,6 +20,7 @@
 
   .title-us-subtitle {
     color: $theme-color-alt-blue;
+    font-size: 1.1rem;
   }
 
   .toratto-us-ecofriendly {
@@ -31,5 +32,39 @@
     -moz-background-size: cover;
     background-size: cover;
     background-position: center;
+  }
+
+  .toratto-choose-row {
+    .col-md-5.col-sm-12 {
+      text-align: center;
+      color: $theme-color-alt-blue;
+      border: 1px solid $theme-color-soft-gray;
+      margin: 10px 8px;
+      padding: 15px;
+    }
+  }
+
+  .toratto-us-mision,
+  .toratto-us-vision {
+    color: #fff;
+    padding: 60px 80px;
+
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    span {
+      font-size: 1.1rem;
+    }
+  }
+
+  .toratto-us-mision {
+    background-color: $theme-color-blue;
+  }
+
+  .toratto-us-vision {
+    background-color: $theme-color-green;
   }
 }

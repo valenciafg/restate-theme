@@ -35,7 +35,7 @@
             @endif
             @if ($project['brochure'])
             <div class="">
-                <a class="btn btn-outline-success btn-md display-4" href="{{$project['brochure']}}">Brochure</a>
+                <a class="btn btn-toratto-green btn-md" href="{{$project['brochure']}}">DESCARGAR BROCHURE</a>
             </div>
             @endif
           </div>
