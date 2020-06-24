@@ -11,9 +11,9 @@
         $outside_active_nav = "active";
     }
 @endphp
-@if (!empty($inside) || !empty($outside)) 
+@if (!empty($inside) || !empty($outside))
 <section class="toratto-project-gallery toratto-section-background-00">
-    <div class="toratto-project-gallery-container"> 
+    <div class="toratto-project-gallery-container">
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="tab-content">
@@ -40,7 +40,7 @@
                     </div>
                     @endif
                 </div>
-                <ul class="nav nav-pills nav-justified" role="tablist">
+                <ul class="nav nav-pills" role="tablist">
                     @if (!empty($inside))
                     <li class="nav-item">
                         <a class="nav-link {{$inside_active_nav}}" id="pills-inside-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">

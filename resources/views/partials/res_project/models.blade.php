@@ -8,7 +8,7 @@
     $first_model_total_area = $models[0]['total_area'];
     $first_model_starting_price_usd = $models[0]['starting_price_usd'];
 @endphp
-<section class="toratto-section-model">
+<section class="toratto-section-model" id="toratto-quotation-section">
   <div class="row">
     <h1 class="toratto-section-model-title col-md-12">¡Tu nuevo hogar está a un solo paso!</h1>
   </div>

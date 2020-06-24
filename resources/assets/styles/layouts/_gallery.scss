@@ -8,10 +8,19 @@
 
 .toratto-project-gallery {
   .toratto-project-gallery-container {
-    .nav.nav-pills.nav-justified {
+    .nav.nav-pills {
+      display: inline-block;
       margin-top: 5px;
 
       .nav-item {
+        display: inline;
+
+        .nav-link,
+        .nav-link.active {
+          float: left;
+          border-radius: 0;
+        }
+
         .nav-link {
           color: $theme-color-green;
           border: 1px $theme-color-green solid;

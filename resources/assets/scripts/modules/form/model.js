@@ -54,4 +54,12 @@ export default {
       $('.toratto-quotation-form-model-fake-btn').html(langArray[langIndex]);
     }
   },
+  initModelLink() {
+    $('.toratto-quotation-link').click(function(e){
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $('#toratto-quotation-section').offset().top,
+      }, 1500);
+    });
+  },
 }

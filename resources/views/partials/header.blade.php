@@ -20,7 +20,7 @@
       <ul class="nav navbar-nav navbar-nav-toratto-center mx-auto">
       @foreach ($menu_items as $item)
         <li class="nav-item">
-          <a class="nav-link" href="{{$item->url}}">{{$item->title}}</a> 
+          <a class="nav-link" href="{{$item->url}}">{{$item->title}}</a>
         </li>
       @endforeach
       </ul>
@@ -51,7 +51,7 @@
         </li>
         @endif
         <li class="nav-item">
-          <a class="btn btn-toratto-green" href="#" role="button">
+          <a class="btn btn-toratto-green toratto-quotation-link" href="/contacto" role="button">
           Cotiza Aquí
           </a>
         </li>
