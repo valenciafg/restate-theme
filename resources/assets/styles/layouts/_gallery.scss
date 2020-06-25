@@ -19,6 +19,9 @@
         .nav-link.active {
           float: left;
           border-radius: 0;
+          padding: 20px;
+          min-width: 240px;
+          font-weight: bold;
         }
 
         .nav-link {

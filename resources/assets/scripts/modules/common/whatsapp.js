@@ -13,7 +13,7 @@ export default {
             message,
             showPopup: false,
             autoOpenTimeout: 8000,
-            size: '50px',
+            size: '65px',
             zIndex: 10,
         });
     },

@@ -10,7 +10,7 @@
 <footer>
   <div class="footer-top">
     <div class="container-fluid">
-      <div class="row">
+      <div class="row" style="padding-left: 25px;padding-right: 25px;">
         <!-- LEFT SIDE -->
         <div class="col-md-3 footer-about">
           @if (!empty($all_settings['phone']))
@@ -29,33 +29,35 @@
           @if (!empty($all_settings['email']))
           <p>
             <a href="mailto:{{$all_settings['email']}}">
-              </strong><i class="fas fa-envelope"></i>{{$all_settings['email']}}</strong>
+              <strong><i class="fas fa-envelope"></i>{{$all_settings['email']}}</strong>
             </a>
+          </p>
+          <p>
+            <a href="/contacto"><strong>Contáctanos</strong></a>
           </p>
           @endif
         </div>
         <!--CENTER-->
         <div class="col-md-2 footer-links">
           <ul>
-            <li><a href="/proyectos">Proyectos en Venta</a></li>
-            <li><a href="/proximos-proyectos">Próximos Proyectos</a></li>
-            <li><a href="/proyectos-entregados">Proyectos Entregados</a></li>
+            <li><a href="/proyectos">Proyectos en venta</a></li>
+            <li><a href="/proximos-proyectos">Próximos proyectos</a></li>
+            <li><a href="/proyectos-entregados">Proyectos entregados</a></li>
           </ul>
         </div>
         <!--RIGHT SIDE-->
         <div class="col-md-2 footer-links">
           <ul>
             <li><a href="/blog">Blog</a></li>
-            <li><a href="/compra-de-terrenos">Compra de Terrenos</a></li>
+            <li><a href="/compra-de-terrenos">Compra de terrenos</a></li>
             <li><a href="/nosotros">Nosotros</a></li>
           </ul>
         </div>
         <div class="col-md-2 footer-links">
           <ul>
-            <li><i class="fas fa-book-open"></i><a href="/libro-de-reclamaciones" target="_blank"> Libro de Reclamaciones</a></li>
-            <li><i class="fas fa-folder-open"></i><a href="/legal" target="_blank"> Protección al Consumidor</a></li>
+            <li><i class="fas fa-book-open"></i><a href="/libro-de-reclamaciones" target="_blank"> Libro de reclamaciones</a></li>
+            <li><i class="fas fa-folder-open"></i><a href="/legal" target="_blank"> Protección al consumidor</a></li>
             <li><a href="#">Post-venta</a></li>
-            <li><a href="/contacto">Contacto</a></li>
           </ul>
         </div>
         <div class="col-md-3 footer-links">
