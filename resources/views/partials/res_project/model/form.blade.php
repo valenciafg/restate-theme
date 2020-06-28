@@ -38,22 +38,22 @@
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="toratto-contact-form-fullname">Nombres y Apellidos: <span class="toratto-form-required">*<span></label>
-        <input type="text" class="form-control" id="toratto-contact-form-fullname" name="toratto-contact-form-fullname" required>
+        <label for="fullname">Nombres y Apellidos: <span class="toratto-form-required">*<span></label>
+        <input type="text" class="form-control" id="fullname" name="fullname" required>
       </div>
       <div class="form-group col-md-6">
-        <label for="toratto-contact-form-phone">Télefono: <span class="toratto-form-required">*<span></label>
-        <input type="text" class="form-control" id="toratto-contact-form-phone" name="toratto-contact-form-phone" required>
+        <label for="phone">Télefono: <span class="toratto-form-required">*<span></label>
+        <input type="text" class="form-control" id="phone" name="phone" required>
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="toratto-contact-form-email">Email <span class="toratto-form-required">*<span></label>
-        <input type="email" class="form-control" id="toratto-contact-form-email" name="toratto-contact-form-email" required>
+        <label for="email">Email <span class="toratto-form-required">*<span></label>
+        <input type="email" class="form-control" id="email" name="email" required>
       </div>
       <div class="form-group col-md-6">
-        <label for="toratto-contact-form-message">Descripción: <span class="toratto-form-required">*<span></label>
-        <input type="text" class="form-control" id="toratto-contact-form-message" name="toratto-contact-form-message" required>
+        <label for="message">Descripción: <span class="toratto-form-required">*<span></label>
+        <input type="text" class="form-control" id="message" name="message" required>
       </div>
     </div>
     <div class="form-group">
@@ -67,6 +67,7 @@
     </div>
     <div class="form-group">
       <input type="hidden" name="toratto-quotation-form-google-res-token">
+      <input type="hidden" name="project_id" value="111">
       <button
         id="btn-toratto-submit-form"
         type="submit"

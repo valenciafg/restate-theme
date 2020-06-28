@@ -1,5 +1,5 @@
-import bedImg2 from '../../../images/bed-2.png';
-import metrajeImg2 from '../../../images/metraje-2.png';
+// import bedImg2 from '../../../images/bed-2.png';
+// import metrajeImg2 from '../../../images/metraje-2.png';
 
 export default {
     initGallery() {
@@ -91,19 +91,19 @@ export default {
     },
     initModels() {
         var carousel = $('.toratto-section-model-carousel');
-        var selectBuilding = $('select[name="toratto-quotation-form-model"]');
+        // var selectBuilding = $('select[name="toratto-quotation-form-model"]');
         carousel.slick({
             centerMode: true,
             centerPadding: '0px',
             slidesPerRow: 1,
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: true,
+            arrows: false,
             dots: false,
             infinite: true,
             swipe: true,
         });
-
+        /*
         carousel.on('afterChange', function(event, slick, currentSlide) {
             var elSlide = $(slick.$slides[currentSlide]);
             var name = elSlide.data('name');
@@ -131,14 +131,6 @@ export default {
                   Desde ${total_area} m&sup2;
                 </li>`;
             }
-            /*
-            if (starting_price_usd) {
-                info_content += `
-                <li class="nav-item">
-                  Desde ${starting_price_usd} USD
-                </li>`;
-            }
-            */
             info.html(info_content);
         });
 
@@ -151,5 +143,6 @@ export default {
             $(currrentNavSlideElem).addClass('is-active');
           }
         });
+        */
     },
 }

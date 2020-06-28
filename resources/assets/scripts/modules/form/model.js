@@ -1,3 +1,6 @@
+import bedImg2 from '../../../images/bed-2.png';
+import metrajeImg2 from '../../../images/metraje-2.png';
+
 export default {
   initModelList () {
     //test for iterating over child elements
@@ -5,9 +8,16 @@ export default {
     var langArrayValues = [];
     $('.toratto-quotation-form-model option').each(function(){
       var img = $(this).attr('data-thumbnail');
+      var index = $(this).attr('data-index');
+      var total_area = $(this).attr('data-total_area');
+      var room_number = $(this).attr('data-room_number');
       var text = this.innerText;
       var value = $(this).val();
-      var item = '<li><img src="'+ img +'" alt="" value="'+value+'"/><span class="title">'+ text +'</span></li>';
+      var item = `
+        <li>
+          <img data-index="${index}" data-total_area="${total_area}" data-room_number="${room_number}" src="${img}" alt="${value}" value="${value}"/>
+          <span class="title">${text}</span>
+        </li>`;
       langArray.push(item);
       langArrayValues.push(value);
     })
@@ -22,6 +32,9 @@ export default {
     $('#toratto-quotation-form-model-fake-list li').click(function(){
       var img = $(this).find('img').attr('src');
       var value = $(this).find('img').attr('value');
+      var index = $(this).find('img').attr('data-index');
+      var total_area = $(this).find('img').attr('data-total_area');
+      var room_number = $(this).find('img').attr('data-room_number');
       var text = this.innerText;
       var item = '<li><img src="'+ img +'" alt="" /><span class="title">'+ text +'</span></li>';
       $('.toratto-quotation-form-model-fake-btn').html(item);
@@ -29,11 +42,29 @@ export default {
       $('.toratto-quotation-form-model-fake-section').toggle();
 
       //MOVE SLICK TO SELECTED MODEL
-      $('.toratto-section-model-carousel').slick('slickGoTo', value);
-      var currrentNavSlideElem = '.toratto-section-model-carousel .slick-slide[data-slick-index="' + value + '"]';
-      $('.toratto-section-model-carousel .slick-slide.is-active').removeClass('is-active');
-      $(currrentNavSlideElem).addClass('is-active');
+      console.log('el nuevo valor es', value, index);
+      $('.toratto-section-model-carousel').slick('slickGoTo', index);
+      // var newCurrentSlide = '.toratto-section-model-carousel .slick-slide[data-slick-index="' + index + '"]';
+      //$('.toratto-section-model-carousel .slick-slide.is-active').removeClass('is-active');
+      //$(currrentNavSlideElem).addClass('is-active');
       $('.toratto-model-info-name').html(value);
+      var info = $('.toratto-model-info');
+      var info_content = '';
+      if (room_number) {
+          info_content += `
+          <li class="nav-item">
+            <img src="${bedImg2}" style="width:50px; height:50px;">
+            ${room_number} Dormitorios
+          </li>`;
+      }
+      if (total_area) {
+          info_content += `
+          <li class="nav-item">
+            <img src="${metrajeImg2}" style="width:50px; height:50px;">
+            Desde ${total_area} m&sup2;
+          </li>`;
+      }
+      info.html(info_content);
       $('select[name="toratto-quotation-form-model"]').val(value);
     });
 

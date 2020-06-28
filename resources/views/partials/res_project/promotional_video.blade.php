@@ -3,20 +3,15 @@
     $title = $project['title'];
 @endphp
 @if (!empty($video))
-<section class="toratto-section-video toratto-section-background-00">
-    <div class="container">
-        <div class="row">
-            <div class="card col-md-4 col-sm-12">
-                <div class="card-body">
-                    <h4 class="card-title">Disfruta de nuestro vídeo promocional</h4>
-                </div>
-            </div>
-            <div class="col-md-8 col-sm-12"> 
-                @php 
-                echo $video;
-                @endphp
-            </div>
-        </div>
+<section class="toratto-section-home-video">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 text-center">
+        <a data-fancybox href="{{$video}}">
+          <i class="fas fa-play-circle"></i>
+        </a>
+      </div>
     </div>
+  </div>
 </section>
 @endif

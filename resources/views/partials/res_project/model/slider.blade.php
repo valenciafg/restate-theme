@@ -1,15 +1,30 @@
 <div class="col-md-6 col-sm-12">
   <div class="row">
     <div class="col-md-12 col-sm-12">
-        <div class="toratto-section-model-carousel">
-            @foreach ($models as $model)
-            @if ($model['blueprint'])
-                <div class="item" data-name="{{$model['name']}}" data-total_area="{{$model['total_area']}}" data-room_number="{{$model['room_number']}}" data-starting_price_pen="{{$model['starting_price_pen']}}" data-starting_price_usd="{{$model['starting_price_usd']}}">
-                  <a data-fancybox="gallery" href="{{$model['blueprint']}}"><img src="{{$model['blueprint']}}" height="350" alt="{{$model['name']}}"></a>
-                </div>
-            @endif
-            @endforeach
+      <div class="toratto-section-model-carousel">
+        @php $index = 0; @endphp
+        @foreach ($models as $model)
+        @if ($model['blueprint'])
+        <div
+          class="item"
+          data-index="{{$index}}"
+          data-name="{{$model['name']}}"
+          data-total_area="{{$model['total_area']}}"
+          data-room_number="{{$model['room_number']}}"
+          data-starting_price_pen="{{$model['starting_price_pen']}}"
+          data-starting_price_usd="{{$model['starting_price_usd']}}"
+        >
+          <a data-fancybox="gallery-{{$index}}" href="{{$model['blueprint']}}">
+            <img src="{{$model['blueprint']}}" height="350" alt="{{$model['name']}}">
+            <div class="overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </a>
         </div>
+        @php $index += 1; @endphp
+        @endif
+        @endforeach
+      </div>
     </div>
   </div>
   <div class="row">
