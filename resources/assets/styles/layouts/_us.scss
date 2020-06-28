@@ -36,6 +36,7 @@
 
   .toratto-choose-row {
     .col-md-5.col-sm-12 {
+      font-family: "CircularStd-Bold", sans-serif;
       text-align: center;
       color: $theme-color-alt-blue;
       border: 1px solid $theme-color-soft-gray;
@@ -46,6 +47,7 @@
 
   .toratto-us-mision,
   .toratto-us-vision {
+    font-family: "CircularStd-Medium", sans-serif;
     color: #fff;
     padding: 60px 80px;
 
@@ -56,6 +58,7 @@
     }
 
     span {
+      font-family: "CircularStd-Book", sans-serif;
       font-size: 1.1rem;
     }
   }

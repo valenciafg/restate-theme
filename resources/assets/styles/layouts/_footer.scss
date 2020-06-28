@@ -35,6 +35,7 @@ footer {
     }
 
     .footer-about {
+      font-family: "CircularStd-Black", sans-serif;
       font-size: 1.5rem;
       font-weight: bold;
 
@@ -44,13 +45,15 @@ footer {
     }
 
     .footer-links {
+      font-family: "CircularStd-Bold", sans-serif;
+
       ul {
         list-style-type: none;
 
         li {
           margin-top: 0;
           margin-bottom: 1.5rem;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
         }
       }
     }

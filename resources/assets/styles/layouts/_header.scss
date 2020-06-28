@@ -34,12 +34,14 @@
         margin: 0 5px 0 5px;
 
         a.nav-link {
+          font-family: "CircularStd-Bold", sans-serif;
           color: #fff;
           font-size: 1rem;
           font-weight: 600;
         }
 
         a.nav-link:hover {
+          font-family: "CircularStd-Bold", sans-serif;
           color: $theme-color-green;
           border-bottom: 2px solid $theme-color-green;
         }
@@ -108,12 +110,14 @@
         margin: 0 5px 0 5px;
 
         a.nav-link {
+          font-family: "CircularStd-Bold", sans-serif;
           color: $theme-color-blue;
           font-size: 1rem;
           font-weight: 600;
         }
 
         a.nav-link:hover {
+          font-family: "CircularStd-Bold", sans-serif;
           color: $theme-color-green;
           border-bottom: 2px solid $theme-color-green;
         }
@@ -127,6 +131,7 @@
 
       .nav-item {
         a {
+          font-family: "CircularStd-Bold", sans-serif;
           color: inherit;
 
           .fas,

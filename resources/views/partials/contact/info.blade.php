@@ -31,12 +31,12 @@
         $clean_phone = str_replace(" ", "", $clean_phone);
         $clean_phone = str_replace("+", "", $clean_phone);
       @endphp
-      <span class="title-us-subtitle-3"><a href="tel:{{$clean_phone}}"><i class="fas fa-phone-alt"></i>{{$all_settings['phone']}}</a></span>
+      <span class="title-us-subtitle-3" style="font-family:'CircularStd-Bold', sans-serif"><a href="tel:{{$clean_phone}}"><i class="fas fa-phone-alt"></i>{{$all_settings['phone']}}</a></span>
     @endif
     </div>
     <div class="col-md-12 col-sm-12">
     @if (!empty($all_settings['email']))
-      <span class="title-us-subtitle-3"><a href="mailto:{{$all_settings['email']}}"><i class="fas fa-envelope"></i>{{$all_settings['email']}}</a></span>
+      <span class="title-us-subtitle-3" style="font-family:'CircularStd-Bold', sans-serif"><a href="mailto:{{$all_settings['email']}}"><i class="fas fa-envelope"></i>{{$all_settings['email']}}</a></span>
     @endif
     </div>
   </div>

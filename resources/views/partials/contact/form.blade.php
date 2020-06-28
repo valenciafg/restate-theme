@@ -8,7 +8,7 @@
       <form>
         <div class="form-row">
           <div class="form-group col-md-12">
-            <span style="font-weight: bold;">Si desea más información por favor ingrese sus datos en el siguiente formato y nos pondremos en contacto con usted:</span>
+            <span style="font-weight: bold; font-family:'CircularStd-Bold', sans-serif">Si desea más información por favor ingrese sus datos en el siguiente formato y nos pondremos en contacto con usted:</span>
           </div>
         </div>
         <div class="form-row">

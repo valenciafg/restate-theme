@@ -2,6 +2,7 @@
   background-color: $theme-color-green-hard;
 
   .toratto-section-model-title {
+    font-family: "CircularStd-Bold", sans-serif;
     text-align: center;
     color: #fff;
     margin: 50px 0 30px 0;
@@ -60,6 +61,7 @@
 
   .nav.toratto-model-info {
     .nav-item {
+      font-family: "CircularStd-Medium", sans-serif;
       color: #fff;
       padding: 10px;
       background-color: rgba(255, 255, 255, 0.18);
@@ -159,8 +161,8 @@
       }
 
       &::after {
-        font-family: "Font Awesome 5 Free", sans-serif;
-        content: "\f142";
+        font-family: "icomoon", sans-serif;
+        content: "\e908";
         font-size: 1.5rem;
         font-weight: bold;
         position: absolute;
