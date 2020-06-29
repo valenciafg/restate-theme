@@ -121,6 +121,7 @@ class TorattoAjax extends Controller
         $land_measure = $form['land_measure'];
         $land_currency = $form['land_currency'];
         $land_price = $form['land_price'];
+        $photo_id = $form['media-ids'];
         // $land_area = $form['land_area'];
         //
         $settingObj = new Setting();
@@ -152,10 +153,18 @@ class TorattoAjax extends Controller
         $body .= "<strong>Tipo de moneda:</strong>".$land_currency."<br>";
         $body .= "<strong>Precio:</strong>".$land_price."<br>";
 
+        $attachments = array();
+        if (!empty($photo_id)) {
+            $attachments = array(
+                get_attached_file($photo_id)
+            );
+        }
 
-        if( wp_mail( $to, $subject , $body, $headers) === FALSE){
+
+        if( wp_mail( $to, $subject , $body, $headers, $attachments) === FALSE){
             $response = array(
-                'status'    => 'error'
+                'status'    => 'error',
+                'attachments' => $attachments
             );
         }else{
             $response = array(

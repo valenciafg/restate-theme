@@ -157,28 +157,27 @@ export default {
       maxFiles: 1,
       acceptedFiles: 'image/*',
       success: function (file, response) {
-          file.previewElement.classList.add('dz-success');
-          file['attachment_id'] = response; // push the id for future reference
-          console.log('****', file, response);
-          var ids = jQuery('#media-ids').val() + ',' + response;
-          jQuery('#media-ids').val(ids);
+        file.previewElement.classList.add('dz-success');
+        file['attachment_id'] = response; // push the id for future reference
+        var ids = response;
+        jQuery('#media-ids').val(ids);
       },
       error: function (file, response) {
-          file.previewElement.classList.add('dz-error');
+        file.previewElement.classList.add('dz-error');
       },
       // update the following section is for removing image from library
       addRemoveLinks: true,
       removedfile: function(file) {
-          var attachment_id = file.attachment_id;
-          jQuery.ajax({
-              type: 'POST',
-              url: sage_vars.delete,
-              data: {
-                media_id : attachment_id,
-              },
-          });
-          var _ref;
-          return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
+        var attachment_id = file.attachment_id;
+        jQuery.ajax({
+            type: 'POST',
+            url: sage_vars.delete,
+            data: {
+              media_id : attachment_id,
+            },
+        });
+        var _ref;
+        return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
       },
     });
     //
