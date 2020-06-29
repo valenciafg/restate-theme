@@ -19,7 +19,13 @@ class TorattoAjax extends Controller
         //
         $to = "valencia6x@gmail.com";
         $subject = "Cotización ".$model;
-        $body = "ejemplo cuerpo";
+        $body = "<h1>Cotización de departamento</h1>";
+        $body .= "<strong>Nombres:</strong>".$fullname;
+        $body .= "<strong>Télefono:</strong>".$phone;
+        $body .= "<strong>Correo:</strong>".$email;
+        $body .= "<strong>Mensaje:</strong>".$message;
+        $body .= "<strong>Proyecto:</strong>".$project_id;
+        $body .= "<strong>Departamento:</strong>".$project_id;
 
 
         if( wp_mail( $to, $subject , $body, $headers) === FALSE){
