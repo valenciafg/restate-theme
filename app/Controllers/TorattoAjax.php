@@ -57,6 +57,6 @@ class TorattoAjax extends Controller
                 'status' => 'ok'
             );
         }
-        wp_send_json(json_encode($response));
+        wp_send_json($response);
     }
 }

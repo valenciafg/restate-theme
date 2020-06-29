@@ -14,13 +14,21 @@ export default {
               $.ajax({
                 data: {
                   action: 'toratto_quotation_form',
-                  category: 3,
                   form: form.serialize(),
                 },
                 method : 'POST',
                 url : sage_vars.ajaxurl,
                 success: function(result){
-                  console.log('result', result);
+                  console.log(result);
+                  if (result.status === 'error') {
+                    alert('La cotización no pudo ser enviada.');
+                  } else {
+                    alert('Cotización enviada, en breve será contactado por nuestros asesores.')
+                  }
+
+                },
+                error : function(jqXHR, status, error) {
+                  console.log('Ha ocurrido un problema', status, error);
                 },
             });
           });
