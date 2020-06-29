@@ -5,25 +5,25 @@
 </div>
 <div class="form-row">
   <div class="form-group col-md-4">
-    <label for="toratto-land_purchase-form-name">Nombres: <span class="toratto-form-required">*<span></label>
-    <input type="text" class="form-control" id="toratto-land_purchase-form-name" name="toratto-land_purchase-form-name" required>
+    <label for="owner_name">Nombres: <span class="toratto-form-required">*<span></label>
+    <input type="text" class="form-control" id="owner_name" name="owner_name" required>
   </div>
   <div class="form-group col-md-4">
-    <label for="toratto-land_purchase-form-lastname">Apellidos: <span class="toratto-form-required">*<span></label>
-    <input type="text" class="form-control" id="toratto-land_purchase-form-lastname" name="toratto-land_purchase-form-lastname" required>
+    <label for="owner_lastname">Apellidos: <span class="toratto-form-required">*<span></label>
+    <input type="text" class="form-control" id="owner_lastname" name="owner_lastname" required>
   </div>
   <div class="form-group col-md-4">
-    <label for="toratto-land_purchase-form-phone">Télefono: <span class="toratto-form-required">*<span></label>
-    <input type="text" class="form-control" id="toratto-land_purchase-form-phone" name="toratto-land_purchase-form-phone" required>
+    <label for="owner_phone">Télefono: <span class="toratto-form-required">*<span></label>
+    <input type="text" class="form-control" id="owner_phone" name="owner_phone" required>
   </div>
 </div>
 <div class="form-row">
   <div class="form-group col-md-4">
-    <label for="toratto-land_purchase-form-email">E-mail: <span class="toratto-form-required">*<span></label>
-    <input type="email" class="form-control" id="toratto-land_purchase-form-email" name="toratto-land_purchase-form-email" required>
+    <label for="owner_email">E-mail: <span class="toratto-form-required">*<span></label>
+    <input type="email" class="form-control" id="owner_email" name="owner_email" required>
   </div>
   <div class="form-group col-md-8">
-    <label for="toratto-land_purchase-form-owner-address">Dirección: <span class="toratto-form-required">*<span></label>
-    <input type="text" class="form-control" id="toratto-land_purchase-form-owner-address" name="toratto-land_purchase-form-owner-address" required>
+    <label for="owner_address">Dirección: <span class="toratto-form-required">*<span></label>
+    <input type="text" class="form-control" id="owner_address" name="owner_address" required>
   </div>
 </div>

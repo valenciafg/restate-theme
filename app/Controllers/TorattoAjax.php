@@ -103,4 +103,65 @@ class TorattoAjax extends Controller
         }
         wp_send_json($response);
     }
+
+    function toratto_land_purchase_form() {
+        parse_str($_POST['form'], $form);
+        //OWNER INFO
+        $owner_name = $form['owner_name'];
+        $owner_lastname = $form['owner_lastname'];
+        $owner_phone = $form['owner_phone'];
+        $owner_email = $form['owner_email'];
+        $owner_address = $form['owner_address'];
+        //LAND INFO
+        $land_deparment = $form['land_deparment'];
+        $land_province = $form['land_province'];
+        $land_district = $form['land_district'];
+        $land_address = $form['land_address'];
+        $land_area = $form['land_area'];
+        $land_measure = $form['land_measure'];
+        $land_currency = $form['land_currency'];
+        $land_price = $form['land_price'];
+        // $land_area = $form['land_area'];
+        //
+        $settingObj = new Setting();
+        $setting = $settingObj->getAllSettings();
+
+        if (!empty($setting['email'])) {
+            $to = $setting['email'];
+        } else {
+            $to = "info@grupotoratto.com";
+        }
+        $headers = array(
+            'Content-Type: text/html; charset=UTF-8',
+            'Cc: '.$owner_email
+        );
+
+        $subject = "Compra de terreno: ".$$project['title'];
+        $body = "<h3>Datos del propietario</h3><br>";
+        $body .= "<strong>Nombres:</strong>".$owner_name." ".$owner_lastname."<br>";
+        $body .= "<strong>Télefono:</strong>".$owner_phone."<br>";
+        $body .= "<strong>Correo:</strong>".$owner_email."<br>";
+        $body .= "<strong>Dirección:</strong>".$owner_address."<br>";
+        $body = "<h3>Datos del terreno</h3><br>";
+        $body .= "<strong>Departamento:</strong>".$land_deparment."<br>";
+        $body .= "<strong>Provincia:</strong>".$land_province."<br>";
+        $body .= "<strong>Distrito:</strong>".$land_district."<br>";
+        $body .= "<strong>Dirección:</strong>".$land_address."<br>";
+        $body .= "<strong>Área total:</strong>".$land_area."<br>";
+        $body .= "<strong>Medidas perimetrales:</strong>".$land_measure."<br>";
+        $body .= "<strong>Tipo de moneda:</strong>".$land_currency."<br>";
+        $body .= "<strong>Precio:</strong>".$land_price."<br>";
+
+
+        if( wp_mail( $to, $subject , $body, $headers) === FALSE){
+            $response = array(
+                'status'    => 'error'
+            );
+        }else{
+            $response = array(
+                'status' => 'ok'
+            );
+        }
+        wp_send_json($response);
+    }
 }

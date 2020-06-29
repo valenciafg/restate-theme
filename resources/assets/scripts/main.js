@@ -28,6 +28,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import singleResProject from './routes/singleResProject';
 import contact from './routes/contact';
+import landPurchase from './routes/landPurchase';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -39,6 +40,7 @@ const routes = new Router({
   aboutUs,
   singleResProject,
   contact,
+  landPurchase,
 });
 
 library.add(...brands);

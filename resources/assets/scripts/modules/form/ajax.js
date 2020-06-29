@@ -95,4 +95,35 @@ export default {
       }
     });
   },
+  initAjaxLandPurchaseForm () {
+    $('#toratto-land-purchase-form').submit(function(e) {
+      e.preventDefault();
+      var isChecked = $('input[name="terms-check"]:checked').length > 0;
+      if (isChecked) {
+        // const sitekey = $('#btn-toratto-submit-form').data('sitekey');
+        var form = $(this);
+        $.ajax({
+          data: {
+            action: 'toratto_land_purchase_form',
+            form: form.serialize(),
+          },
+          method : 'POST',
+          url : sage_vars.ajaxurl,
+          success: function(result){
+            console.log(result);
+            if (result.status === 'error') {
+              alert('La solicitud no pudo ser enviada.');
+            } else {
+              alert('Solicitud enviada, en breve será contactado por nuestros asesores.')
+            }
+          },
+          error : function(jqXHR, status, error) {
+            console.log('Ha ocurrido un problema', status, error);
+          },
+        });
+      } else {
+        alert('Debe aceptar los terminos y condiciones');
+      }
+    });
+  },
 }
