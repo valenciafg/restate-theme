@@ -18,7 +18,7 @@ class TorattoAjax extends Controller
         $message = $form['message'];
         $project_id = $form['project_id'];
         //
-        $projectObj = new  App\Controllers\Project();
+        $projectObj = new Project();
         $project = $projectObj->getSingleProject($project_id);
         //
         $to = "valencia6x@gmail.com";
