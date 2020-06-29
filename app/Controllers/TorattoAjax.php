@@ -11,7 +11,7 @@ class TorattoAjax extends Controller
         $headers = array('Content-Type: text/html; charset=UTF-8');
         //
         parse_str($_POST['form'], $form);
-        $model = $form['toratto-quotation-form-model'];
+        $model_name = $form['toratto-quotation-form-model'];
         $fullname = $form['fullname'];
         $phone = $form['phone'];
         $email = $form['email'];
@@ -20,23 +20,41 @@ class TorattoAjax extends Controller
         //
         $projectObj = new Project();
         $project = $projectObj->getSingleProject($project_id);
+        $models = $project['models'];
+        $rooms = "";
+        foreach ($models as $model) {
+            if ($model_name == $model['name']) {
+                $rooms = ". ".$model['room_number']." dormitorios";
+                $area = ". ".$model['total_area']."m2";
+                break;
+            }
+        }
         //
-        $to = "valencia6x@gmail.com";
-        $subject = "Cotización ".$model;
+        if (!empty($project['advisor_email'])) {
+            $to = $project['advisor_email'];
+        } else {
+            $to = "info@grupotoratto.com";
+        }
+
+        $subject = "Cotización ".$model_name;
         $body = "<h1>Cotización de departamento</h1><br>";
         $body .= "<strong>Nombres:</strong>".$fullname."<br>";
         $body .= "<strong>Télefono:</strong>".$phone."<br>";
         $body .= "<strong>Correo:</strong>".$email."<br>";
         $body .= "<strong>Mensaje:</strong>".$message."<br>";
         $body .= "<strong>Proyecto:</strong>".$project['title']."<br>";
-        $body .= "<strong>Departamento:</strong>".$model."<br>";
+        $body .= "<strong>Departamento:</strong>".$model_name.$rooms.$area."<br>";
 
 
         if( wp_mail( $to, $subject , $body, $headers) === FALSE){
-            wp_send_json('Error');
+            $response = array(
+                'status'    => 'error'
+            );
         }else{
-            wp_send_json('retorno ajax correcto ');
+            $response = array(
+                'status' => 'ok'
+            );
         }
-        // wp_send_json('retorno ajax correcto '.json_encode($form));
+        wp_send_json(json_encode($response));
     }
 }

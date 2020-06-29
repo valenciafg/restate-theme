@@ -67,7 +67,7 @@
     </div>
     <div class="form-group">
       <input type="hidden" name="toratto-quotation-form-google-res-token">
-      <input type="hidden" name="project_id" value="111">
+    <input type="hidden" name="project_id" value="{{$project['id']}}">
       <button
         id="btn-toratto-submit-form"
         type="submit"
