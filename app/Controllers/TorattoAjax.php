@@ -8,10 +8,6 @@ use WP_Query;
 class TorattoAjax extends Controller
 {
     function toratto_quotation_form() {
-        $headers = array(
-            'Content-Type: text/html; charset=UTF-8',
-            'Cc: '.$form['email']
-        );
         //
         parse_str($_POST['form'], $form);
         $model_name = $form['toratto-quotation-form-model'];
@@ -38,7 +34,10 @@ class TorattoAjax extends Controller
         } else {
             $to = "info@grupotoratto.com";
         }
-
+        $headers = array(
+            'Content-Type: text/html; charset=UTF-8',
+            'Cc: '.$email
+        );
         $subject = "Cotización ".$model_name;
         $body = "<h1>Cotización de departamento</h1><br>";
         $body .= "<strong>Nombres:</strong>".$fullname."<br>";
