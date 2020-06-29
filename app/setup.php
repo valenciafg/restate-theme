@@ -148,5 +148,8 @@ add_action('after_setup_theme', function () {
     });
 });
 
-add_action( 'wp_ajax_toratto_quotation_form', 'App\Controllers\TorattoAjax::toratto_quotation_form' );
-add_action( 'wp_ajax_nopriv_toratto_quotation_form', 'App\Controllers\TorattoAjax::toratto_quotation_form'  );
+add_action( 'wp_ajax_toratto_quotation_form', 'App\Controllers\TorattoAjax::toratto_quotation_form');
+add_action( 'wp_ajax_nopriv_toratto_quotation_form', 'App\Controllers\TorattoAjax::toratto_quotation_form');
+
+add_action( 'wp_ajax_toratto_contact_form', 'App\Controllers\TorattoAjax::toratto_contact_form');
+add_action( 'wp_ajax_nopriv_toratto_contact_form', 'App\Controllers\TorattoAjax::toratto_contact_form');

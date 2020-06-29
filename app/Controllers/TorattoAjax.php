@@ -59,4 +59,48 @@ class TorattoAjax extends Controller
         }
         wp_send_json($response);
     }
+
+    function toratto_contact_form() {
+        parse_str($_POST['form'], $form);
+        $fullname = $form['fullname'];
+        $phone = $form['phone'];
+        $email = $form['email'];
+        $description = $form['description'];
+        $project_id = $form['project_id'];
+        $projectObj = new Project();
+        $project = $projectObj->getSingleProject($project_id);
+        //
+        $settingObj = new Setting();
+        $setting = $settingObj->getAllSettings();
+
+        if (!empty($setting['email'])) {
+            $to = $setting['email'];
+        } else {
+            $to = "info@grupotoratto.com";
+        }
+        $headers = array(
+            'Content-Type: text/html; charset=UTF-8',
+            'Cc: '.$email
+        );
+
+        $subject = "Contacto: ".$$project['title'];
+        $body = "<h1>Solicitud de información</h1><br>";
+        $body .= "<strong>Nombres:</strong>".$fullname."<br>";
+        $body .= "<strong>Télefono:</strong>".$phone."<br>";
+        $body .= "<strong>Correo:</strong>".$email."<br>";
+        $body .= "<strong>Mensaje:</strong>".$description."<br>";
+        $body .= "<strong>Proyecto:</strong>".$project['title']."<br>";
+
+
+        if( wp_mail( $to, $subject , $body, $headers) === FALSE){
+            $response = array(
+                'status'    => 'error'
+            );
+        }else{
+            $response = array(
+                'status' => 'ok'
+            );
+        }
+        wp_send_json($response);
+    }
 }
