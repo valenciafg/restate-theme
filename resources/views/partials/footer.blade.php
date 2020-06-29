@@ -12,7 +12,7 @@
     <div class="container-fluid">
       <div class="row" style="padding-left: 25px;padding-right: 25px;">
         <!-- LEFT SIDE -->
-        <div class="col-md-3 footer-about">
+        <div class="col-md-3 footer-about" style="padding-right: 0;">
           @if (!empty($all_settings['phone']))
           @php
             $clean_phone = str_replace("(", "", $all_settings['phone']);
