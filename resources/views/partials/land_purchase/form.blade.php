@@ -9,7 +9,7 @@
     <h1>Completa el siguiente formulario:</h1>
   </div>
   <div class="col-md-12 col-sm-12">
-    <form class="container" id="toratto-land-purchase-form" type="post" action="">
+    <form class="container" id="toratto-land-purchase-form" type="post">
       @include('partials.land_purchase.form_owner')
       @include('partials.land_purchase.form_land')
       <small class="form-text text-muted"><span class="toratto-form-required">(*)<span> Todos los campos son obligatorios</small>

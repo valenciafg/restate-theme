@@ -61,4 +61,22 @@
       }
     }
   }
+
+  .dropzone {
+    border: 1px dashed $theme-color-alt-blue;
+    border-radius: 5px;
+    background: #f5f5f5;
+  }
+
+  .dropzone i {
+    font-size: 4rem;
+  }
+
+  .dropzone .dz-message {
+    color: $theme-color-alt-blue;
+    font-weight: 500;
+    font-size: initial;
+    text-align: center;
+    padding: 15px;
+  }
 }

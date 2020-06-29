@@ -9,6 +9,7 @@ import 'photo-sphere-viewer/dist/photo-sphere-viewer';
 import '@fancyapps/fancybox/dist/jquery.fancybox';
 import 'ionicons';
 import 'floating-whatsapp/floating-wpp';
+import 'dropzone/dist/dropzone';
 //  import 'photoswipe/dist/photoswipe';
 //  import 'photoswipe/dist/photoswipe-ui-default';
 //  import '@fancyapps/fancybox';

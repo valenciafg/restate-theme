@@ -41,3 +41,14 @@
     <input type="text" class="form-control" id="land_price" name="land_price" required>
   </div>
 </div>
+<div class="form-row">
+  <div class="form-group col-md-12">
+    <div id="media-uploader" class="dropzone">
+      <div class="dz-message d-flex flex-column">
+        <i class="far fa-images"></i>
+        Adjuntar fotografía
+      </div>
+    </div>
+    <input type="hidden" id="media-ids" name="media-ids" value="">
+  </div>
+</div>

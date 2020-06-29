@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
+import Dropzone from 'dropzone/dist/dropzone';
+
 export default {
   initAjaxQuotationForm () {
     $('#toratto-modal-form').submit(function(e) {
@@ -96,6 +98,90 @@ export default {
     });
   },
   initAjaxLandPurchaseForm () {
+    /*
+    Dropzone.options.torattoLandPurchaseform = {
+      uploadMultiple: true,
+      maxFiles: 5,
+      acceptedFiles: 'image/*',
+      init:function(){
+        var self = this;
+        // config
+        self.options.addRemoveLinks = true;
+        self.options.dictRemoveFile = 'Delete';
+        //New file added
+        self.on('addedfile', function (file) {
+          console.log('new file added ', file);
+        });
+        // Send file starts
+        self.on('sending', function (file) {
+          console.log('upload started', file);
+          $('.meter').show();
+        });
+
+        // File upload Progress
+        self.on('totaluploadprogress', function (progress) {
+          console.log('progress ', progress);
+          $('.roller').width(progress + '%');
+        });
+
+        self.on('queuecomplete', function (progress) {
+          $('.meter').delay(999).slideUp(999);
+        });
+
+        // On removing file
+        self.on('removedfile', function (file) {
+          console.log(file);
+        });
+      },
+    };
+    *///url : sage_vars.ajaxurl,
+    /*
+    $('#dZUpload').dropzone({
+      url: '/',
+      acceptedFiles: 'image/*',
+      addRemoveLinks: true,
+      success: function (file, response) {
+          var imgName = response;
+          file.previewElement.classList.add('dz-success');
+          console.log('Successfully uploaded :' + imgName);
+      },
+      error: function (file, response) {
+          file.previewElement.classList.add('dz-error');
+      },
+    });
+    */
+    Dropzone.autoDiscover = false;
+    $('#media-uploader').dropzone({
+      url: sage_vars.upload,
+      uploadMultiple: false,
+      maxFiles: 1,
+      acceptedFiles: 'image/*',
+      success: function (file, response) {
+          file.previewElement.classList.add('dz-success');
+          file['attachment_id'] = response; // push the id for future reference
+          console.log('****', file, response);
+          var ids = jQuery('#media-ids').val() + ',' + response;
+          jQuery('#media-ids').val(ids);
+      },
+      error: function (file, response) {
+          file.previewElement.classList.add('dz-error');
+      },
+      // update the following section is for removing image from library
+      addRemoveLinks: true,
+      removedfile: function(file) {
+          var attachment_id = file.attachment_id;
+          jQuery.ajax({
+              type: 'POST',
+              url: sage_vars.delete,
+              data: {
+                media_id : attachment_id,
+              },
+          });
+          var _ref;
+          return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
+      },
+    });
+    //
     $('#toratto-land-purchase-form').submit(function(e) {
       e.preventDefault();
       var isChecked = $('input[name="terms-check"]:checked').length > 0;

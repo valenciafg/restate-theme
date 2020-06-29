@@ -14,7 +14,9 @@ add_action('wp_enqueue_scripts', function () {
     $localized_array = array(
         'ajaxurl'=>admin_url('admin-ajax.php'),
         'siteurl'=>get_bloginfo('url'),
-        'stylesheet_directory_uri'=>get_stylesheet_directory_uri()
+        'stylesheet_directory_uri'=>get_stylesheet_directory_uri(),
+        'upload'=>admin_url( 'admin-ajax.php?action=handle_dropped_media' ),
+        'delete'=>admin_url( 'admin-ajax.php?action=handle_deleted_media' ),
     );
 
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
@@ -156,3 +158,9 @@ add_action( 'wp_ajax_nopriv_toratto_contact_form', 'App\Controllers\TorattoAjax:
 
 add_action( 'wp_ajax_toratto_land_purchase_form', 'App\Controllers\TorattoAjax::toratto_land_purchase_form');
 add_action( 'wp_ajax_nopriv_toratto_land_purchase_form', 'App\Controllers\TorattoAjax::toratto_land_purchase_form');
+
+add_action( 'wp_ajax_handle_dropped_media', 'App\Controllers\TorattoAjax::handle_dropped_media');
+add_action( 'wp_ajax_nopriv_handle_dropped_media', 'App\Controllers\TorattoAjax::handle_dropped_media');
+
+add_action( 'wp_ajax_handle_deleted_media', 'App\Controllers\TorattoAjax::handle_deleted_media');
+add_action( 'wp_ajax_nopriv_handle_deleted_media', 'App\Controllers\TorattoAjax::handle_deleted_media');
