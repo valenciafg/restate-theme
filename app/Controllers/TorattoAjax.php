@@ -137,12 +137,12 @@ class TorattoAjax extends Controller
         );
 
         $subject = "Compra de terreno: ".$$project['title'];
-        $body = "<h3>Datos del propietario</h3><br>";
+        $body = "<h2>Datos del propietario</h2>";
         $body .= "<strong>Nombres:</strong>".$owner_name." ".$owner_lastname."<br>";
         $body .= "<strong>Télefono:</strong>".$owner_phone."<br>";
         $body .= "<strong>Correo:</strong>".$owner_email."<br>";
         $body .= "<strong>Dirección:</strong>".$owner_address."<br>";
-        $body .= "<h3>Datos del terreno</h3><br>";
+        $body .= "<h2>Datos del terreno</h2>";
         $body .= "<strong>Departamento:</strong>".$land_deparment."<br>";
         $body .= "<strong>Provincia:</strong>".$land_province."<br>";
         $body .= "<strong>Distrito:</strong>".$land_district."<br>";
