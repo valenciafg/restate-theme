@@ -8,7 +8,10 @@ use WP_Query;
 class TorattoAjax extends Controller
 {
     function toratto_quotation_form() {
-        $headers = array('Content-Type: text/html; charset=UTF-8');
+        $headers = array(
+            'Content-Type: text/html; charset=UTF-8',
+            'Cc: '.$form['email']
+        );
         //
         parse_str($_POST['form'], $form);
         $model_name = $form['toratto-quotation-form-model'];
