@@ -24,8 +24,8 @@
         @if (!empty($project['starting_price_usd']))
         <li class="nav-item toratto-project-info-item">
           Precio desde $ {{$project['starting_price_usd']}}
-          @if (!empty($project['starting_price_pen']))
-          o S./ {{$project['starting_price_pen']}}
+          @if (!empty($project['end_price_usd']))
+          hasta $ {{$project['end_price_usd']}}
           @endif
         </li>
         @endif

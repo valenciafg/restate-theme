@@ -191,7 +191,9 @@ class Project extends Controller
         $show_banner = get_post_meta($id, "restate_project_show_banner", true);
         $delivery_date = get_post_meta($id, "restate_project_delivery_date", true);
         $starting_price_pen = get_post_meta($id, "restate_project_starting_price_pen", true);
+        $end_price_pen = get_post_meta($id, "restate_project_end_price_pen", true);
         $starting_price_usd = get_post_meta($id, "restate_project_starting_price_usd", true);
+        $end_price_usd = get_post_meta($id, "restate_project_end_price_usd", true);
         $max_rooms = get_post_meta($id, "restate_project_max_rooms", true);
         $min_area = get_post_meta($id, "restate_project_min_area", true);
         $max_area = get_post_meta($id, "restate_project_max_area", true);
@@ -233,7 +235,9 @@ class Project extends Controller
             'show_banner'           => $show_banner,
             'delivery_date'         => $delivery_date,
             'starting_price_pen'    => $starting_price_pen,
+            'end_price_pen'         => $end_price_pen,
             'starting_price_usd'    => $starting_price_usd,
+            'end_price_usd'         => $end_price_usd,
             'max_rooms'             => $max_rooms,
             'min_area'              => $min_area,
             'max_area'              => $max_area,

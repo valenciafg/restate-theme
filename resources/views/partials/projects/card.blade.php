@@ -23,7 +23,7 @@
       <ul class="nav justify-content-center nav-fill" style="margin-bottom: 10px;">
         <li class="nav-item">
           @if (!empty($project['logo']))
-              <img src="{{$project['logo']}}" width="90px" height="70px">
+              <img src="{{$project['logo']}}" width="100px" height="80px">
           @else
               {{strtoupper($project['title'])}}
           @endif
