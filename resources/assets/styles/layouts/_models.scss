@@ -8,6 +8,24 @@
     margin: 50px 0 30px 0;
   }
 
+  .toratto-section-model-rooms {
+    margin-bottom: 10px;
+
+    button {
+      color: #fff;
+      opacity: 0.5;
+      border-bottom: 2px solid #fff;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    button.active {
+      opacity: 1;
+    }
+  }
+
   .toratto-section-model-carousel {
     padding: 0 50px 0 50px;
     margin-bottom: 20px;

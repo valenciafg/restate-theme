@@ -21,7 +21,7 @@
     </a>
     <div class="card-bottom toratto-project-building-card-bottom-info h-100 shadow">
       <div class="container">
-        <div class="row">
+        <div class="row info">
           <div class="col-md-4 text-center">
             @if (!empty($project['logo']))
                 <img src="{{$project['logo']}}" width="100px" height="80px">
@@ -52,6 +52,32 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="row extra-info">
+          @if (!empty($max_rooms))
+          <div class="col-md-6 col-sm-12">
+            <div class="row align-items-center">
+              <div class="col-md-3 px-0">
+                <img src="@asset('images/bed-1.png')" style="width:50px; height:50px;">
+              </div>
+              <div class="col-md-9 px-0">
+                <span>Hasta {{$max_rooms}} dormitorios</span>
+              </div>
+            </div>
+          </div>
+          @endif
+          @if (!empty($min_area) && !empty($max_area))
+          <div class="col-md-6 col-sm-12">
+            <div class="row align-items-center">
+              <div class="col-md-3 px-0">
+                <img src="@asset('images/metraje-1.png')" style="width:50px; height:50px;">
+              </div>
+              <div class="col-md-9 px-0">
+                <span>Desde {{$min_area}} hasta {{$max_area}}m&sup2;</span>
+              </div>
+            </div>
+          </div>
+          @endif
         </div>
       </div>
     </div>

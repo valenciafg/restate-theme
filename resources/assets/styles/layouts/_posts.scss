@@ -143,4 +143,18 @@
       font-size: 1rem;
     }
   }
+
+  .info {
+    margin-bottom: 10px;
+  }
+
+  .extra-info {
+    padding-top: 10px;
+    border-top: 1px solid $theme-color-soft-gray;
+    color: $theme-color-gray;
+
+    li {
+      padding: 0 10px 0 10px;
+    }
+  }
 }

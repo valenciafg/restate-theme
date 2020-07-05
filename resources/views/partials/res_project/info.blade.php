@@ -32,7 +32,7 @@
         {{-- <li class="nav-item toratto-project-info-item">
           <a href="/legal" target="_blank">Ver Documentos Legales</a>
         </li> --}}
-        <li class="nav-item toratto-project-info-item">
+        <li class="nav-item toratto-project-info-item" style="margin: 0 20px 0 20px; display: flex; align-items:center">
           <a href="{{$project['brochure']}}" target="_blank">Descargar Brochure</a>
         </li>
       </ul>

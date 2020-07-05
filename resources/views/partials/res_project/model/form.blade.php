@@ -4,6 +4,17 @@
   $site_key = $all_settings['recaptcha_site_key'];
 @endphp
 <div class="col-md-6 col-sm-12">
+  <div class="row toratto-section-model-rooms">
+    <div class="col-md-12 col-sm-12">
+      <ul class="nav nav-fill">
+        @foreach ($room_list as $room_item)
+        <li class="nav-item">
+          <button class="btn btn-model-room" data-rooms="{{$room_item}}">{{$room_item}} DORMS.</button>
+        </li>
+        @endforeach
+      </ul>
+    </div>
+  </div>
   <form class="toratto-section-model-form" id="toratto-modal-form" type="post" action="">
     <div class="form-row">
       <div class="form-group col-md-12">
