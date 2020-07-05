@@ -11,7 +11,11 @@
 @if (!empty($projects))
 <section class="toratto-section-home-project toratto-section-background-00">
     <div class="container">
-        <h1 class="toratto-section-title">Proyectos</h1>
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <h1 class="toratto-section-title">Proyectos</h1>
+          </div>
+        </div>
         <div class="row">
             @foreach ($projects as $project)
             @php
@@ -31,26 +35,40 @@
                       @endif
                     </a>
                     <div class="card-bottom toratto-project-building-card-bottom-info shadow">
-                        <ul class="nav justify-content-center nav-fill">
-                            <li class="nav-item">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-4 text-center">
                             @if (!empty($project['logo']))
                                 <img src="{{$project['logo']}}" width="100px" height="80px">
                             @else
                                 {{strtoupper($project['title'])}}
                             @endif
-                            </li>
-                            <li class="nav-item toratto-project-building-card-bottom-info-location">
-                                @if (!empty($location))
-                                  <span class="location">{{$location[0]}}</span>
-                                @endif
-                                @if (!empty($address))
-                                    <span class="address">{{$address}}</span>
-                                @endif
-                                @if (!empty($stage))
-                                   <span class="stage">{{$stage[0]}}</span>
-                                @endif
-                            </li>
-                        </ul>
+                          </div>
+                          <div class="col-md-8 location">
+                            <div class="container">
+                              <div class="row align-items-center">
+                                <div class="col-md-5 px-0">
+                                  @if (!empty($location))
+                                  <span class="district">{{$location[0]}}</span>
+                                  @endif
+                                </div>
+                                <div class="col-md-7 px-0">
+                                  @if (!empty($stage))
+                                  <div class="stage">{{$stage[0]}}</div>
+                                  @endif
+                                </div>
+                              </div>
+                              <div class="row" style="margin-top: 10px">
+                                <div class="col-md-12 px-0">
+                                  @if (!empty($address))
+                                  <div class="address">{{$address}}</div>
+                                  @endif
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -58,7 +76,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 toratto-project-building-projects">
-                <a class="btn btn-toratto-green btn-block" href="/proyectos">Ver todos los proyectos</a>
+                <a class="btn btn-toratto-green btn-block btn-lg" href="/proyectos">Ver todos los proyectos</a>
             </div>
         </div>
     </div>

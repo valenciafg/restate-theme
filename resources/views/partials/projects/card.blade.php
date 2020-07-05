@@ -20,38 +20,40 @@
       @endif
     </a>
     <div class="card-bottom toratto-project-building-card-bottom-info h-100 shadow">
-      <ul class="nav justify-content-center nav-fill" style="margin-bottom: 10px;">
-        <li class="nav-item">
-          @if (!empty($project['logo']))
-              <img src="{{$project['logo']}}" width="100px" height="80px">
-          @else
-              {{strtoupper($project['title'])}}
-          @endif
-        </li>
-        <li class="nav-item toratto-project-building-card-bottom-info-location">
-          @if (!empty($location))
-            <span class="location">{{$location[0]}}</span>
-          @endif
-          @if (!empty($address))
-            <span class="address">{{$address}}</span>
-          @endif
-          @if (!empty($stage))
-            <span class="stage">{{$stage[0]}}</span>
-          @endif
-        </li>
-      </ul>
-      <ul class="nav justify-content-center nav-fill toratto-bottom-extra-info">
-        @if (!empty($max_rooms))
-        <li>
-          <img src="@asset('images/bed-1.png')" style="width:50px; height:50px;"> Hasta {{$max_rooms}} dormitorios
-        </li>
-        @endif
-        @if (!empty($min_area) && !empty($max_area))
-        <li>
-          <img src="@asset('images/metraje-1.png')" style="width:50px; height:50px;"> Desde {{$min_area}} hasta {{$max_area}}m&sup2;
-        </li>
-        @endif
-      </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            @if (!empty($project['logo']))
+                <img src="{{$project['logo']}}" width="100px" height="80px">
+            @else
+                {{strtoupper($project['title'])}}
+            @endif
+          </div>
+          <div class="col-md-8 location">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-5 px-0">
+                  @if (!empty($location))
+                  <span class="district">{{$location[0]}}</span>
+                  @endif
+                </div>
+                <div class="col-md-7 px-0">
+                  @if (!empty($stage))
+                  <div class="stage">{{$stage[0]}}</div>
+                  @endif
+                </div>
+              </div>
+              <div class="row" style="margin-top: 10px">
+                <div class="col-md-12 px-0">
+                  @if (!empty($address))
+                  <div class="address">{{$address}}</div>
+                  @endif
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

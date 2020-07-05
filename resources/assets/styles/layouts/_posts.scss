@@ -83,46 +83,6 @@
     }
   }
 
-  .card-bottom.toratto-project-building-card-bottom-info {
-    background-color: #fff;
-    padding: 10px;
-
-    .toratto-project-building-card-bottom-info-location {
-      float: left;
-
-      span {
-        float: left;
-        clear: left;
-        color: $theme-color-alt-blue;
-
-        .far,
-        .fas {
-          color: $theme-color-green;
-        }
-      }
-
-      .location,
-      .address {
-        margin-bottom: 5px;
-      }
-
-      .location,
-      .stage {
-        font-family: "CircularStd-Bold", sans-serif;
-        font-size: 1rem;
-        font-weight: bold;
-      }
-
-      .stage {
-        color: #fff;
-      }
-
-      .address {
-        font-size: 0.8rem;
-      }
-    }
-  }
-
   .toratto-project-building-projects {
     text-align: center;
     margin-top: 20px;
@@ -151,4 +111,36 @@
   background-color: #fff;
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.card-bottom.toratto-project-building-card-bottom-info {
+  background-color: #fff;
+  padding: 10px;
+
+  .location {
+    float: left;
+    color: $theme-color-alt-blue;
+
+    .district,
+    .stage {
+      font-family: "CircularStd-Bold", sans-serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .stage {
+      color: #fff;
+      background-color: $theme-color-green;
+      border-radius: 20px 0;
+      padding: 6px 12px;
+      text-align: center;
+      font-size: 1rem;
+      // margin-left: 20px;
+      // min-width: 220px;
+    }
+
+    .address {
+      font-size: 1rem;
+    }
+  }
 }

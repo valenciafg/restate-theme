@@ -33,11 +33,11 @@
                 {{$project['slogan']}}
             </p>
             @endif
-            @if ($project['brochure'])
+            {{--@if ($project['brochure'])
             <div class="">
                 <a class="btn btn-toratto-green btn-md" href="{{$project['brochure']}}">DESCARGAR BROCHURE</a>
             </div>
-            @endif
+            @endif--}}
           </div>
           <div class="col-md-4 col-sm-12">
             <span class="toratto-project-banner-excerpt">
@@ -47,7 +47,7 @@
           <div class="col-md-8 col-sm-12">
             <div class="toratto-project-banner-subtitle">
               @if (!empty($stage))
-              <span class="stage float-right">{{$stage}}</span>
+              <span class="stage">{{$stage}}</span>
               @endif
             </div>
           </div>

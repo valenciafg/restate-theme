@@ -7,10 +7,18 @@ body {
   color: rgba(232, 232, 232, 0.5);
   font-family: "CircularStd-Black", sans-serif;
   font-weight: bold;
-  font-size: 140px;
+  font-size: 8.75rem;
   text-align: center;
   margin: 0;
   text-transform: uppercase;
+
+  @media (max-width: 480px) {
+    font-size: 3.5rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 5rem;
+  }
 }
 
 .toratto-section-title-2 {
