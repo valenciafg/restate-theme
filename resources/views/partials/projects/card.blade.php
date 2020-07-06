@@ -29,7 +29,7 @@
                 {{strtoupper($project['title'])}}
             @endif
           </div>
-          <div class="col-md-8 location">
+          <div class="col-md-8 location px-0">
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-md-5 px-0">
