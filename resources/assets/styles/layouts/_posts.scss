@@ -117,32 +117,37 @@
   background-color: #fff;
   padding: 10px;
 
-  .location {
-    float: left;
-    color: $theme-color-alt-blue;
+  // .location {
+  //   float: left;
+  //   color: $theme-color-alt-blue;
 
-    .district,
-    .stage {
-      font-family: "CircularStd-Bold", sans-serif;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .stage {
-      color: #fff;
-      background-color: $theme-color-green;
-      border-radius: 20px 0;
-      padding: 6px 12px;
-      text-align: center;
-      font-size: 1rem;
-      // margin-left: 20px;
-      // min-width: 220px;
-    }
-
-    .address {
-      font-size: 1rem;
-    }
+  .district,
+  .stage {
+    font-family: "CircularStd-Bold", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
+
+  .district {
+    color: $theme-color-alt-blue;
+  }
+
+  .stage {
+    color: #fff;
+    background-color: $theme-color-green;
+    border-radius: 20px 0;
+    padding: 6px 12px;
+    text-align: center;
+    font-size: 1rem;
+    // margin-left: 20px;
+    // min-width: 220px;
+  }
+
+  .address {
+    font-size: 1.3rem;
+    color: $theme-color-alt-blue;
+  }
+  // }
 
   .info {
     margin-bottom: 10px;

@@ -5,13 +5,13 @@
 <div class="row">
   <div class="container">
     <div class="col-md-12 col-sm-12">
-      <form action="">
+      <form id="toratto-complaints-book-form" type="post">
         <div class="form-group col-md-12" style="margin-top: 50px;margin-bottom: 50px;">
           <span>Antes de empezar, indícanos el lugar en el que se dieron los sucesos del reclamo:</span>
         </div>
         <div class="form-group col-md-4">
-          <label for="toratto-contact-form-project">Establecimiento <span class="toratto-form-required">*<span></label>
-          <select class="form-control" class="form-control" id="toratto-contact-form-project" name="toratto-contact-form-project" required>
+          <label for="project">Establecimiento <span class="toratto-form-required">*<span></label>
+          <select class="form-control" class="form-control" id="project" name="project" required>
             @foreach ($projects as $project)
               <option value="{{$project['title']}}">{{$project['title']}}</option>
             @endforeach
@@ -30,30 +30,30 @@
         </div>
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label for="toratto-land_purchase-form-name">Nombres: <span class="toratto-form-required">*<span></label>
-            <input type="text" class="form-control" id="toratto-land_purchase-form-name" name="toratto-land_purchase-form-name" required>
+            <label for="consumer-name">Nombres: <span class="toratto-form-required">*<span></label>
+            <input type="text" class="form-control" id="consumer-name" name="consumer-name" required>
           </div>
           <div class="form-group col-md-4">
-            <label for="toratto-land_purchase-form-lastname">Apellidos: <span class="toratto-form-required">*<span></label>
-            <input type="text" class="form-control" id="toratto-land_purchase-form-lastname" name="toratto-land_purchase-form-lastname" required>
+            <label for="consumer-lastname">Apellidos: <span class="toratto-form-required">*<span></label>
+            <input type="text" class="form-control" id="consumer-lastname" name="consumer-lastname" required>
           </div>
           <div class="form-group col-md-4">
-            <label for="toratto-land_purchase-form-phone">Télefono: <span class="toratto-form-required">*<span></label>
-            <input type="text" class="form-control" id="toratto-land_purchase-form-phone" name="toratto-land_purchase-form-phone" required>
+            <label for="consumer-phone">Télefono: <span class="toratto-form-required">*<span></label>
+            <input type="text" class="form-control" id="consumer-phone" name="consumer-phone" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label for="toratto-land_purchase-form-email">E-mail: <span class="toratto-form-required">*<span></label>
-            <input type="email" class="form-control" id="toratto-land_purchase-form-email" name="toratto-land_purchase-form-email" required>
+            <label for="consumer-email">E-mail: <span class="toratto-form-required">*<span></label>
+            <input type="email" class="form-control" id="consumer-email" name="consumer-email" required>
           </div>
           <div class="form-group col-md-4">
-            <label for="toratto-land_purchase-form-owner-address">Dirección: <span class="toratto-form-required">*<span></label>
-            <input type="text" class="form-control" id="toratto-land_purchase-form-owner-address" name="toratto-land_purchase-form-owner-address" required>
+            <label for="consumer-address">Dirección: <span class="toratto-form-required">*<span></label>
+            <input type="text" class="form-control" id="consumer-address" name="consumer-address" required>
           </div>
           <div class="form-group col-md-4">
-            <label for="toratto-contact-form-project">Documento de identidad: <span class="toratto-form-required">*<span></label>
-            <select class="form-control" class="form-control" id="toratto-contact-form-project" name="toratto-contact-form-project" required>
+            <label for="consumer-doc-type">Documento de identidad: <span class="toratto-form-required">*<span></label>
+            <select class="form-control" class="form-control" id="consumer-doc-type" name="consumer-doc-type" required>
               <option value="">Tipo de documento</option>
               <option value="DNI">DNI</option>
               <option value="RUC">RUC</option>
@@ -63,17 +63,17 @@
         </div>
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label for="toratto-land_purchase-form-name">Nº de documento: <span class="toratto-form-required">*<span></label>
-            <input type="text" class="form-control" id="toratto-land_purchase-form-name" name="toratto-land_purchase-form-name" required>
+            <label for="consumer-document">Nº de documento: <span class="toratto-form-required">*<span></label>
+            <input type="text" class="form-control" id="consumer-document" name="consumer-document" required>
           </div>
           <div class="form-group col-md-4">
-            <label for="toratto-land_purchase-form-lastname">Nombre del tutor:</label>
-            <input type="text" class="form-control" id="toratto-land_purchase-form-lastname" name="toratto-land_purchase-form-lastname">
+            <label for="consumer-tutor-fullname">Nombre del tutor:</label>
+            <input type="text" class="form-control" id="consumer-tutor-fullname" name="consumer-tutor-fullname">
             <small class="form-text text-muted">*Aplica, si el reclamante es menor de edad.</small>
           </div>
           <div class="form-group col-md-4">
-            <label for="toratto-land_purchase-form-phone">Nº de documento:</label>
-            <input type="text" class="form-control" id="toratto-land_purchase-form-phone" name="toratto-land_purchase-form-phone">
+            <label for="consumer-tutor-document">Nº de documento:</label>
+            <input type="text" class="form-control" id="consumer-tutor-document" name="consumer-tutor-document">
             <small class="form-text text-muted">*Aplica, si el reclamante es menor de edad.</small>
           </div>
         </div>
@@ -84,17 +84,17 @@
           </div>
           <div class="form group col-md-12" style="margin-top: 20px;margin-bottom: 20px;">
             <div class="form-check form-check-inline">
-              <input type="radio" class="form-check-input" name="land-type" id="toratto-contact-form-check">
-              <label class="form-check-label" for="toratto-contact-form-check">Proyecto</label>
+              <input type="radio" class="form-check-input" name="land-type" id="land-type">
+              <label class="form-check-label" for="land-type">Proyecto</label>
             </div>
             <div class="form-check form-check-inline">
-              <input type="radio" class="form-check-input" name="land-type" id="toratto-contact-form-check">
-              <label class="form-check-label" for="toratto-contact-form-check">Servicio</label>
+              <input type="radio" class="form-check-input" name="land-type" id="land-type">
+              <label class="form-check-label" for="land-type">Servicio</label>
             </div>
           </div>
           <div class="form-group col-md-12">
-            <label for="toratto-contact-form-description">Descripción <span class="toratto-form-required">*</span></label>
-            <textarea class="form-control" id="toratto-contact-form-description" name="toratto-contact-form-description" rows="2" required=""></textarea>
+            <label for="land-description">Descripción <span class="toratto-form-required">*</span></label>
+            <textarea class="form-control" id="land-description" name="land-description" rows="2" required=""></textarea>
           </div>
         </div>
         <!-- 3. DETALLE DE RECLAMO -->
@@ -104,17 +104,17 @@
           </div>
           <div class="form group col-md-12" style="margin-top: 20px;margin-bottom: 20px;">
             <div class="form-check form-check-inline">
-              <input type="radio" class="form-check-input" name="land-type" id="toratto-contact-form-check">
-              <label class="form-check-label" for="toratto-contact-form-check">Reclamo</label>
+              <input type="radio" class="form-check-input" name="claim-type" id="claim-check">
+              <label class="form-check-label" for="claim-check">Reclamo</label>
             </div>
             <div class="form-check form-check-inline">
-              <input type="radio" class="form-check-input" name="land-type" id="toratto-contact-form-check">
-              <label class="form-check-label" for="toratto-contact-form-check">Queja</label>
+              <input type="radio" class="form-check-input" name="claim-type" id="claim-check">
+              <label class="form-check-label" for="claim-check">Queja</label>
             </div>
           </div>
           <div class="form-group col-md-12">
-            <label for="toratto-contact-form-description">Descripción <span class="toratto-form-required">*</span></label>
-            <textarea class="form-control" id="toratto-contact-form-description" name="toratto-contact-form-description" rows="2" required=""></textarea>
+            <label for="claim-description">Descripción <span class="toratto-form-required">*</span></label>
+            <textarea class="form-control" id="claim-description" name="claim-description" rows="2" required=""></textarea>
           </div>
           <div class="form-group col-md-12" style="margin-bottom: 0px;">
             <small class="form-text text-muted">
@@ -127,12 +127,12 @@
             </small>
           </div>
           <div class="form-group col-md-12">
-            <label for="toratto-contact-form-description">Detalle <span class="toratto-form-required">*</span></label>
-            <textarea class="form-control" id="toratto-contact-form-description" name="toratto-contact-form-description" rows="2" required=""></textarea>
+            <label for="claim-detail">Detalle <span class="toratto-form-required">*</span></label>
+            <textarea class="form-control" id="claim-detail" name="claim-detail" rows="2" required=""></textarea>
           </div>
           <div class="form-group col-md-12">
-            <label for="toratto-contact-form-description">Pedido <span class="toratto-form-required">*</span></label>
-            <textarea class="form-control" id="toratto-contact-form-description" name="toratto-contact-form-description" rows="2" required=""></textarea>
+            <label for="claim-order">Pedido <span class="toratto-form-required">*</span></label>
+            <textarea class="form-control" id="claim-order" name="claim-order" rows="2" required=""></textarea>
           </div>
         </div>
         <!-- 4. OBSERVACIONES -->
@@ -163,8 +163,8 @@
           </div>
           <div class="form-group col-md-12">
             <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="toratto-contact-form-check">
-              <label class="form-check-label" for="toratto-contact-form-check">He leído y acepto las condiciones de uso de mis datos personales</label>
+              <input type="checkbox" class="form-check-input" id="terms-check">
+              <label class="form-check-label" for="terms-check">He leído y acepto las condiciones de uso de mis datos personales</label>
             </div>
           </div>
           <div class="form-group col-md-12" style="margin-bottom: 0px;">

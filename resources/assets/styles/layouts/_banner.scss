@@ -23,6 +23,18 @@
   background-repeat: no-repeat;
 }
 
+.toratto-section-home-banner {
+  @media (min-width: 768px) {
+    .offset-md-1 {
+      margin-left: 10%;
+    }
+
+    .offset-md-2 {
+      margin-left: 22%;
+    }
+  }
+}
+
 .toratto-section-home-banner.owl-carousel .owl-slide {
   position: relative;
   height: 100vh;
@@ -94,6 +106,17 @@
   align-items: center;
 
   .toratto-project-banner-container {
+
+    @media (min-width: 768px) {
+      .offset-md-1 {
+        margin-left: 10%;
+      }
+
+      .offset-md-2 {
+        margin-left: 22%;
+      }
+    }
+
     .toratto-project-banner-title {
       font-family: "CircularStd-Bold", sans-serif;
       color: #fff;

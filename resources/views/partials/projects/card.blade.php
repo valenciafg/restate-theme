@@ -21,34 +21,34 @@
     </a>
     <div class="card-bottom toratto-project-building-card-bottom-info h-100 shadow">
       <div class="container">
-        <div class="row info">
-          <div class="col-md-4 text-center">
+        <div class="row">
+          <!-- logo column -->
+          <div class="col-md-3 px-1">
             @if (!empty($project['logo']))
                 <img src="{{$project['logo']}}" width="100px" height="80px">
             @else
                 {{strtoupper($project['title'])}}
             @endif
           </div>
-          <div class="col-md-8 location px-0">
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-md-5 px-0">
-                  @if (!empty($location))
-                  <span class="district">{{$location[0]}}</span>
-                  @endif
-                </div>
-                <div class="col-md-7 px-0">
-                  @if (!empty($stage))
-                  <div class="stage">{{$stage[0]}}</div>
-                  @endif
-                </div>
+          <!-- district and stage column -->
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-6 text-center">
+                @if (!empty($location))
+                <span class="district">{{$location[0]}}</span>
+                @endif
               </div>
-              <div class="row" style="margin-top: 10px">
-                <div class="col-md-12 px-0">
-                  @if (!empty($address))
-                  <div class="address">{{$address}}</div>
-                  @endif
-                </div>
+              <div class="col-md-6">
+                @if (!empty($stage))
+            <div class="stage">{{$stage[0]}}</div>
+            @endif
+              </div>
+            </div>
+            <div class="row" style="margin-top: 10px">
+              <div class="col-md-12">
+                @if (!empty($address))
+                <div class="address">{{$address}}</div>
+                @endif
               </div>
             </div>
           </div>
