@@ -16,7 +16,9 @@
         </span>
       </div>
       <div class="col-md-4" style="text-align: center">
+
         <span class="toratto-project-info-item">
+          <img src="@asset('images/PDF_file_icon.png')" style="width:45px; height:50px;">
           <a href="{{$project['brochure']}}" target="_blank">Descargar Brochure</a>
         </span>
       </div>

@@ -58,22 +58,23 @@
                         }
                         @endphp
                         <div class="tab-pane fade {{$active_class}}" id="v-pills-{{$project['id']}}" role="tabpanel" aria-labelledby="v-pills-{{$project['id']}}-tab">
-                          <h3>{{$project['title']}}</h3>
-                            @php
-                                echo $project['legal_info'];
-                                $legal_docs = $project['legal_docs'];
-                            @endphp
-                            @if (!empty($legal_docs))
-                            <ul class="toratto-legal-docs-list">
-                                @foreach ($legal_docs as $doc)
-                                <li>
-                                    <a class="btn btn-toratto-blue btn-lg" href="{{$doc['file']}}" target="_blank">
-                                      <i class="far fa-file-pdf"></i> {{$doc['name']}}
-                                    </a>
-                                </li>
-                                @endforeach
-                            </ul>
-                            @endif
+                          @php
+                              echo $project['legal_info'];
+                              $legal_docs = $project['legal_docs'];
+                          @endphp
+                          @if (!empty($legal_docs))
+                          <div class="row">
+                            @foreach ($legal_docs as $doc)
+                            <div class="col-md-6 col-sm-6">
+                              <a class="btn btn-toratto-blue-single btn-lg btn-block" href="{{$doc['file']}}" target="_blank">
+                                {{-- <i class="far fa-file-pdf"></i>  --}}
+                                <img src="@asset('images/PDF_file_icon_red.png')" style="width:30px; height:35px;">
+                                {{$doc['name']}}
+                              </a>
+                            </div>
+                            @endforeach
+                          </div>
+                          @endif
                         </div>
                         @php
                             $i++;

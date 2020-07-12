@@ -19,17 +19,17 @@ $location = !empty($project['categories']['location']) ? $project['categories'][
         <div class="row">
             <div class="card col-md-4 col-sm-12">
                 <div class="card-body">
-                    <h4 class="card-title">Visítanos en</h4>
+                    <h4 class="card-title">Ubícanos en</h4>
                     <p class="card-text">
-                        <i class="fas fa-map-marker-alt"></i> {{$address}}
+                      {{$address}}
                     </p>
-                    <p class="card-text"> 
-                        <i class="fas fa-map-marked-alt"></i> {{$location}}
-                    </p> 
+                    <p class="card-text">
+                      {{$location}}
+                    </p>
                 </div>
                  @if (!empty($gmap_url))
-                <div class="card-footer text-center"> 
-                    <a class="btn btn-toratto-green" href="{{$gmap_url}}" target="_blank">Ir al mapa</a>
+                <div class="card-footer text-center">
+                    <a class="btn btn-toratto-green-single" href="{{$gmap_url}}" target="_blank">IR AL MAPA</a>
                 </div>
                 @endif
             </div>

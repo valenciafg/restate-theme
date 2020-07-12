@@ -105,7 +105,8 @@
   align-items: center;
 
   .card {
-    border: 1px solid $theme-color-green;
+    // border: 1px solid $theme-color-green;
+    border-color: transparent;
     color: $theme-color-green;
     background: rgba(255, 255, 255, 0.9);
 
@@ -128,7 +129,7 @@
       background-color: transparent;
       border-top: none;
 
-      a.btn.btn-toratto-green {
+      a.btn.btn-toratto-green-single {
         color: $theme-color-blue;
         width: 100%;
 

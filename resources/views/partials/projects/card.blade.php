@@ -23,7 +23,7 @@
       <div class="container">
         <div class="row">
           <!-- logo column -->
-          <div class="col-md-3 px-1">
+          <div class="col-md-3 px-0">
             @if (!empty($project['logo']))
                 <img src="{{$project['logo']}}" width="100px" height="80px">
             @else
@@ -31,7 +31,7 @@
             @endif
           </div>
           <!-- district and stage column -->
-          <div class="col-md-9">
+          <div class="col-md-9 px-0">
             <div class="row">
               <div class="col-md-6 text-center">
                 @if (!empty($location))
@@ -45,7 +45,7 @@
               </div>
             </div>
             <div class="row" style="margin-top: 10px">
-              <div class="col-md-12">
+              <div class="col-md-12 px-0">
                 @if (!empty($address))
                 <div class="address">{{$address}}</div>
                 @endif

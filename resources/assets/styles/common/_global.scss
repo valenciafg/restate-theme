@@ -114,6 +114,18 @@ body {
   }
 }
 
+.btn-toratto-green-single {
+  font-family: "CircularStd-Book", sans-serif;
+  color: #fff;
+  border-color: $theme-color-green;
+
+  &:hover {
+    color: #fff;
+    background-color: $theme-color-green;
+    border-color: $theme-color-green;
+  }
+}
+
 .btn-toratto-green-full {
   font-family: "CircularStd-Bold", sans-serif;
   color: #fff;
@@ -133,6 +145,18 @@ body {
   color: $theme-color-blue;
   border-color: $theme-color-green;
   font-weight: bold;
+
+  &:hover {
+    color: #fff;
+    background-color: $theme-color-green;
+    border-color: $theme-color-green;
+  }
+}
+
+.btn-toratto-blue-single {
+  font-family: "CircularStd-Book", sans-serif;
+  color: $theme-color-blue;
+  border-color: $theme-color-green;
 
   &:hover {
     color: #fff;
