@@ -187,6 +187,9 @@ class Project extends Controller
         $categories = $this->getProjectCategories($id);
         $logo = get_post_meta($id, "restate_project_logo_image");
         $logo = $this->getProjectFile($logo);
+        $show_facade_banner = get_post_meta($id, "restate_project_show_facade_banner", true);
+        $facade_banner_img = get_post_meta($id, "restate_project_facade_banner_image");
+        $facade_banner_img = $this->getProjectFile($facade_banner_img);
         $slogan = get_post_meta($id, "restate_project_slogan", true);
         $show_banner = get_post_meta($id, "restate_project_show_banner", true);
         $delivery_date = get_post_meta($id, "restate_project_delivery_date", true);
@@ -210,6 +213,8 @@ class Project extends Controller
         $panoramic_gallery = get_post_meta($id, "restate_project_panoramics", true);
         $panoramic_gallery = $this->getPanoramicGallery($panoramic_gallery);
         $video = get_post_meta($id, "restate_project_promotional_video", true);
+        $video_background = get_post_meta($id, "restate_project_promotional_video_background");
+        $video_background = $this->getProjectFile($video_background);
         $brochures_files = get_post_meta($id, 'restate_project_brochure_file', false);
         $brochures_files = $this->getProjectFile($brochures_files);
         $terms_and_conditions = get_post_meta($id, "restate_project_information_conditions", true);
@@ -233,6 +238,8 @@ class Project extends Controller
             'categories'            => $categories,
             'slogan'                => $slogan,
             'show_banner'           => $show_banner,
+            'show_facade_banner'    => $show_facade_banner,
+            'facade_banner_img'     => $facade_banner_img,
             'delivery_date'         => $delivery_date,
             'starting_price_pen'    => $starting_price_pen,
             'end_price_pen'         => $end_price_pen,
@@ -248,6 +255,7 @@ class Project extends Controller
             'inside_photos'         => $inside_photos,
             'panoramic_gallery'     => $panoramic_gallery,
             'video'                 => $video,
+            'video_background'      => $video_background,
             'gallery'               => $gallery,
             'outside_photos'        => $outside_photos,
             'brochure'              => $brochures_files,

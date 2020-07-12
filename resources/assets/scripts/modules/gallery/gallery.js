@@ -88,6 +88,10 @@ export default {
             },
             /*infinite: false,*/
         });
+
+        $('.toratto-gallery-outside-pill').click(function(){
+          rev2.slick('refresh');
+        });
     },
     initModels() {
         var carousel = $('.toratto-section-model-carousel');

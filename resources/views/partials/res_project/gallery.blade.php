@@ -50,7 +50,7 @@
                   @endif
                   @if (!empty($outside))
                   <li class="nav-item">
-                    <a class="nav-link {{$outside_active_nav}}" id="pills-outside-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                    <a class="nav-link {{$outside_active_nav}} toratto-gallery-outside-pill" id="pills-outside-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
                       EXTERIOR Y ÁREAS COMUNES
                     </a>
                   </li>
