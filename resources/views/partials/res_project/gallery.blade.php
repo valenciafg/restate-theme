@@ -32,7 +32,7 @@
                   <div class="tab-pane fade gallery-container {{$outside_active_tab}}" id="pills-profile" role="tabpanel" aria-labelledby="pills-outside-tab">
                       <div class="rev_slider2">
                       @foreach ($outside as $photo)
-                      <div class="rev_slide">
+                      <div class="rev_slide2">
                           <img class="test" src="{{$photo['image_url']}}"/>
                       </div>
                       @endforeach

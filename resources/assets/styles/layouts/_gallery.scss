@@ -8,6 +8,13 @@
 
 .toratto-project-gallery {
   .toratto-project-gallery-container {
+    .tab-content > .tab-pane {
+      display: block;
+      height: 0;
+      overflow: hidden;
+    }
+    .tab-content > .active { height: auto; }
+
     .nav.nav-pills {
       display: inline-block;
       margin-top: 5px;
