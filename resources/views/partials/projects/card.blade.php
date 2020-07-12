@@ -23,7 +23,7 @@
       <div class="container">
         <div class="row">
           <!-- logo column -->
-          <div class="col-md-3 px-0">
+          <div class="col-md-3 px-0 col-sm-12">
             @if (!empty($project['logo']))
                 <img src="{{$project['logo']}}" width="100px" height="80px">
             @else
@@ -45,7 +45,7 @@
               </div>
             </div>
             <div class="row" style="margin-top: 10px">
-              <div class="col-md-12 px-0">
+              <div class="col-md-12 px-0 col-sm-12">
                 @if (!empty($address))
                 <div class="address">{{$address}}</div>
                 @endif

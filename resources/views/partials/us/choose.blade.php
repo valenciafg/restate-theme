@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="col-md-6 col-sm-12">
-        <img src="@asset('images/img-nosotros-2.png')" style="width:530px; height:620px;">
+        <img src="@asset('images/img-nosotros-2.png')" style="width:100%; height:620px;">
       </div>
     </div>
   </div>

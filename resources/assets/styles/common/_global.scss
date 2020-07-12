@@ -16,7 +16,11 @@ body {
     font-size: 3.5rem;
   }
 
-  @media (max-width: 768px) {
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    font-size: 3.5rem;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     font-size: 5rem;
   }
 }
@@ -30,6 +34,10 @@ body {
   text-align: center;
   margin: 0;
   text-transform: uppercase;
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    font-size: 3rem;
+  }
 }
 
 .toratto-custom-page.toratto-section-title,

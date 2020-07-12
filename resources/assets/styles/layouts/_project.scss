@@ -47,6 +47,11 @@
   background-color: $theme-color-green;
   color: #fff;
 
+  .col-sm-12 {
+    margin: 10px 0;
+    text-align: center;
+  }
+
   .toratto-project-info-item {
     font-family: "CircularStd-Medium", sans-serif;
     padding: 10px;
