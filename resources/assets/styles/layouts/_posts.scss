@@ -117,8 +117,10 @@
   background-color: #fff;
   padding: 10px;
 
-  .col-sm-12 {
-    text-align: center;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .col-sm-12 {
+      text-align: center;
+    }
   }
   // .location {
   //   float: left;
