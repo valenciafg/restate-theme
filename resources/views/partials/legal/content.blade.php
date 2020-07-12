@@ -65,7 +65,7 @@
                           @if (!empty($legal_docs))
                           <div class="row">
                             @foreach ($legal_docs as $doc)
-                            <div class="col-md-6 col-sm-6">
+                            <div class="col-md-6 col-sm-6" style="margin-bottom: 5px;">
                               <a class="btn btn-toratto-blue-single btn-lg btn-block" href="{{$doc['file']}}" target="_blank">
                                 {{-- <i class="far fa-file-pdf"></i>  --}}
                                 <img src="@asset('images/PDF_file_icon_red.png')" style="width:30px; height:35px;">

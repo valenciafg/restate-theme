@@ -8,6 +8,7 @@
   echo "</pre>";
   */
 @endphp
+@if (!empty($posts))
 <section class="toratto-section-home-blog toratto-section-background-00">
     <div class="container">
         <div class="row">
@@ -55,3 +56,4 @@
         </div>
     </div>
 </section>
+@endif
