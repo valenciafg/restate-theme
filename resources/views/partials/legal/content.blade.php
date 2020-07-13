@@ -48,7 +48,9 @@
                       <div class="row">
                         <div class="col-md-12 col-sm-12">
                           <h2 class="title-underline">POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS PERSONALES</h2>
-                          @php echo $content; @endphp
+                          <div style="margin-top: 8px;">
+                            @php echo $content; @endphp
+                          </div>
                         </div>
                       </div>
                     </div>

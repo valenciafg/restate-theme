@@ -56,11 +56,14 @@
     font-family: "CircularStd-Medium", sans-serif;
     padding: 10px;
     margin: 0 10px 0 10px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+
+    img {
+      margin: 0 5px;
+    }
 
     a {
       color: #fff;
-      font-size: 1.6rem;
 
       &:hover {
         text-decoration: none;
