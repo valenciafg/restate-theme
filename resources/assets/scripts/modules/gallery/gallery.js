@@ -44,7 +44,6 @@ function initInsideSlider() {
     customPaging: function() {
         return '';
     },
-    /*infinite: false,*/
   });
 }
 

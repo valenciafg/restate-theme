@@ -1,6 +1,6 @@
 
 <section class="toratto-project-info">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-lg-4 col-md-4 col-sm-12">
         <span class="toratto-project-info-item">

@@ -42,14 +42,22 @@
 
 .toratto-project-info {
   min-height: 120px;
-  display: flex;
+  padding: 25px 70px;
+  // display: flex;
   align-items: center;
   background-color: $theme-color-green;
   color: #fff;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    padding: 0;
+  }
 
   .col-sm-12 {
     margin: 10px 0;
     text-align: center;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      padding: 0;
+      text-align: left;
+    }
   }
 
   .toratto-project-info-item {
