@@ -6,6 +6,18 @@ body {
   font-family: "CircularStd-Book", sans-serif;
 }
 
+.western {
+  font-family: "CircularStd-Book", sans-serif;
+
+  span {
+    font-family: "CircularStd-Book", sans-serif;
+  }
+}
+
+.fancybox-close {
+  color: $theme-color-green;
+}
+
 .toratto-green-link {
   color: $theme-color-green;
   text-decoration: none;

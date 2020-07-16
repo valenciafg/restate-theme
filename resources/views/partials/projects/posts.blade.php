@@ -7,7 +7,7 @@ $posts = new WP_Query(array(
 ));
 @endphp
 @section('content')
-<section class="toratto-section-background-00">
+<section class="toratto-section-background-00" style="margin-top: 25px;">
   <div class="container">
     {{-- <div class="row">
       <div class="col-md-12 col-sm-12 text-center">

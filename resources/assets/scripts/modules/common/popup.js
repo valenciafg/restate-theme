@@ -6,4 +6,9 @@ export default {
             $('.pop-up').removeClass('open');
         });
     },
+    openPopup() {
+      $('#main-popup').fancybox({
+        closeBtn:'<a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>',
+      }).trigger('click');
+    },
 }

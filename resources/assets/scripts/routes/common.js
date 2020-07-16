@@ -15,6 +15,7 @@ export default {
     bannerOwl.initOwl();
     panoramic.initPanoramic();
     popup.closePopup();
+    popup.openPopup();
     whatsapp.initWhatsapp();
     //  projectCarousel.initProjectCarousel();
     bannerVegas.initBannerVegas();

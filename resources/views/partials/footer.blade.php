@@ -53,10 +53,10 @@
             <li><a href="/nosotros">Nosotros</a></li>
           </ul>
         </div>
-        <div class="col-md-2 footer-links">
+        <div class="col-md-2 footer-links" style="padding: 0;">
           <ul>
-            <li><img src="@asset('images/libro-reclamaciones.png')" style="width:64px; height:30px;" ><a href="/libro-de-reclamaciones" target="_blank"> Libro de reclamaciones</a></li>
-            <li><i class="fas fa-folder-open"></i><a href="/legal" target="_blank"> Protección al consumidor</a></li>
+            <li><img src="@asset('images/libro-reclamaciones.png')" style="width:64px; height:30px;"> <a href="/libro-de-reclamaciones" target="_blank">Libro de reclamaciones</a></li>
+            <li><a href="/legal" target="_blank"> Protección al consumidor</a></li>
             <li><a href="#">Post-venta</a></li>
           </ul>
         </div>
