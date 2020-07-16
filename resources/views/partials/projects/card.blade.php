@@ -21,7 +21,7 @@
     </a>
     <div class="card-bottom toratto-project-building-card-bottom-info h-100 shadow">
       <div class="container">
-        <div class="row">
+        <div class="row" style="margin-bottom: 10px">
           <!-- logo column -->
           <div class="col-md-3 px-0 col-sm-12">
             @if (!empty($project['logo']))

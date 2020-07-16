@@ -8,13 +8,13 @@ $posts = new WP_Query(array(
 @endphp
 @section('content')
 <section class="toratto-section-background-00">
-  <div class="container-fluid">
+  {{-- <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 col-sm-12 text-center">
         <h1 class="toratto-custom-page toratto-section-title">{{ get_the_title() }}</h1>
       </div>
     </div>
-  </div>
+  </div> --}}
   <div class="container shadow toratto-blog-page">
     @include('partials.blog.nav')
     <div class="row">

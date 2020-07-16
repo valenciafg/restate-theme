@@ -41,19 +41,25 @@
         <div class="form-group">
           <label for="description">Descripción <span class="toratto-form-required">*<span></label>
           <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
-          <small class="form-text text-muted"><span class="toratto-form-required">(*)<span> Todos los campos son obligatorios</small>
+          <small class="form-text text-muted"><span class="toratto-form-required">(*)</span> Todos los campos son obligatorios</small>
         </div>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="check" name="terms-check">
-          <label class="form-check-label" for="check">He leído y acepto las condiciones de uso de mis datos personales</label>
+          <label class="form-check-label" for="check">He leído y acepto las <a href="/legal" target="_blank" class="toratto-green-link">condiciones de uso de mis datos personales</a></label>
         </div>
-        <button
-          id="btn-toratto-submit-form"
-          type="submit"
-          class="btn btn-toratto-green-full btn-lg"
-          data-sitekey="{{$site_key}}"
-          style="margin-top: 25px;"
-        >Enviar</button>
+        <div class="form-row">
+          <div class="form-group col-md-12 text-right">
+            <button
+              id="btn-toratto-submit-form"
+              type="submit"
+              class="btn btn-toratto-green-full btn-lg"
+              data-sitekey="{{$site_key}}"
+              style="margin-top: 25px; font-size:15px; width:188px; height: 50px"
+            >
+              ENVIAR
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   </div>

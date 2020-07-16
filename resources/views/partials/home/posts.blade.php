@@ -11,11 +11,11 @@
 @if (!empty($projects))
 <section class="toratto-section-home-project toratto-section-background-00">
     <div class="container">
-        <div class="row">
+        {{-- <div class="row">
           <div class="col-md-12 col-sm-12">
             <h1 class="toratto-section-title">Proyectos</h1>
           </div>
-        </div>
+        </div> --}}
         <div class="row">
             @foreach ($projects as $project)
             @php

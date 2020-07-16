@@ -43,6 +43,7 @@
 </div>
 <div class="form-row">
   <div class="form-group col-md-12">
+    <label for="media-ids" style="margin: 15px 0;">Fotografía de terreno en venta: <span class="toratto-form-required">*<span></label>
     <div id="media-uploader" class="dropzone">
       <div class="dz-message d-flex flex-column">
         <i class="far fa-images"></i>

@@ -120,20 +120,35 @@
   display: flex;
   align-items: center;
 
+  .blue-text,
+  .green-text {
+    font-family: "CircularStd-Bold", sans-serif;
+    font-size: 2rem;
+  }
+
+  .blue-text {
+    color: $theme-color-blue;
+  }
+
+  .green-text {
+    color: $theme-color-green;
+  }
+
   .card {
     // border: 1px solid $theme-color-green;
     border-color: transparent;
     color: $theme-color-green;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0);
 
     .card-title {
       color: $theme-color-blue;
       font-weight: bold;
+      font-size: 36px;
     }
 
     .card-text {
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 36px;
     }
 
     .fas {

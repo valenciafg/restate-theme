@@ -15,17 +15,21 @@
       <small class="form-text text-muted"><span class="toratto-form-required">(*)<span> Todos los campos son obligatorios</small>
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="check" name="terms-check">
-        <label class="form-check-label" for="check">He leído y acepto las condiciones de uso de mis datos personales</label>
+        <label class="form-check-label" for="check">He leído y acepto las <a href="/legal" target="_blank" class="toratto-green-link">condiciones de uso de mis datos personales</a></label>
       </div>
-      <button
-        id="btn-toratto-submit-form"
-        type="submit"
-        class="btn btn-toratto-green-full btn-lg"
-        style="margin-top: 25px;"
-        data-sitekey="{{$site_key}}"
-      >
-        Enviar
-    </button>
+      <div class="form-row">
+        <div class="form-group col-md-12 text-center">
+          <button
+            id="btn-toratto-submit-form"
+            type="submit"
+            class="btn btn-toratto-green-full btn-lg"
+            style="margin-top: 25px; font-size:15px; width:188px; height: 50px"
+            data-sitekey="{{$site_key}}"
+          >
+            ENVIAR
+          </button>
+        </div>
+      </div>
     </form>
   </div>
 </div>
