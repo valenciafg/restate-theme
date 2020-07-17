@@ -2,9 +2,9 @@
   $project = new  App\Controllers\Project();
   $projects = $project->getProjects(10);
 
-  //echo "<pre>";
-  //print_r($projects);
-  //echo "</pre>";
+  // echo "<pre>";
+  // print_r($projects);
+  // echo "</pre>";
   $col_md = 6;
 
 @endphp
@@ -17,23 +17,27 @@
           </div>
         </div> --}}
         <div class="row">
-            @foreach ($projects as $project)
-            @php
-            $address = $project['address'];
-            $facade = $project['facade'];
-            $categories = $project['categories'];
-            $location = $categories['location'];
-            $stage = $categories['stage'];
-            @endphp
+          @foreach ($projects as $project)
+          @php
+          $address = $project['address'];
+          $facade = $project['facade'];
+          $categories = $project['categories'];
+          $location = $categories['location'];
+          $stage = $categories['stage'];
+          $show = $project['show_home'];
+          @endphp
+          @if (isset($show) && $show === 'TRUE')
+
+
             <div class="col-md-{{$col_md}} col-sm-12" style="padding-left: 0;padding-right: 0;">
                 <div class="toratto-project-building">
-                    <a href="{{$project['url']}}" class="card toratto-project-building-card">
-                      @if (empty($facade))
-                        <img class="card-img img-hover-zoom" src="@asset('images/default_facade.jpg')">
-                      @else
-                        <img class="card-img img-hover-zoom" src="{{$facade}}">
-                      @endif
-                    </a>
+                  <a href="{{$project['url']}}" class="card toratto-project-building-card">
+                    @if (empty($facade))
+                      <img class="card-img img-hover-zoom" src="@asset('images/default_facade.jpg')">
+                    @else
+                      <img class="card-img img-hover-zoom" src="{{$facade}}">
+                    @endif
+                  </a>
                     <div class="card-bottom toratto-project-building-card-bottom-info shadow">
                       <div class="container">
                         <div class="row">
@@ -72,7 +76,8 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @endif
+          @endforeach
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 toratto-project-building-projects">

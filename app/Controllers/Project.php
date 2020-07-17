@@ -195,6 +195,7 @@ class Project extends Controller
         $facade_banner_img = $this->getProjectFile($facade_banner_img);
         $slogan = get_post_meta($id, "restate_project_slogan", true);
         $show_banner = get_post_meta($id, "restate_project_show_banner", true);
+        $show_home = get_post_meta($id, "restate_project_show_home", true);
         $delivery_date = get_post_meta($id, "restate_project_delivery_date", true);
         $starting_price_pen = get_post_meta($id, "restate_project_starting_price_pen", true);
         $end_price_pen = get_post_meta($id, "restate_project_end_price_pen", true);
@@ -241,6 +242,7 @@ class Project extends Controller
             'categories'            => $categories,
             'slogan'                => $slogan,
             'show_banner'           => $show_banner,
+            'show_home'             => $show_home,
             'show_facade_banner'    => $show_facade_banner,
             'show_popup'            => $show_popup,
             'popup_image'           => $popup_image,
