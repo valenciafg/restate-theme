@@ -3,9 +3,9 @@
   $all_settings = $settings->getAllSettings();
   $site_key = $all_settings['recaptcha_site_key'];
 @endphp
-<div class="col-md-6 col-sm-12">
+<div class="col-lg-6 col-md-6 col-sm-12">
   <div class="row toratto-section-model-rooms">
-    <div class="col-md-12 col-sm-12">
+    <div class="col-lg-12 col-md-12 col-sm-12">
       <ul class="nav nav-fill">
         @foreach ($room_list as $room_item)
         <li class="nav-item">

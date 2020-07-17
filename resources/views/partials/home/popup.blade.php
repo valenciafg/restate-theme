@@ -3,16 +3,6 @@
     $all_settings = $settings->getAllSettings();
 @endphp
 @if (!empty($all_settings['show_popup']) && $all_settings['show_popup'] !== 'FALSE')
-{{-- <div class="pop-up open">
-  <div class="content">
-    <div class="container">
-      <span class="close">
-        <i class="far fa-times-circle"></i>
-      </span>
-      <img src="{{$all_settings['popup_image']}}" alt="popup">
-    </div>
-  </div>
-</div> --}}
 <a id="main-popup" href="{{$all_settings['popup_image']}}" data-fancybox="gallery" style="display: none;">
 	<img src="{{$all_settings['popup_image']}}" alt="popup"/>
 </a>

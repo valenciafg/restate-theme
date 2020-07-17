@@ -184,6 +184,9 @@ class Project extends Controller
         $facade = get_post_meta($id, "restate_project_facade_image");
         $facade = $this->getProjectFile($facade);
         $facade = $facade !== "" ? $facade : get_stylesheet_directory_uri()."/assets/images/default_facade.jpg";
+        $show_popup = get_post_meta($id, "restate_project_show_popup", true);
+        $popup_image = get_post_meta($id, "restate_project_popup_image");
+        $popup_image = $this->getProjectFile($popup_image);
         $categories = $this->getProjectCategories($id);
         $logo = get_post_meta($id, "restate_project_logo_image");
         $logo = $this->getProjectFile($logo);
@@ -239,6 +242,8 @@ class Project extends Controller
             'slogan'                => $slogan,
             'show_banner'           => $show_banner,
             'show_facade_banner'    => $show_facade_banner,
+            'show_popup'            => $show_popup,
+            'popup_image'           => $popup_image,
             'facade_banner_img'     => $facade_banner_img,
             'delivery_date'         => $delivery_date,
             'starting_price_pen'    => $starting_price_pen,
