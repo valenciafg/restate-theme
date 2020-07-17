@@ -1,11 +1,11 @@
 @php
     $fullname = $project['advisor_fullname'];
-    $number = $project['advisor_ws_number'];    
+    $number = $project['advisor_ws_number'];
     $email = $project['advisor_email'];
     $gender = $project['advisor_gender'];
 @endphp
 @if (!empty($fullname) && !empty($number))
-@php 
+@php
 $number = str_replace("(", "", $number);
 $number = str_replace(")", "", $number);
 $number = str_replace(" ", "", $number);
@@ -21,5 +21,10 @@ if(!empty($email)) {
 $message = "Hola, soy ".$fullname." seré su ".$advisor_text.". ".$advisor_email;
 $client_message = "Hola, me interesa el proyecto ".$project['title'];
 @endphp
-<div class="toratto-whatsapp-button" data-phone="{{$number}}" data-popup-message="{{$message}}" data-message="{{$client_message}}"></div>
+{{-- <div class="toratto-whatsapp-button" data-phone="{{$number}}" data-popup-message="{{$message}}" data-message="{{$client_message}}"></div> --}}
+<div class="wrapper-whatsapp">
+  <div class="icon-wrapper-whatsapp">
+    <a href="https://wa.me/{{$number}}?text={{$client_message}}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</div>
 @endif
