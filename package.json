@@ -93,6 +93,7 @@
     "photo-sphere-viewer": "^4.0.4",
     "photoswipe": "^4.1.3",
     "popper.js": "^1.14.7",
+    "sip.js": "^0.17.1",
     "slick-carousel": "^1.8.1",
     "vegas": "^2.5.1"
   }

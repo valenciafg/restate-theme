@@ -27,4 +27,16 @@ $client_message = "Hola, me interesa el proyecto ".$project['title'];
     <a href="https://wa.me/{{$number}}?text={{$client_message}}" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
 </div>
+<div class="wrapper-call">
+  <div class="icon-wrapper-call">
+    <a href="#" class="toratto-call"><i class="fas fa-phone"></i></a>
+  </div>
+  <div class="icon-wrapper-hangup" style="display: none">
+    <a href="#" class="toratto-hangup"><i class="fas fa-phone-slash"></i></a>
+  </div>
+</div>
+
 @endif
+<audio id="remoteAudio" controls>
+  <p>Your browser doesn't support HTML5 audio.</p>
+</audio>
