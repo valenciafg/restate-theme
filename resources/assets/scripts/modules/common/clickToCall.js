@@ -28,7 +28,7 @@ export default {
       .then(() => {
         $('.icon-wrapper-call').hide();
         $('.icon-wrapper-hangup').show();
-        simpleUser.register();
+        // simpleUser.register();
         simpleUser.call('sip:126@pbx.grupotoratto.com');
       })
       .catch((error) => {
