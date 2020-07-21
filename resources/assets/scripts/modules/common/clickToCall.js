@@ -29,7 +29,7 @@ const options = {
 const server = 'wss://pbx.cinusual.com:7443';
 
 // Construct a SimpleUser instance
-const simpleUser = new Web.SimpleUser(server, options);
+
 
 // Connect to server and place call
 
@@ -48,11 +48,13 @@ export default {
   initCall() {
     $('.toratto-call').click(function(e) {
       e.preventDefault();
+      const simpleUser = new Web.SimpleUser(server, options);
       simpleUser.connect()
       .then(() => {
         $('.icon-wrapper-call').hide();
         $('.icon-wrapper-hangup').show();
-        simpleUser.call('sip:100@pbx.cinusual.com')
+        simpleUser.register();
+        simpleUser.call('sip:100@pbx.cinusual.com');
       })
       .catch((error) => {
         // Call failed
@@ -63,7 +65,7 @@ export default {
   initHanup() {
     $('.toratto-hangup').click(function(e) {
       e.preventDefault();
-
+/*
       simpleUser.hangup()
       .then(() => {
         $('.icon-wrapper-hangup').hide();
@@ -73,6 +75,7 @@ export default {
         // Call failed
         console.error('Failure', error)
       });
+      */
     });
   },
 }
