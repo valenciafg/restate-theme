@@ -7,6 +7,7 @@
   $project = new  App\Controllers\Project();
   $projects = $project->getBannerProjects();
 @endphp
+@section('content')
 @include('partials.home.banner')
 @include('partials.home.popup')
 @include('partials.home.posts')
@@ -14,6 +15,8 @@
 @include('partials.home.blog')
 @include('partials.home.video')
 @include('partials.home.social')
+@include('partials.home.phone')
+@endsection
 {{--
 @include('partials.home.social')
 

@@ -1,8 +1,12 @@
 @php
-    $fullname = $project['advisor_fullname'];
-    $number = $project['advisor_ws_number'];
-    $email = $project['advisor_email'];
-    $gender = $project['advisor_gender'];
+  $settings = new  App\Controllers\Setting();
+  $all_settings = $settings->getAllSettings();
+  $help = $all_settings['pbx_help'];
+  $fullname = $project['advisor_fullname'];
+  $number = $project['advisor_ws_number'];
+  $email = $project['advisor_email'];
+  $gender = $project['advisor_gender'];
+  $ext = $project['advisor_ext_number'];
 @endphp
 @if (!empty($fullname) && !empty($number))
 @php
@@ -27,7 +31,9 @@ $client_message = "Hola, me interesa el proyecto ".$project['title'];
     <a href="https://wa.me/{{$number}}?text={{$client_message}}" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
 </div>
-<div class="wrapper-call">
+@endif
+@if (!empty($ext))
+<div class="wrapper-call" data-toggle="tooltip" data-placement="bottom" title="{{$help}}">
   <div class="icon-wrapper-call">
     <a href="#" class="toratto-call"><i class="fas fa-phone"></i></a>
   </div>
@@ -35,8 +41,7 @@ $client_message = "Hola, me interesa el proyecto ".$project['title'];
     <a href="#" class="toratto-hangup"><i class="fas fa-phone-slash"></i></a>
   </div>
 </div>
-
-@endif
-<audio id="remoteAudio" controls>
+<audio id="remoteAudio" controls style="display: none" data-ext="{{$ext}}">
   <p>Your browser doesn't support HTML5 audio.</p>
 </audio>
+@endif

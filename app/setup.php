@@ -6,17 +6,26 @@ use Roots\Sage\Container;
 use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
+use App\Controllers\Setting;
 
 /**
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
+    $setting = new Setting();
+    $all_settings = $setting->getAllSettings();
     $localized_array = array(
-        'ajaxurl'=>admin_url('admin-ajax.php'),
-        'siteurl'=>get_bloginfo('url'),
-        'stylesheet_directory_uri'=>get_stylesheet_directory_uri(),
-        'upload'=>admin_url( 'admin-ajax.php?action=handle_dropped_media' ),
-        'delete'=>admin_url( 'admin-ajax.php?action=handle_deleted_media' ),
+        'ajaxurl'                   => admin_url('admin-ajax.php'),
+        'siteurl'                   => get_bloginfo('url'),
+        'stylesheet_directory_uri'  => get_stylesheet_directory_uri(),
+        'upload'                    => admin_url( 'admin-ajax.php?action=handle_dropped_media' ),
+        'delete'                    => admin_url( 'admin-ajax.php?action=handle_deleted_media' ),
+        'pbx_server'                => $all_settings['pbx_server'],
+        'pbx_port'                  => $all_settings['pbx_port'],
+        'pbx_aor'                   => $all_settings['pbx_aor'],
+        'pbx_username'              => $all_settings['pbx_username'],
+        'pbx_password'              => $all_settings['pbx_password'],
+        'pbx_main_extension'        => $all_settings['pbx_main_extension'],
     );
 
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);

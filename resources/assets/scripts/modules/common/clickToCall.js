@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 import { Web } from 'sip.js';
 
 // WebSocket server to connect with
-const server = 'wss://pbx.grupotoratto.com:7443';
+const server = `wss://${sage_vars.pbx_server}:${sage_vars.pbx_port}`;
 
 let simpleUser;
 
@@ -10,18 +11,19 @@ let simpleUser;
 export default {
   initCall() {
     const remoteAudio = document.getElementById('remoteAudio');
+    const ext = $('#remoteAudio').data('ext');
     $('.toratto-call').click(function(e) {
       e.preventDefault();
       // Construct a SimpleUser instance
       simpleUser = new Web.SimpleUser(server, {
-        aor: 'sip:124@pbx.grupotoratto.com', // caller
+        aor: `sip:${sage_vars.pbx_aor}@${sage_vars.pbx_server}`, // caller
         media: {
           constraints: { audio: true, video: false }, // audio only call
           remote: { audio: remoteAudio }, // play remote audio
         },
         userAgentOptions: {
-          authorizationPassword: 'gt123456',
-          authorizationUsername: '124',
+          authorizationPassword: `${sage_vars.pbx_password}`,
+          authorizationUsername: `${sage_vars.pbx_username}`,
         },
       });
       simpleUser.connect()
@@ -29,7 +31,7 @@ export default {
         $('.icon-wrapper-call').hide();
         $('.icon-wrapper-hangup').show();
         // simpleUser.register();
-        simpleUser.call('sip:126@pbx.grupotoratto.com');
+        simpleUser.call(`sip:${ext}@${sage_vars.pbx_server}`);
       })
       .catch((error) => {
         // Call failed

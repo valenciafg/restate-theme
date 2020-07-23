@@ -223,7 +223,10 @@ class Project extends Controller
         $brochures_files = $this->getProjectFile($brochures_files);
         $terms_and_conditions = get_post_meta($id, "restate_project_information_conditions", true);
         $advisor_fullname = get_post_meta($id, 'restate_project_advisor_fullname', true);
+        $advisor_photo = get_post_meta($id, "restate_project_advisor_photo");
+        $advisor_photo = $this->getProjectFile($advisor_photo);
         $advisor_ws_number = get_post_meta($id, 'restate_project_advisor_whatsapp_number', true);
+        $advisor_ext_number = get_post_meta($id, 'restate_project_advisor_extension_number', true);
         $advisor_email = get_post_meta($id, 'restate_project_advisor_email', true);
         $advisor_gender = get_post_meta($id, 'restate_project_advisor_gender', true);
         $models = get_post_meta($id, "restate_project_models");
@@ -268,7 +271,9 @@ class Project extends Controller
             'brochure'              => $brochures_files,
             'terms_and_conditions'  => $terms_and_conditions,
             'advisor_fullname'      => $advisor_fullname,
+            'advisor_photo'         => $advisor_photo,
             'advisor_ws_number'     => $advisor_ws_number,
+            'advisor_ext_number'    => $advisor_ext_number,
             'advisor_email'         => $advisor_email,
             'advisor_gender'        => $advisor_gender,
             'models'                => $models,

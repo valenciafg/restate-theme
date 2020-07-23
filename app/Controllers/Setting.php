@@ -89,6 +89,13 @@ class Setting extends Controller
             'gplus'                 => (isset($settings['real_estate_setting_social_gplus'])?$settings['real_estate_setting_social_gplus']:''),
             'skype'                 => (isset($settings['real_estate_setting_social_skype'])?$settings['real_estate_setting_social_skype']:''),
             'instagram'             => (isset($settings['real_estate_setting_social_instagram'])?$settings['real_estate_setting_social_instagram']:''),
+            'pbx_server'            => (isset($settings['real_estate_setting_te_server'])?$settings['real_estate_setting_te_server']:''),
+            'pbx_port'              => (isset($settings['real_estate_setting_te_port'])?$settings['real_estate_setting_te_port']:''),
+            'pbx_aor'               => (isset($settings['real_estate_setting_te_aor'])?$settings['real_estate_setting_te_aor']:''),
+            'pbx_username'          => (isset($settings['real_estate_setting_te_username'])?$settings['real_estate_setting_te_username']:''),
+            'pbx_password'          => (isset($settings['real_estate_setting_te_password'])?$settings['real_estate_setting_te_password']:''),
+            'pbx_main_extension'    => (isset($settings['real_estate_setting_te_extension'])?$settings['real_estate_setting_te_extension']:''),
+            'pbx_help'    => (isset($settings['real_estate_setting_te_help'])?$settings['real_estate_setting_te_help']:''),
         ];
         return $config_data;
     }
