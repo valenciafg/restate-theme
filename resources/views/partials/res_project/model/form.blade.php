@@ -2,6 +2,14 @@
   $settings = new  App\Controllers\Setting();
   $all_settings = $settings->getAllSettings();
   $site_key = $all_settings['recaptcha_site_key'];
+  $advisor_fullname = $project['advisor_fullname'];
+  $advisor_photo = $project['advisor_photo'];
+  $number = $project['advisor_ws_number'];
+  $advisor_ws_number = $project['advisor_ws_number'];
+  $number = str_replace("(", "", $number);
+  $number = str_replace(")", "", $number);
+  $number = str_replace(" ", "", $number);
+  $number = str_replace("+", "", $number);
 @endphp
 <div class="col-lg-6 col-md-6 col-sm-12">
   <div class="row toratto-section-model-rooms">
@@ -89,4 +97,31 @@
       </button>
     </div>
   </form>
+  @if (!empty($advisor_fullname) && !empty($number))
+  <div class="row toratto-project-advisor align-items-center">
+    <div class="col-md-3 col-sm-12 px-0 text-center photo">
+      @if (!empty($advisor_photo))
+      <img src="{{$advisor_photo}}" alt="{{$advisor_fullname}}" style="width: 120px; height: 115px">
+      @else
+      <i class="fas fa-user-tie"></i>
+      @endif
+    </div>
+    <div class="col-md-9 col-sm-12">
+      <div class="row">
+        <div class="col-md-5 name">{{$advisor_fullname}}</div>
+        <div class="col-md-5 number">
+          <a href="https://wa.me/{{$number}}" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            {{$advisor_ws_number}}
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 toratto-project-advisor-title">
+          Asesor inmobiliario
+        </div>
+      </div>
+    </div>
+  </div>
+  @endif
 </div>

@@ -1,5 +1,5 @@
 @php
-    $models = $project['models'];
+  $models = $project['models'];
 @endphp
 @if (!empty($models))
   @php

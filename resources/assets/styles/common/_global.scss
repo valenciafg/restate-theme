@@ -285,7 +285,6 @@ body {
   }
 }
 
-.icon-wrapper-call,
 .icon-wrapper-hangup {
   display: flex;
   align-items: center;
@@ -311,19 +310,48 @@ body {
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-}
 
-.icon-wrapper-call {
-  .fas.fa-phone {
-    color: $theme-color-green;
+  .fas.fa-phone-slash {
+    color: #fff;
     font-size: 1.5rem;
   }
 }
 
-.icon-wrapper-hangup {
-  .fas.fa-phone-slash {
+.icon-wrapper-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 140px;
+  padding: 5px;
+  color: #333;
+  background: $theme-color-blue;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 10px;
+  // -webkit-border-radius: 50%;
+  // -moz-border-radius: 50%;
+  // -ms-border-radius: 50%;
+  // -o-border-radius: 50%;
+  transition: 250ms color;
+  -webkit-transition: 250ms color;
+  -moz-transition: 250ms color;
+  -ms-transition: 250ms color;
+  -o-transition: 250ms color;
+  animation-name: wave;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  a {
     color: #fff;
-    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+
+    .fas.fa-phone {
+      color: $theme-color-green;
+      font-size: 1.5rem;
+    }
   }
 }
 

@@ -83,7 +83,7 @@ class TorattoAjax extends Controller
             'Cc: '.$email
         );
 
-        $subject = "Contacto: ".$$project['title'];
+        $subject = "Contacto: ".$project['title'];
         $body = "<h1>Solicitud de información</h1><br>";
         $body .= "<strong>Nombres:</strong>".$fullname."<br>";
         $body .= "<strong>Télefono:</strong>".$phone."<br>";
@@ -137,7 +137,7 @@ class TorattoAjax extends Controller
             'Cc: '.$owner_email
         );
 
-        $subject = "Compra de terreno: ".$$project['title'];
+        $subject = "Compra de terreno: ".$project['title'];
         $body = "<h2>Datos del propietario</h2>";
         $body .= "<strong>Nombres:</strong>".$owner_name." ".$owner_lastname."<br>";
         $body .= "<strong>Télefono:</strong>".$owner_phone."<br>";

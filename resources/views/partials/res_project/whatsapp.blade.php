@@ -35,7 +35,10 @@ $client_message = "Hola, me interesa el proyecto ".$project['title'];
 @if (!empty($ext))
 <div class="wrapper-call" data-toggle="tooltip" data-placement="bottom" title="{{$help}}">
   <div class="icon-wrapper-call">
-    <a href="#" class="toratto-call"><i class="fas fa-phone"></i></a>
+    <a href="#" class="toratto-call">
+      <i class="fas fa-phone"></i>
+      <span>Llama gratis</span>
+    </a>
   </div>
   <div class="icon-wrapper-hangup" style="display: none">
     <a href="#" class="toratto-hangup"><i class="fas fa-phone-slash"></i></a>
