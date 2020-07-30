@@ -180,6 +180,36 @@
       height: 320px;
     }
   }
+
+  .slick-next::before,
+  .slick-prev::before {
+    content: none;
+  }
+
+  .slick-arrow {
+    width: 55px;
+    height: 55px;
+    z-index: 5;
+    border-top: 3px solid $theme-color-green;
+    border-right: 3px solid $theme-color-green;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+  }
+
+  .slick-arrow:hover {
+    opacity: 0.5;
+  }
+
+  .slick-prev {
+    left: 2%;
+    transform: rotate(225deg);
+  }
+
+  .slick-next {
+    right: 2%;
+    transform: rotate(45deg);
+  }
 }
 
 .toratto-project-panoramic {
@@ -200,34 +230,4 @@
       color: #fff;
     }
   }
-}
-
-.slick-next::before,
-.slick-prev::before {
-  content: none;
-}
-
-.slick-arrow {
-  width: 55px;
-  height: 55px;
-  z-index: 5;
-  border-top: 3px solid $theme-color-green;
-  border-right: 3px solid $theme-color-green;
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-}
-
-.slick-arrow:hover {
-  opacity: 0.5;
-}
-
-.slick-prev {
-  left: 2%;
-  transform: rotate(225deg);
-}
-
-.slick-next {
-  right: 2%;
-  transform: rotate(45deg);
 }

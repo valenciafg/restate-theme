@@ -50,6 +50,14 @@
         @endforeach
       </div>
       @endif
+      <div class="row">
+        <div class="col-md-12">
+          @php
+            echo do_shortcode("[social_board id='384' type='carousel']");
+            echo do_shortcode("[social_board id='383' type='carousel']");
+          @endphp
+        </div>
+      </div>
     </div>
 </section>
 @endif

@@ -27,7 +27,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row toratto-section-model-carousel-info">
     <div class="col-lg-12 col-md-12 col-sm-12">
       <span class="toratto-model-info-name">{{$first_model_name}}</span>
       <ul class="nav justify-content-center nav-fill toratto-model-info">
