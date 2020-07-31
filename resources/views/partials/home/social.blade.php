@@ -2,6 +2,7 @@
     $settings = new  App\Controllers\Setting();
     $all_settings = $settings->getAllSettings();
     $fb_posts = $all_settings['facebook_posts'];
+    $socials = $all_settings['social_streams'];
 @endphp
 @if (!empty($all_settings['facebook']))
 <section class="toratto-section-home-social toratto-section-background-00">
@@ -50,14 +51,17 @@
         @endforeach
       </div>
       @endif
+      @if(!empty($socials))
       <div class="row">
         <div class="col-md-12">
+          @foreach ($socials as $post)
           @php
-            echo do_shortcode("[social_board id='384' type='carousel']");
-            echo do_shortcode("[social_board id='383' type='carousel']");
+            echo do_shortcode("[social_board id='".$post['code']."' type='".$post['type']."']");
           @endphp
+          @endforeach
         </div>
       </div>
+      @endif
     </div>
 </section>
 @endif

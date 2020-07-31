@@ -59,6 +59,19 @@ class Setting extends Controller
         return $posts;
     }
 
+    public function getSocialStreams($list) {
+        $posts = [];
+        foreach ($list as $post) {
+            if(!empty($post['real_estate_setting_social_post_code']) && !empty($post['real_estate_setting_social_post_type'])) {
+                $posts[] = array(
+                    'code' => $post['real_estate_setting_social_post_code'],
+                    'type' => $post['real_estate_setting_social_post_type']
+                );
+            }
+        }
+        return $posts;
+    }
+
     public  function getAllSettings(){
         $config_data = [];
         $settings = $this->settings;
@@ -83,6 +96,7 @@ class Setting extends Controller
             'whatsapp'              => (isset($settings['real_estate_setting_social_whatsapp'])?$settings['real_estate_setting_social_whatsapp']:''),
             'facebook'              => (isset($settings['real_estate_setting_social_facebook'])?$settings['real_estate_setting_social_facebook']:''),
             'facebook_posts'        => (isset($settings['real_estate_setting_social_fb_posts'])?$this->getFacebookPosts($settings['real_estate_setting_social_fb_posts']):[]),
+            'social_streams'        => (isset($settings['real_estate_setting_social_posts'])?$this->getSocialStreams($settings['real_estate_setting_social_posts']):[]),
             'twitter'               => (isset($settings['real_estate_setting_social_twitter'])?$settings['real_estate_setting_social_twitter']:''),
             'pinterest'             => (isset($settings['real_estate_setting_social_pinterest'])?$settings['real_estate_setting_social_pinterest']:''),
             'linkedin'              => (isset($settings['real_estate_setting_social_linkedin'])?$settings['real_estate_setting_social_linkedin']:''),
