@@ -6,6 +6,7 @@ export default {
   initAjaxQuotationForm () {
     $('#toratto-modal-form').submit(function(e) {
       e.preventDefault();
+
       var isChecked = $('input[name="toratto-quotation-form-terms-check"]:checked').length > 0;
       if (isChecked) {
         const sitekey = $('#btn-toratto-submit-form').data('sitekey');
@@ -31,7 +32,11 @@ export default {
                   if (result.status === 'error') {
                     alert('La cotización no pudo ser enviada.');
                   } else {
-                    alert('Cotización enviada, en breve será contactado por nuestros asesores.')
+                    $('#fullname').val('');
+                    $('#phone').val('');
+                    $('#email').val('');
+                    $('#message').val('');
+                    alert('Cotización enviada, en breve será contactado por nuestros asesores.');
                   }
 
                 },
