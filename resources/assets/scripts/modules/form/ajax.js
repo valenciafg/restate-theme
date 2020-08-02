@@ -20,8 +20,14 @@ export default {
                 },
                 method : 'POST',
                 url : sage_vars.ajaxurl,
+                beforeSend: function() {
+                  $('#btn-toratto-submit-form').attr('disabled', true);
+                  $('#btn-toratto-submit-form').html('Cargando');
+                },
                 success: function(result){
                   console.log(result);
+                  $('#btn-toratto-submit-form').removeAttr('disabled');
+                  $('#btn-toratto-submit-form').html('Enviar');
                   if (result.status === 'error') {
                     alert('La cotización no pudo ser enviada.');
                   } else {
@@ -30,6 +36,8 @@ export default {
 
                 },
                 error : function(jqXHR, status, error) {
+                  $('#btn-toratto-submit-form').removeAttr('disabled');
+                  $('#btn-toratto-submit-form').html('Enviar');
                   console.log('Ha ocurrido un problema', status, error);
                 },
             });
