@@ -363,3 +363,11 @@ body {
 .sboard.sb-modern2.sb-carousel .sb-item .sb-user {
   margin-bottom: 10px;
 }
+
+.sboard .sb-item .sb-inner .sb-thumb {
+  border: none;
+}
+
+.sboard.sb-carousel .sb-item .sb-thumb {
+  background-color: transparent;
+}
