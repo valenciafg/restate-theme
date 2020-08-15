@@ -8,12 +8,36 @@
   $menu_items = $menu->getPrimaryNavigationMenuItems();
 @endphp
 <header class="banner">
+  <!--
+  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Access Home Online</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.htm">Home</a></li>
+          <li><a href="settings.htm">Settings</a></li>
+          <li><a href="connected-sites.htm">Sites</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>-->
   <!-- MAIN MENU -->
   <nav class="navbar navbar-toratto navbar-expand-lg justify-content-md-center justify-content-start navbar-fixed-top fixed-top">
     <!-- MENU LEFT SIDE -->
     <a class="navbar-brand navbar-toratto-brand brand" href="{{ home_url('/') }}">
       <img class="toratto-logo-primary" src="{{$logo}}" width="192" height="50" alt="{{ get_bloginfo('name', 'display') }}">
       <img class="toratto-logo-secundary" src="{{$logo2}}" width="192" height="50" alt="{{ get_bloginfo('name', 'display') }}" style="display:none;">
+    </a>
+    <a href="#" class="mobile-menu-button float-right position-relative collapsed" data-toggle="collapse" data-target="#mobile-navbar-collapse" aria-expanded="false">
+      <i class="fas fa-bars"></i>
     </a>
     <!-- MENU CENTER SIDE -->
     <div class="navbar-collapse navbar-toratto-menu collapse align-items-center">
@@ -55,6 +79,16 @@
           Cotiza Aquí
           </a>
         </li>
+      </ul>
+    </div>
+    <!-- -->
+    <div class="collapse navbar-collapse" id="mobile-navbar-collapse">
+      <ul class="nav navbar-nav">
+      @foreach ($menu_items as $item)
+        <li class="nav-item">
+          <a class="nav-link" href="{{$item->url}}">{{$item->title}}</a>
+        </li>
+      @endforeach
       </ul>
     </div>
   </nav>

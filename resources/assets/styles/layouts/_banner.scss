@@ -173,6 +173,10 @@
   transition-delay: 0.5s;
 }
 
+.toratto-section-home-banner.owl-carousel .owl-dots {
+  display: none;
+}
+
 .toratto-section-home-banner.owl-carousel .owl-dots,
 .toratto-section-home-banner.owl-carousel .owl-nav {
   position: absolute;
@@ -216,11 +220,12 @@
 
 @media screen and (max-width: 575px) {
   .toratto-section-home-banner.owl-carousel .owl-nav {
-    top: 5%;
+    bottom: 10%;
+    left: 40%;
   }
 
   .toratto-section-home-banner.owl-carousel .owl-nav svg {
-    width: 24px;
-    height: 24px;
+    width: 50px;
+    height: 50px;
   }
 }

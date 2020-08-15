@@ -28,6 +28,49 @@
   color: #fff;
   text-transform: uppercase;
 
+  .mobile-menu-button {
+    left: 35%;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    i.fas {
+      color: #fff;
+      font-size: 2rem;
+    }
+  }
+
+  .mobile-menu-button.scrolled {
+    left: 35%;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    i.fas {
+      color: $theme-color-blue;
+      font-size: 2rem;
+    }
+  }
+
+  #mobile-navbar-collapse {
+    background-color: #fff;
+    border-radius: 5px;
+
+    @media (min-width: 768px) {
+      display: none !important;
+    }
+
+    .nav.navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $theme-color-blue;
+        }
+      }
+    }
+  }
+
   .navbar-collapse.align-items-center {
     .navbar-nav-toratto-center {
       .nav-item {
