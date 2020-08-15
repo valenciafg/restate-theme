@@ -29,7 +29,7 @@
   text-transform: uppercase;
 
   .mobile-menu-button {
-    left: 35%;
+    left: 32%;
 
     @media (min-width: 768px) {
       display: none;
@@ -42,7 +42,7 @@
   }
 
   .mobile-menu-button.scrolled {
-    left: 35%;
+    left: 32%;
 
     @media (min-width: 768px) {
       display: none;
