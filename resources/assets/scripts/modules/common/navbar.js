@@ -20,6 +20,7 @@ export default {
           || $('.page-template-complaints_book').length > 0
         ) {
             nav.addClass('scrolled');
+            mobileMenuButton.addClass('scrolled');
             logoPrimary.hide();
             logoSecundary.show();
         } else {
