@@ -16,7 +16,7 @@ $posts = new WP_Query(array(
     </div> --}}
     <div class="row">
       @include('partials.blog.nav')
-      <div class="row">
+      <div class="row toratto-project-row">
         @if ($posts->have_posts())
           @php
             $posts = $posts->posts;

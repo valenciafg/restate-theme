@@ -53,59 +53,11 @@
       }
     }
   }
+}
 
-  /*
-  .toratto-project-building-card-bottom-info {
-    background-color: #fff;
-    padding: 10px;
+.toratto-project-row {
 
-    .toratto-project-building-card-bottom-info-location {
-      float: left;
-
-      span {
-        // float: left;
-        // clear: left;
-        color: $theme-color-alt-blue;
-
-        .far,
-        .fas {
-          color: $theme-color-green;
-        }
-      }
-
-      .location,
-      .address {
-        margin-bottom: 5px;
-      }
-
-      .location {
-        font-size: 1.2rem;
-        font-weight: bold;
-      }
-
-      .address {
-        font-size: 1rem;
-      }
-
-      .stage {
-        background-color: $theme-color-green;
-        color: #fff;
-        padding: 5px 30px 5px 30px;
-        border-radius: 20px 0;
-        font-size: 1.2rem;
-        min-width: 215px;
-      }
-    }
-
-    .toratto-bottom-extra-info {
-      padding-top: 10px;
-      border-top: 1px solid $theme-color-soft-gray;
-      color: $theme-color-gray;
-
-      li {
-        padding: 0 10px 0 10px;
-      }
-    }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    margin: 20px;
   }
-  */
 }
