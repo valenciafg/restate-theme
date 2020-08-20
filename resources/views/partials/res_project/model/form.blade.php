@@ -101,7 +101,7 @@
   <div class="row toratto-project-advisor align-items-center">
     <div class="col-md-3 col-sm-12 px-0 text-center photo">
       @if (!empty($advisor_photo))
-      <img src="{{$advisor_photo}}" alt="{{$advisor_fullname}}" style="width: 105px; height: 100px; border-radius: 50px">
+      <img src="{{$advisor_photo}}" alt="{{$advisor_fullname}}" style="width: 105px; height: 55px; border-radius: 55px">
       @else
       <i class="fas fa-user-tie"></i>
       @endif
