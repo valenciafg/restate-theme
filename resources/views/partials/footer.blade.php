@@ -71,6 +71,7 @@
           <p><i class="fas fa-map-marker-alt"></i>{{$all_settings['address']}}</p>
           <p>{{$all_settings['city']}}</p>
           @endif
+          <img src="@asset('images/membresia.png')" style="width: 195px;height: 85px;margin-bottom: 5px;">
         </div>
       </div>
       <div class="row">
