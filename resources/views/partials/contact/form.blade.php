@@ -31,11 +31,29 @@
           </div>
           <div class="form-group col-md-6">
             <label for="project_id">Proyecto: <span class="toratto-form-required">*<span></label>
-            <select class="form-control" class="form-control" id="project_id" name="project_id" required>
+            <select class="form-control" class="form-control" id="project_id" name="project_id" required  style="display: none;">
+              @php
+              $i = 0;
+              @endphp
               @foreach ($projects as $project)
-              <option value="{{$project['id']}}">{{$project['title']}}</option>
+              <option
+                value="{{$project['id']}}"
+                data-index="{{$i}}"
+                data-thumbnail="{{$project['logo']}}"
+              >
+                {{$project['title']}}
+              </option>
               @endforeach
+              @php
+              $i += 1;
+              @endphp
             </select>
+            <div class="toratto-contact-form-project-section">
+              <button type="button" class="project-btn" value=""></button>
+                <div class="project-list-section">
+                  <ul id="project-list"></ul>
+                </div>
+            </div>
           </div>
         </div>
         <div class="form-group">

@@ -63,3 +63,94 @@
     }
   }
 }
+
+.toratto-contact-form-project-section {
+  .project-btn {
+    width: 100%;
+    float: left;
+    text-align: left;
+    border-color: transparent;
+
+    img {
+      width: 25px;
+    }
+
+    li,
+    li:hover {
+      padding: 5px;
+      list-style: none;
+      background-color: #fff;
+
+      .title {
+        color: $theme-color-blue;
+        font-weight: bold;
+      }
+
+      .sub-title {
+        color: $theme-color-alt-blue;
+      }
+    }
+
+    &::after {
+      font-family: "icomoon", sans-serif;
+      content: "\e908";
+      font-size: 0.5rem;
+      font-weight: bold;
+      position: absolute;
+      top: 45px;
+      right: 30px;
+      color: $theme-color-alt-blue;
+      height: 38px;
+      bottom: 0;
+    }
+  }
+
+  .project-list-section {
+    display: none;
+
+    #project-list {
+      padding-left: 0;
+
+      img {
+        width: 50px;
+      }
+
+      li {
+        list-style: none;
+        padding: 5px;
+        background-color: #fff;
+
+        .title {
+          color: $theme-color-blue;
+          font-weight: bold;
+        }
+
+        .sub-title {
+          color: $theme-color-alt-blue;
+        }
+
+        img {
+          margin: 5px;
+        }
+      }
+
+      li:hover {
+        background-color: $theme-color-alt-blue;
+
+        .title {
+          color: #fff;
+          font-weight: bold;
+        }
+
+        .sub-title {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  #project-list li span,
+  .project-btn li span {
+    margin-left: 30px;
+  }
+}
