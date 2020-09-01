@@ -103,6 +103,12 @@
       height: 38px;
       bottom: 0;
     }
+
+    &:focus {
+      outline: 0;
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(82, 93, 220, 0.25);
+      box-shadow: 0 0 0 0.2rem rgba(82, 93, 220, 0.25);
+    }
   }
 
   .project-list-section {
