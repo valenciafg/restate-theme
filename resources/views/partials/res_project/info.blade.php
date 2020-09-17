@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
       <div class="col-lg-4 col-md-4 col-sm-12">
         <span class="toratto-project-info-item">
-          <img src="@asset('images/bed-2.png')" style="width:50px; height:50px;"> 1 a {{$project['max_rooms']}} ambientes
+          <img src="@asset('images/bed-2.png')" style="width:50px; height:50px;"> {{$project['min_rooms']}} a {{$project['max_rooms']}} ambientes
         </span>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
