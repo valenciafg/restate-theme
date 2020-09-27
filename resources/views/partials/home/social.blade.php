@@ -14,7 +14,7 @@
           </div>
           <div class="card toratto-home-social-title col-md-4 col-sm-12">
               <div class="card-body">
-                  <h3 class="card-title">¡Síguenos en nuestras redes sociales!</h3>
+                  <h2 class="card-title">¡Síguenos en nuestras redes sociales!</h2>
               </div>
           </div>
           <div class="card toratto-home-social-icons col-md-4 col-sm-12">
