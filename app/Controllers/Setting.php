@@ -103,6 +103,7 @@ class Setting extends Controller
             'gplus'                 => (isset($settings['real_estate_setting_social_gplus'])?$settings['real_estate_setting_social_gplus']:''),
             'skype'                 => (isset($settings['real_estate_setting_social_skype'])?$settings['real_estate_setting_social_skype']:''),
             'instagram'             => (isset($settings['real_estate_setting_social_instagram'])?$settings['real_estate_setting_social_instagram']:''),
+            'youtube'               => (isset($settings['real_estate_setting_social_youtube'])?$settings['real_estate_setting_social_youtube']:''),
             'pbx_server'            => (isset($settings['real_estate_setting_te_server'])?$settings['real_estate_setting_te_server']:''),
             'pbx_port'              => (isset($settings['real_estate_setting_te_port'])?$settings['real_estate_setting_te_port']:''),
             'pbx_aor'               => (isset($settings['real_estate_setting_te_aor'])?$settings['real_estate_setting_te_aor']:''),
