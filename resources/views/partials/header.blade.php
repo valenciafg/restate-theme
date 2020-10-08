@@ -70,9 +70,6 @@
         $clean_whatsapp = str_replace(" ", "", $clean_whatsapp);
         $clean_whatsapp = str_replace("+", "", $clean_whatsapp);
         @endphp
-        <li class="nav-item">
-          <a href="https://wa.me/{{$clean_whatsapp}}" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        </li>
         @endif
         <li class="nav-item">
           <a class="btn btn-toratto-green toratto-quotation-link" href="/contacto" role="button">

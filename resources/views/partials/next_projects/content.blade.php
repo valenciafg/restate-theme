@@ -16,28 +16,23 @@ $posts = new WP_Query(array(
 @endphp
 @section('content')
 <section class="toratto-section-background-00" style="margin-top: 90px;">
-  {{-- <div class="container">
+  <div class="container">
     <div class="row">
-      <div class="col-md-12 col-sm-12 text-center">
-        <h1 class="toratto-custom-page toratto-section-title-2">{{ get_the_title() }}</h1>
+      @include('partials.blog.nav')
+      <div class="row toratto-project-row">
+        @if ($posts->have_posts())
+          @php
+            $posts = $posts->posts;
+          @endphp
+          @foreach ($posts as $post)
+            @include('partials.projects.card')
+          @endforeach
+        @else
+          <h1>empty</h1>
+        @endif
       </div>
+      @include('partials.blog.nav')
     </div>
-  </div> --}}
-  <div class="container shadow toratto-project-page">
-    @include('partials.blog.nav')
-    <div class="row">
-      @if ($posts->have_posts())
-        @php
-          $posts = $posts->posts;
-        @endphp
-        @foreach ($posts as $post)
-          @include('partials.projects.card')
-        @endforeach
-      @else
-        <h1>empty</h1>
-      @endif
-    </div>
-    @include('partials.blog.nav')
   </div>
 </section>
 @endsection

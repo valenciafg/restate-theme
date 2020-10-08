@@ -9,11 +9,6 @@ $posts = new WP_Query(array(
 @section('content')
 <section class="toratto-section-background-00" style="margin-top: 90px;">
   <div class="container">
-    {{-- <div class="row">
-      <div class="col-md-12 col-sm-12 text-center">
-        <h1 class="toratto-custom-page toratto-section-title">{{ get_the_title() }}</h1>
-      </div>
-    </div> --}}
     <div class="row">
       @include('partials.blog.nav')
       <div class="row toratto-project-row">
