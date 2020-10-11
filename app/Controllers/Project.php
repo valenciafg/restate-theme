@@ -295,4 +295,15 @@ class Project extends Controller
         }
         return $data;
     }
+
+    public function stageInList($value, $stages) {
+        $included = false;
+        foreach($stages as $stage) {
+            if (strtolower($stage) === strtolower($value)) {
+                $included = true;
+            break;
+            }
+        }
+        return $included;
+    }
 }

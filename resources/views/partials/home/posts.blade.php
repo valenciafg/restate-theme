@@ -1,10 +1,7 @@
 @php
   $project = new  App\Controllers\Project();
+  $pj = $project;
   $projects = $project->getProjects(10);
-
-  // echo "<pre>";
-  // print_r($projects);
-  // echo "</pre>";
   $col_md = 6;
 
 @endphp
@@ -26,9 +23,7 @@
           $stage = $categories['stage'];
           $show = $project['show_home'];
           @endphp
-          @if (isset($show) && $show === 'TRUE')
-
-
+          @if (isset($show) && $show === 'TRUE' && !$pj->stageInList("entregado", $stage))
             <div class="col-md-{{$col_md}} col-sm-12" style="padding-left: 0;padding-right: 0;">
                 <div class="toratto-project-building">
                   <a href="{{$project['url']}}" class="card toratto-project-building-card">

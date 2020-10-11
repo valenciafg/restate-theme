@@ -3,7 +3,15 @@ $currentPage = get_query_var('paged');
 $posts = new WP_Query(array(
     'post_type' => 'res_project', // Default or custom post type
     'posts_per_page' => 10, // Max number of posts per page
-    'paged' => $currentPage
+    'paged' => $currentPage,
+    'tax_query' => array(
+        array (
+            'taxonomy' => 'res_stage',
+            'field' => 'slug',
+            'terms' => 'entregado',
+            'operator'  => 'NOT IN'
+        )
+    ),
 ));
 @endphp
 @section('content')
