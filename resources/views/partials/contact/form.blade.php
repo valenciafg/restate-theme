@@ -1,7 +1,22 @@
 @php
-  $project = new  App\Controllers\Project();
+  $projectObj = new  App\Controllers\Project();
   $settings = new  App\Controllers\Setting();
-  $projects = $project->getProjects(-1);
+
+  $posts = new WP_Query(array(
+    'post_type' => 'res_project', // Default or custom post type
+    'posts_per_page' => 10, // Max number of posts per page
+    'paged' => $currentPage,
+    'tax_query' => array(
+        array (
+            'taxonomy' => 'res_stage',
+            'field' => 'slug',
+            'terms' => 'entregado',
+            'operator'  => 'NOT IN'
+        )
+    ),
+  ));
+
+//  $projects = $project->getProjects(-1);
   $all_settings = $settings->getAllSettings();
   $site_key = $all_settings['recaptcha_site_key'];
 @endphp
@@ -32,10 +47,15 @@
           <div class="form-group col-md-6">
             <label for="project_id">Proyecto: <span class="toratto-form-required">*<span></label>
             <select class="form-control" class="form-control" id="project_id" name="project_id" required  style="display: none;">
+              @if ($posts->have_posts())
               @php
               $i = 0;
+              $posts = $posts->posts;
               @endphp
-              @foreach ($projects as $project)
+              @foreach ($posts as $post)
+              @php
+              $project = $projectObj->getSingleProject($post->ID);
+              @endphp
               <option
                 value="{{$project['id']}}"
                 data-index="{{$i}}"
@@ -47,6 +67,7 @@
               @php
               $i += 1;
               @endphp
+              @endif
             </select>
             <div class="toratto-contact-form-project-section">
               <button type="button" class="project-btn" value=""></button>
