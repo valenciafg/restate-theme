@@ -1,5 +1,4 @@
 @php
-
 $currentPage = get_query_var('paged');
 $posts = new WP_Query(array(
     'post_type' => 'res_project', // Default or custom post type

@@ -1,5 +1,4 @@
 @php
-
 $currentPage = get_query_var('paged');
 $posts = new WP_Query(array(
     'post_type' => 'res_project', // Default or custom post type
@@ -17,7 +16,7 @@ $posts = new WP_Query(array(
 @section('content')
 <section class="toratto-section-background-00" style="margin-top: 90px;">
   <div class="container">
-    <div class="row">
+    <div class="">
       @include('partials.blog.nav')
       <div class="row toratto-project-row">
         @if ($posts->have_posts())
