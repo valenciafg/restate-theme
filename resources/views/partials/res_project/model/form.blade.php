@@ -11,7 +11,7 @@
   $number = str_replace(" ", "", $number);
   $number = str_replace("+", "", $number);
 @endphp
-<div class="col-lg-6 col-md-6 col-sm-12">
+<div class="col-lg-5 col-md-6 col-sm-12">
   <div class="row toratto-section-model-rooms">
     <div class="col-lg-12 col-md-12 col-sm-12">
       <ul class="nav nav-fill">
