@@ -5,12 +5,24 @@ $posts = new WP_Query(array(
     'posts_per_page' => 10, // Max number of posts per page
     'paged' => $currentPage,
     'tax_query' => array(
-        array (
-            'taxonomy' => 'res_stage',
-            'field' => 'slug',
-            'terms' => 'entregado',
-            'operator'  => 'NOT IN'
-        )
+      array (
+        'taxonomy' => 'res_stage',
+        'field' => 'slug',
+        'terms' => 'entregado',
+        'operator'  => 'NOT IN'
+      ),
+      array (
+        'taxonomy' => 'res_stage',
+        'field' => 'slug',
+        'terms' => 'proximo',
+        'operator'  => 'NOT IN'
+      ),
+      array (
+        'taxonomy' => 'res_stage',
+        'field' => 'slug',
+        'terms' => 'proxima-entrega',
+        'operator'  => 'NOT IN'
+      ),
     ),
 ));
 @endphp
