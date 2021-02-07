@@ -9,20 +9,17 @@
       array (
         'taxonomy' => 'res_stage',
         'field' => 'slug',
-        'terms' => 'entregado',
-        'operator'  => 'NOT IN'
+        'terms' => 'pre-venta'
       ),
       array (
         'taxonomy' => 'res_stage',
         'field' => 'slug',
-        'terms' => 'proximo',
-        'operator'  => 'NOT IN'
+        'terms' => 'entrega-inmediata'
       ),
       array (
         'taxonomy' => 'res_stage',
         'field' => 'slug',
-        'terms' => 'proxima-entrega',
-        'operator'  => 'NOT IN'
+        'terms' => 'pre-venta'
       ),
     ),
   ));
