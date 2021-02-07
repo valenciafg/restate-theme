@@ -18,9 +18,6 @@ function clickLiFake() {
     //MOVE SLICK TO SELECTED MODEL
     console.log('el nuevo valor es', value, index);
     $('.toratto-section-model-carousel').slick('slickGoTo', index);
-    // var newCurrentSlide = '.toratto-section-model-carousel .slick-slide[data-slick-index="' + index + '"]';
-    //$('.toratto-section-model-carousel .slick-slide.is-active').removeClass('is-active');
-    //$(currrentNavSlideElem).addClass('is-active');
     $('.toratto-model-info-name').html(value);
     var info = $('.toratto-model-info');
     var info_content = '';

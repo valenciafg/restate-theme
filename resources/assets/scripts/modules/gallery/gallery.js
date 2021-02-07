@@ -105,13 +105,9 @@ export default {
       $('#pills-outside-tab').click(function(){
         $('.rev_slider').slick('refresh');
       });
-      // $('.toratto-gallery-outside-pill').click(function(){
-      //   rev2.slick('refresh');
-      // });
     },
     initModels() {
         var carousel = $('.toratto-section-model-carousel');
-        // var selectBuilding = $('select[name="toratto-quotation-form-model"]');
         carousel.slick({
             centerMode: true,
             centerPadding: '0px',
@@ -123,46 +119,5 @@ export default {
             infinite: true,
             swipe: true,
         });
-        /*
-        carousel.on('afterChange', function(event, slick, currentSlide) {
-            var elSlide = $(slick.$slides[currentSlide]);
-            var name = elSlide.data('name');
-            var room_number = elSlide.data('room_number');
-            var total_area = elSlide.data('total_area');
-            // var starting_price_usd = elSlide.data('starting_price_usd');
-
-            // $('.toratto-quotation-form-name').html(name);
-            // $('input[name="toratto-quotation-form-name"').val(name);
-            $('select[name="toratto-quotation-form-model"]').val(name);
-            $('.toratto-model-info-name').html(name);
-            var info = $('.toratto-model-info');
-            var info_content = '';
-            if (room_number) {
-                info_content += `
-                <li class="nav-item">
-                  <img src="${bedImg2}" style="width:50px; height:50px;">
-                  ${room_number} Dormitorios
-                </li>`;
-            }
-            if (total_area) {
-                info_content += `
-                <li class="nav-item">
-                  <img src="${metrajeImg2}" style="width:50px; height:50px;">
-                  Desde ${total_area} m&sup2;
-                </li>`;
-            }
-            info.html(info_content);
-        });
-
-        selectBuilding.change(function() {
-          let value = $(this).val();
-          if (value.length > 0) {
-            $('.toratto-section-model-carousel').slick('slickGoTo', value);
-            var currrentNavSlideElem = '.toratto-section-model-carousel .slick-slide[data-slick-index="' + value + '"]';
-            $('.toratto-section-model-carousel .slick-slide.is-active').removeClass('is-active');
-            $(currrentNavSlideElem).addClass('is-active');
-          }
-        });
-        */
     },
 }

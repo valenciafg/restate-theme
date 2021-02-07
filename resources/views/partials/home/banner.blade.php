@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-md-12 col-sm-12">
           <div class="owl-slide-animated">
-            <div class="toratto-leaf" style="max-width: 198px">
+            <div class="toratto-leaf" style="max-width: 225px">
               {{$stage[0]}}
             </div>
           </div>
@@ -37,7 +37,7 @@
           <div class="row">
             <div class="col-md-3 offset-md-2 col-sm-6">
               <div class="owl-slide-animated">
-                <div class="toratto-leaf" style="max-width: 198px">
+                <div class="toratto-leaf" style="max-width: 225px">
                   {{$location[0]}}
                 </div>
               </div>
