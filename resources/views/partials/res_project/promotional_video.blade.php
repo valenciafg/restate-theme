@@ -17,7 +17,7 @@
     </div>
   </section>
   @else
-  <section class="toratto-section-home-video-with-bg" style="background-image: url({{$video_background}});">
+  <section class="toratto-section-home-video-with-bg" style="background-image: url({{$video_background}});background-size: cover;background-repeat: no-repeat;background-position: center;">
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-md-3 col-sm-12 text-center">
