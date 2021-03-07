@@ -1,4 +1,10 @@
 .toratto-blog-page {
+  background-color: #fff;
+  padding-top: 0 !important;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+
   .toratto-post-title {
     color: $theme-color-blue;
     text-transform: uppercase;
@@ -21,7 +27,7 @@
 }
 
 .page-nav-container {
-  margin-bottom: 25px;
+  margin: 15px 0 10px 15px;
 
   .page-numbers {
     color: $theme-color-green;
@@ -37,5 +43,19 @@
     color: #fff;
     border-color: $theme-color-green;
     background-color: $theme-color-green;
+  }
+}
+
+.toratto-blog-title-container.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 77px;
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    min-height: 400px;
+    position: relative;
   }
 }

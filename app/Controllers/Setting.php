@@ -49,6 +49,11 @@ class Setting extends Controller
         return $this->getAttachmentUrl($logo_id);
     }
 
+    public function getWebsiteBlogBannerImage() {
+        $logo_id = $this->getWebsiteLogoId('real_estate_setting_blog_banner_image');
+        return $this->getAttachmentUrl($logo_id);
+    }
+
     public function getFacebookPosts($list) {
         $posts = [];
         foreach ($list as $post) {
@@ -80,8 +85,10 @@ class Setting extends Controller
             'secundary_logo'        => $this->getWebsiteSecundaryLogo(),
             'show_popup'            => (isset($settings['real_estate_setting_show_popup'])?$settings['real_estate_setting_show_popup'][0]:''),
             'popup_image'           => $this->getWebsitePopupImage(),
+            'popup_url'             => (isset($settings['real_estate_setting_popup_image_url'])?$settings['real_estate_setting_popup_image_url']:''),
             'show_promotion'        => (isset($settings['real_estate_setting_show_promotion'])?$settings['real_estate_setting_show_promotion'][0]:''),
             'promotion_image'       => $this->getWebsitePromotionImage(),
+            'blog_image'            => $this->getWebsiteBlogBannerImage(),
             'description'           => (isset($settings['real_estate_setting_main_description'])?$settings['real_estate_setting_main_description']:''),
             'address'               => (isset($settings['real_estate_setting_main_address'])?$settings['real_estate_setting_main_address']:''),
             'postal_code'           => (isset($settings['real_estate_setting_main_postal_code'])?$settings['real_estate_setting_main_postal_code']:''),

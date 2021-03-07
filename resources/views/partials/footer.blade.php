@@ -85,7 +85,7 @@
     <div class="container">
       <div class="row">
           <div class="col-md-6 footer-copyright">
-            &copy; Grupo Toratto 2020. Todos los derechos reservados.
+            &copy; Grupo Toratto {{date('Y')}}. Todos los derechos reservados.
           </div>
           <div class="col-md-6 footer-social">
             @if (!empty($all_settings['whatsapp']))
