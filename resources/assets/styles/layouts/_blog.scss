@@ -55,7 +55,17 @@
     margin-left: 0;
     margin-right: 0;
     width: 100%;
-    min-height: 400px;
+    min-height: 100vh;
     position: relative;
+
+    .toratto-blog-title-col {
+      margin-top: auto;
+      margin-bottom: auto;
+
+      .toratto-custom-page.toratto-section-title {
+        margin: 0;
+        font-size: 6rem;
+      }
+    }
   }
 }
