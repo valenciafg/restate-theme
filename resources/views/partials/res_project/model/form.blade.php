@@ -26,7 +26,7 @@
   <form class="toratto-section-model-form" id="toratto-modal-form" type="post" action="">
     <div class="form-row">
       <div class="form-group col-md-12">
-        <select name="toratto-quotation-form-model" class=" toratto-quotation-form-model form-control form-control-lg" style="display: none;">
+        <select name="toratto-quotation-form-model" class="toratto-quotation-form-model form-control form-control-lg" style="display: none;">
           @php
           $i = 0;
           @endphp
@@ -39,7 +39,7 @@
               data-total_area="{{$model['total_area']}}"
               data-room_number="{{$model['room_number']}}"
             >
-              {{$model['name']}}
+             {{$model['name']}}
             </option>
           @php
           $i += 1;

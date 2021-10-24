@@ -40,7 +40,7 @@
         <!--CENTER-->
         <div class="col-md-2 footer-links">
           <ul>
-            <li><a href="/proyectos">Proyectos en venta</a></li>
+            <li><a href="/departamentos">Departamentos en venta</a></li>
             <li><a href="/proximos-proyectos">Próximos proyectos</a></li>
             <li><a href="/proyectos-entregados">Proyectos entregados</a></li>
           </ul>
