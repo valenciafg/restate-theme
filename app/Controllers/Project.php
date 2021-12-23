@@ -194,6 +194,7 @@ class Project extends Controller
         $facade_banner_img = get_post_meta($id, "restate_project_facade_banner_image");
         $facade_banner_img = $this->getProjectFile($facade_banner_img);
         $slogan = get_post_meta($id, "restate_project_slogan", true);
+        $ribbon = get_post_meta($id, "restate_project_ribbon_message", true);
         $show_banner = get_post_meta($id, "restate_project_show_banner", true);
         $show_home = get_post_meta($id, "restate_project_show_home", true);
         $delivery_date = get_post_meta($id, "restate_project_delivery_date", true);
@@ -245,6 +246,7 @@ class Project extends Controller
             'facade'                => $facade,
             'categories'            => $categories,
             'slogan'                => $slogan,
+            'ribbon'                => $ribbon,
             'show_banner'           => $show_banner,
             'show_home'             => $show_home,
             'show_facade_banner'    => $show_facade_banner,

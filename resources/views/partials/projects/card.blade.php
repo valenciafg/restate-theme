@@ -1,6 +1,7 @@
 @php
   $projectObj = new  App\Controllers\Project();
   $project = $projectObj->getSingleProject($post->ID);
+  $ribbon = $project['ribbon'];
   $address = $project['address'];
   $facade = $project['facade'];
   $categories = $project['categories'];
@@ -13,6 +14,9 @@
 <div class="col-md-6 col-sm-12" style="padding-right: 0;padding-left: 0;">
   <div class="toratto-project-building">
     <a href="{{$project['url']}}" class="card toratto-project-building-card">
+      @if (!empty($ribbon))
+        <h4 class='corner corner-ribbon'>{{$ribbon}}</h4>
+      @endif
       @if (empty($facade))
         <img class="card-img img-hover-zoom" src="@asset('images/default_facade.jpg')">
       @else
