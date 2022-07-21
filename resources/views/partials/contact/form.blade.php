@@ -89,7 +89,7 @@
         <div class="form-row">
           <div class="form-group col-md-12 text-right">
             <button
-              id="btn-toratto-submit-form"
+              id="btn-toratto-submit-contact-form"
               type="submit"
               class="btn btn-toratto-green-full btn-lg"
               data-sitekey="{{$site_key}}"

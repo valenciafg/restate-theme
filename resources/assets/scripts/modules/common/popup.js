@@ -7,17 +7,30 @@ export default {
         });
     },
     openPopup() {
-      $('#main-popup').fancybox({
-        closeBtn:'<a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>',
-        // Clicked on the content
-        clickContent: function() {
-          var href = $('#main-popup-url').attr('href');
-          if (href){
-            console.log('href', href);
-            window.location.href = href;
+      const data = $('#main-popup-data');
+      const img = data.data('img');
+      if (img) {
+        console.log('img', img)
+        $.fancybox.open([
+          {
+            src: img,
+            opts: {
+              buttons: [
+                'close',
+              ],
+              protect: true,
+              animationEffect: false,
+              clickContent: false,
+            },
+          },
+        ]);
+        $('.fancybox-content').on('click', function() {
+          const url = data.data('url');
+          if (url && url !== '#'){
+            console.log('href', url);
+            window.location.href = `${url}?campaing=true`;
           }
-          return false;
-        },
-      }).trigger('click');
+        })
+      }
     },
 }

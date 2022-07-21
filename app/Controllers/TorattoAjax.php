@@ -137,7 +137,7 @@ class TorattoAjax extends Controller
             'Cc: '.$owner_email
         );
 
-        $subject = "Compra de terreno: ".$project['title'];
+        $subject = "Compra de terreno ";
         $body = "<h2>Datos del propietario</h2>";
         $body .= "<strong>Nombres:</strong>".$owner_name." ".$owner_lastname."<br>";
         $body .= "<strong>Télefono:</strong>".$owner_phone."<br>";
@@ -165,6 +165,79 @@ class TorattoAjax extends Controller
             $response = array(
                 'status'    => 'error',
                 'attachments' => $attachments
+            );
+        }else{
+            $response = array(
+                'status' => 'ok'
+            );
+        }
+        wp_send_json($response);
+    }
+
+    function toratto_complaints_book_from() {
+        parse_str($_POST['form'], $form);
+        $project = $form['project'];
+        //  Consumer identification
+        $consumer_name = $form['consumer-name'];
+        $consumer_lastname = $form['consumer-lastname'];
+        $consumer_phone = $form['consumer-phone'];
+        $consumer_email = $form['consumer-email'];
+        $consumer_address = $form['consumer-address'];
+        $consumer_doc_type = $form['consumer-doc-type'];
+        $consumer_document = $form['consumer-document'];
+        $consumer_tutor_fullname = $form['consumer-tutor-fullname'];
+        $consumer_tutor_document = $form['consumer-tutor-document'];
+        //  Land
+        $land_type = $form['land-type'];
+        $land_description = $form['land-description'];
+        //  Claim
+        $claim_type = $form['claim-type'];
+        $claim_description = $form['claim-description'];
+        $claim_detail = $form['claim-detail'];
+        $claim_order = $form['claim-order'];
+        //  header and to
+        /*
+        $settingObj = new Setting();
+        $setting = $settingObj->getAllSettings();
+        if (!empty($setting['email'])) {
+            $to = $setting['email'];
+        } else {
+            $to = "info@grupotoratto.com";
+        }
+        */
+        $to = "ycardenas@grupotoratto.com";
+        $headers = array(
+            'Content-Type: text/html; charset=UTF-8',
+            'Cc: '.$consumer_email
+        );
+
+        $response = array(
+            'status' => 'ok'
+        );
+        $subject = "Registro en libro de reclamación por: ".$consumer_name." ".$consumer_lastname;
+        $body = "Proyecto: ".$project;
+        $body .= "<h2>Datos del consumidor que realiza el reclamo</h2>";
+        $body .= "<strong>Nombres:</strong>".$consumer_name." ".$consumer_lastname."<br>";
+        $body .= "<strong>Télefono:</strong>".$consumer_phone."<br>";
+        $body .= "<strong>Correo:</strong>".$consumer_email."<br>";
+        $body .= "<strong>Dirección:</strong>".$consumer_address."<br>";
+        $body .= "<strong>Documento de identidad:</strong>".$consumer_doc_type." ".$consumer_document."<br>";
+        $body .= "<strong>Tutor:</strong>".$consumer_tutor_fullname." ".$consumer_tutor_document."<br>";
+        //  Land
+        /*
+        $body .= "<h2>Datos del terreno</h2>";
+        $body .= "<strong>Tipo:</strong>".$land_type."<br>";
+        $body .= "<strong>Descripción:</strong>".$land_description."<br>";
+        */
+        //  Claim
+        $body .= "<h2>Datos del reclamo o pedido</h2>";
+        $body .= "<strong>Tipo:</strong>".$claim_type."<br>";
+        $body .= "<strong>Descripción:</strong>".$claim_description."<br>";
+        $body .= "<strong>Detalle:</strong>".$claim_detail."<br>";
+        $body .= "<strong>Oden:</strong>".$claim_order."<br>";
+        if( wp_mail( $to, $subject , $body, $headers) === FALSE){
+            $response = array(
+                'status'    => 'error'
             );
         }else{
             $response = array(

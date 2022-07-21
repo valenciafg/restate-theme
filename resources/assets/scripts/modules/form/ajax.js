@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import Dropzone from 'dropzone/dist/dropzone';
+Dropzone.autoDiscover = false;
 
 export default {
   initAjaxQuotationForm () {
@@ -67,8 +68,14 @@ export default {
           },
           method : 'POST',
           url : sage_vars.ajaxurl,
+          beforeSend: function() {
+            $('#btn-toratto-submit-contact-form').attr('disabled', true);
+            $('#btn-toratto-submit-contact-form').html('Cargando');
+          },
           success: function(result){
             console.log(result);
+            $('#btn-toratto-submit-contact-form').removeAttr('disabled');
+            $('#btn-toratto-submit-contact-form').html('Enviar');
             if (result.status === 'error') {
               alert('La solicitud no pudo ser enviada.');
             } else {
@@ -76,6 +83,8 @@ export default {
             }
           },
           error : function(jqXHR, status, error) {
+            $('#btn-toratto-submit-contact-form').removeAttr('disabled');
+            $('#btn-toratto-submit-contact-form').html('Enviar');
             console.log('Ha ocurrido un problema', status, error);
           },
       });
@@ -111,59 +120,6 @@ export default {
     });
   },
   initAjaxLandPurchaseForm () {
-    /*
-    Dropzone.options.torattoLandPurchaseform = {
-      uploadMultiple: true,
-      maxFiles: 5,
-      acceptedFiles: 'image/*',
-      init:function(){
-        var self = this;
-        // config
-        self.options.addRemoveLinks = true;
-        self.options.dictRemoveFile = 'Delete';
-        //New file added
-        self.on('addedfile', function (file) {
-          console.log('new file added ', file);
-        });
-        // Send file starts
-        self.on('sending', function (file) {
-          console.log('upload started', file);
-          $('.meter').show();
-        });
-
-        // File upload Progress
-        self.on('totaluploadprogress', function (progress) {
-          console.log('progress ', progress);
-          $('.roller').width(progress + '%');
-        });
-
-        self.on('queuecomplete', function (progress) {
-          $('.meter').delay(999).slideUp(999);
-        });
-
-        // On removing file
-        self.on('removedfile', function (file) {
-          console.log(file);
-        });
-      },
-    };
-    *///url : sage_vars.ajaxurl,
-    /*
-    $('#dZUpload').dropzone({
-      url: '/',
-      acceptedFiles: 'image/*',
-      addRemoveLinks: true,
-      success: function (file, response) {
-          var imgName = response;
-          file.previewElement.classList.add('dz-success');
-          console.log('Successfully uploaded :' + imgName);
-      },
-      error: function (file, response) {
-          file.previewElement.classList.add('dz-error');
-      },
-    });
-    */
-    Dropzone.autoDiscover = false;
     $('#media-uploader').dropzone({
       url: sage_vars.upload,
       uploadMultiple: false,
@@ -223,5 +179,62 @@ export default {
         alert('Debe aceptar los terminos y condiciones');
       }
     });
+  },
+  initAjaxComplaintsBookFrom () {
+    $('#toratto-complaints-book-form').submit(function(e) {
+      e.preventDefault();
+
+      var isChecked = $('input[name="terms-check"]:checked').length > 0;
+      if (isChecked) {
+        const inputs = [
+          'project',
+          'consumer-name',
+          'consumer-lastname',
+          'consumer-phone',
+          'consumer-email',
+          'consumer-address',
+          'consumer-doc-type',
+          'consumer-document',
+          'consumer-tutor-fullname',
+          'consumer-tutor-document',
+          'land-type',
+          'land-description',
+          'claim-type',
+          'claim-description',
+          'claim-detail',
+          'claim-order',
+        ]
+        var form = $(this);
+        $.ajax({
+          data: {
+            action: 'toratto_complaints_book_from',
+            form: form.serialize(),
+          },
+          method : 'POST',
+          url : sage_vars.ajaxurl,
+          beforeSend: function() {
+            $('#btn-toratto-submit-book-form').attr('disabled', true);
+            $('#btn-toratto-submit-book-form').html('Cargando');
+          },
+          success: function(result){
+            console.log(result);
+            $('#btn-toratto-submit-book-form').removeAttr('disabled');
+            $('#btn-toratto-submit-book-form').html('Enviar');
+            if (result.status === 'error') {
+              alert('La solicitud no pudo ser enviada.');
+            } else {
+              alert('Solicitud enviada, en breve será contactado por nuestros asesores.')
+            }
+          },
+          error : function(jqXHR, status, error) {
+            $('#btn-toratto-submit-book-form').removeAttr('disabled');
+            $('#btn-toratto-submit-book-form').html('Enviar');
+            console.log('Ha ocurrido un problema', status, error);
+          },
+      });
+      } else {
+        alert('Debe aceptar los terminos y condiciones');
+      }
+    })
   },
 }

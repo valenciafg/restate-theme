@@ -9,7 +9,7 @@ import 'photo-sphere-viewer/dist/photo-sphere-viewer';
 import '@fancyapps/fancybox/dist/jquery.fancybox';
 import 'ionicons';
 import 'floating-whatsapp/floating-wpp';
-import 'dropzone/dist/dropzone';
+// import 'dropzone/dist/dropzone';
 //  import 'photoswipe/dist/photoswipe';
 //  import 'photoswipe/dist/photoswipe-ui-default';
 //  import '@fancyapps/fancybox';
@@ -30,6 +30,7 @@ import aboutUs from './routes/about';
 import singleResProject from './routes/singleResProject';
 import contact from './routes/contact';
 import landPurchase from './routes/landPurchase';
+import complaintsBook from './routes/complaintsBook';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -42,6 +43,7 @@ const routes = new Router({
   singleResProject,
   contact,
   landPurchase,
+  complaintsBook,
 });
 
 library.add(...brands);

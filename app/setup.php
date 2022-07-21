@@ -165,6 +165,9 @@ add_action( 'wp_ajax_nopriv_toratto_quotation_form', 'App\Controllers\TorattoAja
 add_action( 'wp_ajax_toratto_contact_form', 'App\Controllers\TorattoAjax::toratto_contact_form');
 add_action( 'wp_ajax_nopriv_toratto_contact_form', 'App\Controllers\TorattoAjax::toratto_contact_form');
 
+add_action( 'wp_ajax_toratto_complaints_book_from', 'App\Controllers\TorattoAjax::toratto_complaints_book_from');
+add_action( 'wp_ajax_nopriv_toratto_complaints_book_from', 'App\Controllers\TorattoAjax::toratto_complaints_book_from');
+
 add_action( 'wp_ajax_toratto_land_purchase_form', 'App\Controllers\TorattoAjax::toratto_land_purchase_form');
 add_action( 'wp_ajax_nopriv_toratto_land_purchase_form', 'App\Controllers\TorattoAjax::toratto_land_purchase_form');
 

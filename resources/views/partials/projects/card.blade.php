@@ -29,7 +29,7 @@
           <!-- logo column -->
           <div class="col-md-3 px-0 col-sm-12">
             @if (!empty($project['logo']))
-                <img src="{{$project['logo']}}" width="100px" height="80px">
+                <img class="project-logo" src="{{$project['logo']}}" width="100px" height="90px">
             @else
                 {{strtoupper($project['title'])}}
             @endif

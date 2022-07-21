@@ -79,8 +79,12 @@
         a.nav-link {
           font-family: "CircularStd-Bold", sans-serif;
           color: #fff;
-          font-size: 1rem;
           font-weight: 600;
+          font-size: 0.9rem;
+
+          @media (min-width: 1368px) {
+            font-size: 1rem;
+          }
         }
 
         a.nav-link:hover {
@@ -155,8 +159,12 @@
         a.nav-link {
           font-family: "CircularStd-Bold", sans-serif;
           color: $theme-color-blue;
-          font-size: 1rem;
           font-weight: 600;
+          font-size: 0.9rem;
+
+          @media (min-width: 1368px) {
+            font-size: 1rem;
+          }
         }
 
         a.nav-link:hover {

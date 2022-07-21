@@ -155,4 +155,12 @@ export default {
       }, 1500);
     });
   },
+  initGoToQuotation() {
+    let searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.has('campaing')) {
+      $('html, body').animate({
+        scrollTop: $('#toratto-quotation-section').offset().top,
+      }, 1500);
+    }
+  },
 }

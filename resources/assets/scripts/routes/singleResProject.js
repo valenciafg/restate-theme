@@ -8,6 +8,7 @@ export default {
     ajax.initAjaxQuotationForm();
     model.initModelList();
     model.initModelLink();
+    model.initGoToQuotation();
     call.initCall();
     call.initHanup();
   },

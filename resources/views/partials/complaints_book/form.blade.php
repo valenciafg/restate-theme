@@ -84,11 +84,11 @@
           </div>
           <div class="form group col-md-12" style="margin-top: 20px;margin-bottom: 20px;">
             <div class="form-check form-check-inline">
-              <input type="radio" class="form-check-input" name="land-type" id="land-type">
+              <input type="radio" class="form-check-input" name="land-type" id="land-type" value="Proyecto">
               <label class="form-check-label" for="land-type">Proyecto</label>
             </div>
             <div class="form-check form-check-inline">
-              <input type="radio" class="form-check-input" name="land-type" id="land-type">
+              <input type="radio" class="form-check-input" name="land-type" id="land-type" value="Servicio">
               <label class="form-check-label" for="land-type">Servicio</label>
             </div>
           </div>
@@ -104,11 +104,11 @@
           </div>
           <div class="form group col-md-12" style="margin-top: 20px;margin-bottom: 20px;">
             <div class="form-check form-check-inline">
-              <input type="radio" class="form-check-input" name="claim-type" id="claim-check">
+              <input type="radio" class="form-check-input" name="claim-type" id="claim-check" value="Reclamo">
               <label class="form-check-label" for="claim-check">Reclamo</label>
             </div>
             <div class="form-check form-check-inline">
-              <input type="radio" class="form-check-input" name="claim-type" id="claim-check">
+              <input type="radio" class="form-check-input" name="claim-type" id="claim-check" value="Queja">
               <label class="form-check-label" for="claim-check">Queja</label>
             </div>
           </div>
@@ -163,7 +163,7 @@
           </div>
           <div class="form-group col-md-12">
             <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="terms-check">
+              <input type="checkbox" class="form-check-input" id="terms-check" name="terms-check">
               <label class="form-check-label" for="terms-check">He leído y acepto las condiciones de uso de mis datos personales</label>
             </div>
           </div>
@@ -179,7 +179,11 @@
           </div>
         </div>
         <div class="form-row">
-          <button type="submit" class="btn btn-toratto-green-full btn-lg" style="margin-top: 25px;">Enviar</button>
+          <button
+            id="btn-toratto-submit-book-form"
+            type="submit"
+            class="btn btn-toratto-green-full btn-lg"
+            style="margin-top: 25px;">Enviar</button>
         </div>
       </form>
     </div>
